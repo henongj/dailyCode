@@ -13,15 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Find_Peak_Element_162.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
+    <Filter Include="헤더 파일\leetCodeProblem">
+      <UniqueIdentifier>{32ba82bd-ccb2-4533-ad68-d3e5b45ed8d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="leetCodeSubmitMain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Find_Peak_Element_162.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="koko_eating_bananas_875.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

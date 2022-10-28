@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Find_Peak_Element_162.h" />
+    <ClInclude Include="koko_eating_bananas_875.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="leetCodeSubmitMain.cpp" />
