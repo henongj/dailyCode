@@ -37,7 +37,7 @@ int main(void)
 		printVector2D(t.testCase3);
 		*/
 		
-		cout << s.exist(t.testCase1, t.testCaseWord2) << endl;
+		cout << s.exist(t.testCase5, t.testCaseWord5) << endl;
 
 	}
 

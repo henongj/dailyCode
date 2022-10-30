@@ -22,9 +22,24 @@ struct testCase
 			{'A','D','E','E'}
 	};
 	string testCaseWord3 = "ABCB"; // output : false
-	
 
+	vector<vector<char>> testCase4 = vector<vector<char>>{ 
+		{'C', 'A', 'A'}, 
+		{'A', 'A', 'A'},
+		{'B', 'C', 'D'}
+	};
+	string testCaseWord4 = "AAB";
+
+/* [["A", "B", "C", "E"], ["S", "F", "E", "S"], ["A", "D", "E", "E"]]
+	"ABCESEEEFS"*/
+	vector<vector<char>> testCase5 = vector<vector<char>>{
+		{'A', 'B' ,'C' ,'E' },
+		{'S' ,'F' ,'E' ,'S' },
+		{'A' ,'D' ,'E' ,'E' }
+	};
+	string testCaseWord5 = "ABCESEEEFS";
 	
+		
 };
 
 class Solution {
@@ -47,11 +62,11 @@ public:
 		++counter;
 		
 		visited[startPos.first][startPos.second] = 0;
-		auto back = q.back();
+		pair<int,int> back;
 
 		while (!q.empty())
 		{ // queue가 빌때까지 BFS
-			back = q.back();
+			back = q.front();
 			
 			//올바른 문자를 pop;
 			q.pop();
@@ -60,13 +75,13 @@ public:
 			for (int i = 0; i < 4; i++)
 			{// 근처 상하좌우 (안 && 첫 방문 word와 && 일치하는 글자)
 				pair<int,int> near = pair<int,int>(back.first + movePos[i].first , back.second + movePos[i].second);
+
 				if (isInside(board, near) && visited[near.first][near.second] && word[counter] == board[near.first][near.second])
 				{
 					counterFlag = true;
 					q.push(near);
 					visited[near.first][near.second] = 0;
 				}
-
 			}
 			if (counterFlag)
 			{

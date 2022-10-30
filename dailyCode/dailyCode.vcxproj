@@ -132,7 +132,9 @@
     <ClInclude Include="word_search_79.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="leetCodeSubmitMain.cpp" />
+    <ClCompile Include="leetCodeSubmitMain.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp20</LanguageStandard>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
