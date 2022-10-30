@@ -18,16 +18,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="leetCodeSubmitMain.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Find_Peak_Element_162.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
     <ClInclude Include="koko_eating_bananas_875.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
+    <ClInclude Include="word_search_79.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="leetCodeSubmitMain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
