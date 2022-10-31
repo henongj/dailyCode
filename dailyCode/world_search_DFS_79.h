@@ -38,7 +38,10 @@ struct testCase
 		{'A' ,'D' ,'E' ,'E' }
 	};
 	string testCaseWord5 = "ABCESEEEFS";
-
+	/* 반례
+	[["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"]]
+"AAAAAAAAAAAAAAB"
+	*/
 
 };
 
@@ -46,6 +49,7 @@ inline void print_pair(const pair<int, int>& p)
 {
 	cout << p.first << " " << p.second << endl;
 }
+
 
 class Solution {
 public:
@@ -56,42 +60,35 @@ public:
 	}
 
 	// depth first search, for vector<vector<pair<int,int>>
-	bool DFS(const std::vector<vector<char>>& board, vector<vector<char>> check, const pair<int,int>& position, int& len, const string& word, bool& flag)
+	bool DFS(const std::vector<vector<char>>& board, vector<vector<char>> check, const pair<int, int>& position, int& len, const string& word)
 	{
+
+		if (len == word.length())
+			return true;
+		if (!isInside(board, position)) // 밖이면
+			return false;
+		if (check[position.first][position.second] == 0) // 이미 방문한 곳이면 제낌
+			return false;
+		if (board[position.first][position.second] != word[len]) // 안인데 글자가 다르면 제낌
+			return false;
+
 		// 상하좌우 탐색할 좌표.
-		pair<int, int> movePos[4] = { {position.first - 1 , position.second + 0},{position.first + 1,position.second + 0},{position.first + 0,position.second - 1},{position.first + 0,position.second + 1} }; // 상하좌우
-		
-		if (board[position.first][position.second] == word[len])
-		{ // 탐색 대상이 찾는 글자다
-			len++;
-			check[position.first][position.second] = 0;
-			if (len == word.size())
-				flag = true;
-		}
-		else
-		{// 글자 아니면 돌아가야죠
-			return len == word.length() ? true : flag;
-		}
-		
-		
-		for (int idx = 0; idx < 4 ; idx++)
-		{
-			if (!isInside(board, movePos[idx])) // 밖이면 제낌
-				continue;
-			if( check[movePos[idx].first][movePos[idx].second] == 0 ) // 이미 방문한 곳이면 제낌
-				continue;
-			
-			if (len < word.length()) //  찾을 글자가 더 있으면
-			{
-				flag = DFS(board, check, movePos[idx], len, word, flag);
-				if (flag) return flag;
-			}
-			else if (len == word.length()) // 다 찾았으면
-				return true;
-			else
-				return flag;
-		}
-		
+		pair<int, int> movePos[4] = {
+			{position.first - 1 , position.second + 0},
+			{position.first + 1,position.second + 0},
+			{position.first + 0,position.second - 1},
+			{position.first + 0,position.second + 1}
+		}; // 상하좌우
+
+
+		len++;
+		check[position.first][position.second] = 0;
+
+		bool flag = DFS(board, check, movePos[0], len, word) ||
+			DFS(board, check, movePos[1], len, word) ||
+			DFS(board, check, movePos[2], len, word) ||
+			DFS(board, check, movePos[3], len, word);
+
 		len--;
 		check[position.first][position.second] = 1;
 
@@ -99,26 +96,21 @@ public:
 	}
 
 	bool exist(std::vector<std::vector<char>> board, std::string word) {
-		
-		vector<vector<char>> check = board;
-		bool flag = false;
 
 		for (int row = 0; row < board.size(); row++)
 		{
-			for (int col = 0; col < board[row].size() ; col++)
+			for (int col = 0; col < board[row].size(); col++)
 			{
-				if (board[row][col] == word[0])
-				{
-					int len = 0;
-					if (DFS(board, check, make_pair(row, col), len,word,flag))
-					{
-						return true;
-					}
-				}
+				int len = 0;
+				vector<vector<char>> check = board;
+				bool flag = false;
+				if (word[0] == board[row][col] && DFS(board, check, make_pair(row, col), len, word))
+					return true;
 			}
 		}
+
 		return false;
-		
+
 	}
 };
 
