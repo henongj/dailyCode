@@ -56,36 +56,45 @@ public:
 	}
 
 	// depth first search, for vector<vector<pair<int,int>>
-	bool DFS(const std::vector<vector<char>>& board, vector<vector<char>>& check, const pair<int,int>& position, int& len, const string& word, bool& flag)
+	bool DFS(const std::vector<vector<char>>& board, vector<vector<char>> check, const pair<int,int>& position, int& len, const string& word, bool& flag)
 	{
-		// 좌표를 기준으로 상하좌우를 탐색한다.
+		// 상하좌우 탐색할 좌표.
 		pair<int, int> movePos[4] = { {position.first - 1 , position.second + 0},{position.first + 1,position.second + 0},{position.first + 0,position.second - 1},{position.first + 0,position.second + 1} }; // 상하좌우
+		
+		if (board[position.first][position.second] == word[len])
+		{ // 탐색 대상이 찾는 글자다
+			len++;
+			check[position.first][position.second] = 0;
+			if (len == word.size())
+				flag = true;
+		}
+		else
+		{// 글자 아니면 돌아가야죠
+			return len == word.length() ? true : flag;
+		}
+		
 		
 		for (int idx = 0; idx < 4 ; idx++)
 		{
-			bool f = false;
-			if (isInside(board, movePos[idx]) && check[movePos[idx].first][movePos[idx].second] != 0 && word[len] == board[movePos[idx].first][movePos[idx].second]) // 안 && 방문 X && word[len] 과 일치
+			if (!isInside(board, movePos[idx])) // 밖이면 제낌
+				continue;
+			if( check[movePos[idx].first][movePos[idx].second] == 0 ) // 이미 방문한 곳이면 제낌
+				continue;
+			
+			if (len < word.length()) //  찾을 글자가 더 있으면
 			{
-				f = true;
-				print_pair(movePos[idx]);
-				++len;
-				check[movePos[idx].first][movePos[idx].second] = 0; // 방문
-				if (len < word.length())
-					DFS(board, check, movePos[idx], len, word, flag);
-				else if (len == word.length())
-					return true;
-				else
-					return flag;
+				flag = DFS(board, check, movePos[idx], len, word, flag);
+				if (flag) return flag;
 			}
+			else if (len == word.length()) // 다 찾았으면
+				return true;
 			else
-			{
-				if (f)
-				{
-					--len;
-					check[movePos[idx].first][movePos[idx].second] = 1; // 방문 취소
-				}
-			}
+				return flag;
 		}
+		
+		len--;
+		check[position.first][position.second] = 1;
+
 		return flag;
 	}
 
