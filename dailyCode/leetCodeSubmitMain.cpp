@@ -3,7 +3,7 @@
 #include<utility>
 #include<string>
 #include<algorithm>
-#include "word_search_79.h"
+#include"world_search_DFS_79.h"
 /*
 * #include "Find_Peak_Element_162.h"
 */
@@ -37,7 +37,7 @@ int main(void)
 		printVector2D(t.testCase3);
 		*/
 		
-		cout << s.exist(t.testCase5, t.testCaseWord5) << endl;
+		cout << s.exist(t.testCase1, t.testCaseWord1) << endl;
 
 	}
 
