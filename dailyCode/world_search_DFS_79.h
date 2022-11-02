@@ -54,64 +54,61 @@ inline void print_pair(const pair<int, int>& p)
 class Solution {
 public:
 
-	inline bool isInside(const std::vector<std::vector<char>>& board, const pair<int, int>& position)
-	{ // first : 행 second : 열
-		return (0 <= position.first && position.first < board.size()) && (0 <= position.second && position.second < board[position.first].size());
-	}
 
-	// depth first search, for vector<vector<pair<int,int>>
-	bool DFS(const std::vector<vector<char>>& board, vector<vector<char>> check, const pair<int, int>& position, int& len, const string& word)
-	{
+	class Solution {
+	public:
 
-		if (len == word.length())
-			return true;
-		if (!isInside(board, position)) // 밖이면
-			return false;
-		if (check[position.first][position.second] == 0) // 이미 방문한 곳이면 제낌
-			return false;
-		if (board[position.first][position.second] != word[len]) // 안인데 글자가 다르면 제낌
-			return false;
-
-		// 상하좌우 탐색할 좌표.
-		pair<int, int> movePos[4] = {
-			{position.first - 1 , position.second + 0},
-			{position.first + 1,position.second + 0},
-			{position.first + 0,position.second - 1},
-			{position.first + 0,position.second + 1}
-		}; // 상하좌우
-
-
-		len++;
-		check[position.first][position.second] = 0;
-
-		bool flag = DFS(board, check, movePos[0], len, word) ||
-			DFS(board, check, movePos[1], len, word) ||
-			DFS(board, check, movePos[2], len, word) ||
-			DFS(board, check, movePos[3], len, word);
-
-		len--;
-		check[position.first][position.second] = 1;
-
-		return flag;
-	}
-
-	bool exist(std::vector<std::vector<char>> board, std::string word) {
-
-		for (int row = 0; row < board.size(); row++)
-		{
-			for (int col = 0; col < board[row].size(); col++)
-			{
-				int len = 0;
-				vector<vector<char>> check = board;
-				bool flag = false;
-				if (word[0] == board[row][col] && DFS(board, check, make_pair(row, col), len, word))
-					return true;
-			}
+		inline bool isInside(const std::vector<std::vector<char>>& board, const pair<int, int>& position)
+		{ // first : 행 second : 열
+			return (0 <= position.first && position.first < board.size()) && (0 <= position.second && position.second < board[position.first].size());
 		}
 
-		return false;
+		// depth first search, for vector<vector<pair<int,int>>
+		bool DFS(std::vector<vector<char>>& board, const pair<int, int>& position, int& len, const string& word)
+		{
+			if (len == word.size()) // 다 찾았으면 true
+				return true;
+			if (!isInside(board, position)) // 밖이면 제껴
+				return false;
+			if ((board[position.first][position.second] != word[len]))
+				return false;
 
-	}
+			// 현재 위치에서 word[len]과 같은 문자를 찾았다면
+			board[position.first][position.second] = 0; // 방문했다고 표시
+			len++;
+
+			bool result = DFS(board, { position.first + 1, position.second }, len, word) ||
+				DFS(board, { position.first - 1, position.second }, len, word) ||
+				DFS(board, { position.first, position.second + 1 }, len, word) ||
+				DFS(board, { position.first, position.second - 1 }, len, word);
+
+
+			board[position.first][position.second] = word[len - 1]; // 방문했다고 표시한거 다시 원상복구
+			len--;
+
+			return result;
+
+		}
+
+		bool exist(std::vector<std::vector<char>> board, std::string word) {
+
+			for (int row = 0; row < board.size(); row++)
+			{
+				for (int col = 0; col < board[row].size(); col++)
+				{
+					int len = 0;
+					vector<vector<char>> check = board;
+
+					if (word[0] == board[row][col] && DFS(board, pair<int, int>(row, col), len, word))
+						return true;
+				}
+			}
+
+			return false;
+
+		}
+	};
+
 };
 
 #endif
