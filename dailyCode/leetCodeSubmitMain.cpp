@@ -29,14 +29,6 @@ int main(void)
 		testCase t;
 
 		
-
-		Solution s = Solution();
-
-		/*
-		printVector2D(t.testCase1);
-		printVector2D(t.testCase3);
-		*/
-		
 		cout << s.exist(t.testCase1, t.testCaseWord1) << endl;
 
 	}
