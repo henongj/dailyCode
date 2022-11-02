@@ -30,19 +30,12 @@ struct testCase
 	};
 	string testCaseWord4 = "AAB";
 
-	/* [["A", "B", "C", "E"], ["S", "F", "E", "S"], ["A", "D", "E", "E"]]
-		"ABCESEEEFS"*/
 	vector<vector<char>> testCase5 = vector<vector<char>>{
 		{'A', 'B' ,'C' ,'E' },
 		{'S' ,'F' ,'E' ,'S' },
 		{'A' ,'D' ,'E' ,'E' }
 	};
 	string testCaseWord5 = "ABCESEEEFS";
-	/* ¹İ·Ê
-	[["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"],["A","A","A","A","A","A"]]
-"AAAAAAAAAAAAAAB"
-	*/
-
 };
 
 inline void print_pair(const pair<int, int>& p)
@@ -59,21 +52,21 @@ public:
 	public:
 
 		inline bool isInside(const std::vector<std::vector<char>>& board, const pair<int, int>& position)
-		{ // first : Çà second : ¿­
+		{ // first : í–‰ second : ì—´
 			return (0 <= position.first && position.first < board.size()) && (0 <= position.second && position.second < board[position.first].size());
 		}
 
 		// depth first search, for vector<vector<pair<int,int>>
 		bool DFS(std::vector<vector<char>>& board, const pair<int, int>& position, int& len, const string& word)
 		{
-			if (len == word.size()) // ´Ù Ã£¾ÒÀ¸¸é true
+			if (len == word.size()) // ë‹¤ ì°¾ì•˜ìœ¼ë©´ true
 				return true;
-			if (!isInside(board, position)) // ¹ÛÀÌ¸é Á¦²¸
+			if (!isInside(board, position)) // ë°–ì´ë©´ ì œê»´
 				return false;
 			if ((board[position.first][position.second] != word[len]))
 				return false;
-			// ÇöÀç À§Ä¡¿¡¼­ word[len]°ú °°Àº ¹®ÀÚ¸¦ Ã£¾Ò´Ù¸é
-			board[position.first][position.second] = 0; // ¹æ¹®Çß´Ù°í Ç¥½Ã
+			// í˜„ì¬ ìœ„ì¹˜ì—ì„œ word[len]ê³¼ ê°™ì€ ë¬¸ìë¥¼ ì°¾ì•˜ë‹¤ë©´
+			board[position.first][position.second] = 0; // ë°©ë¬¸í–ˆë‹¤ê³  í‘œì‹œ
 			len++;
 
 			bool result = DFS(board, { position.first + 1, position.second }, len, word) ||
@@ -82,7 +75,7 @@ public:
 				DFS(board, { position.first, position.second - 1 }, len, word);
 
 
-			board[position.first][position.second] = word[len - 1]; // ¹æ¹®Çß´Ù°í Ç¥½ÃÇÑ°Å ´Ù½Ã ¿ø»óº¹±¸
+			board[position.first][position.second] = word[len - 1]; // ë°©ë¬¸í–ˆë‹¤ê³  í‘œì‹œí•œê±° ë‹¤ì‹œ ì›ìƒë³µêµ¬
 			len--;
 
 			return result;
