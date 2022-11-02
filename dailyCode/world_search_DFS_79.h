@@ -72,7 +72,6 @@ public:
 				return false;
 			if ((board[position.first][position.second] != word[len]))
 				return false;
-
 			// 현재 위치에서 word[len]과 같은 문자를 찾았다면
 			board[position.first][position.second] = 0; // 방문했다고 표시
 			len++;
