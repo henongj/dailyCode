@@ -18,27 +18,26 @@ public:
         int middle = 0;
 
 
-        if (nums.size() == 1) return 0; // ¿ø¼Ò°¡ ÇÏ³ª
-        if (nums[0] > nums[1]) return 0; // °¡Àå ¿ŞÂÊÀÌ peak
-        if (nums[nums.size() - 2] < nums[nums.size() - 1]) return nums.size() - 1; // °¡Àå ¿À¸¥Á·ÀÌ peak
+        if (nums.size() == 1) return 0; // ì›ì†Œê°€ í•˜ë‚˜
+        if (nums[0] > nums[1]) return 0; // ê°€ì¥ ì™¼ìª½ì´ peak
+        if (nums[nums.size() - 2] < nums[nums.size() - 1]) return nums.size() - 1; // ê°€ì¥ ì˜¤ë¥¸ì¡±ì´ peak
 
 
         while (left <= right) {
             middle = (right - left) / 2 + left; // 1 2 3 4 5
             std::cout << "(left, middle, right) : ( " << left << ", " << middle << ", " << right << " )\n";
             std::cout << "(middle-1, middle, middle+1) : ( " << nums[middle - 1] << ", " << nums[middle] << ", " << nums[middle + 1] << " )\n";
-            //peak element ÀÎ °æ¿ì
-
+            //peak element ì¸ ê²½ìš°
             if (nums[middle - 1] < nums[middle] && nums[middle + 1] < nums[middle])
             {
                 return middle;
             }
-            // Áõ°¡ ÁßÀÎ °æ¿ì
+            // ì¦ê°€ ì¤‘ì¸ ê²½ìš°
             else if (nums[middle] < nums[middle + 1])
             {
                 left = middle + 1;
             }
-            // °¨¼Ò ÁßÀÎ °æ¿ì
+            // ê°ì†Œ ì¤‘ì¸ ê²½ìš°
             else if (nums[middle] < nums[middle - 1])
             {
                 right = middle;

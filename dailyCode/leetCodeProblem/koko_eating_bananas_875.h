@@ -19,7 +19,6 @@ public:
         }
         return left;
     }
-
     bool canEatInTime(std::vector<int>& piles, int k, int h) {
         unsigned long long hour = 0;
         for (auto pile : piles) {
