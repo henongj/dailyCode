@@ -1,10 +1,5 @@
-#include<iostream>
-#include<vector>
-#include<utility>
-#include<string>
-#include<algorithm>
-#include<queue>
-using namespace std;
+#ifndef ___implement_binary_tree_h___
+#define ___implement_binary_tree___
 
 class Node
 {
@@ -84,15 +79,4 @@ public:
 };
 
 
-int main(void)
-{
-	{
-		using namespace std;
-		TreeSolution s = TreeSolution();
-		s.levelOrder();
-		
-	}
-
-
-	return 0;
-}
+#endif

@@ -11,7 +11,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class TreeSolution {
 public:
 
 	vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
