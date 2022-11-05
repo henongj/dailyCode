@@ -1,6 +1,6 @@
 
-#ifndef ___Subtract_the_Product_and_Sum_of_Digits_of_an_Integer_h___
-#define ___Subtract_the_Product_and_Sum_of_Digits_of_an_Integer_h___
+#ifndef ___Subtract_the_Product_and_Sum_of_Digits_of_an_Integer_1281_h___
+#define ___Subtract_the_Product_and_Sum_of_Digits_of_an_Integer_1281_h___
 
 /*
 1281. Subtract the Product and Sum of Digits of an Integer
