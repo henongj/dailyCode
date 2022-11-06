@@ -1,10 +1,3 @@
-#include<iostream>
-#include<vector>
-#include<utility>
-#include<string>
-#include<algorithm>
-#include<queue>
-using namespace std;
 
 /*
 1779. Find Nearest Point That Has the Same X or Y Coordinate
@@ -14,6 +7,11 @@ https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordi
 */
 #ifndef ___Find_Nearest_Point_That_Has_the_Same_X_or_Y_Coordinate_1779_h___
 #define ___Find_Nearest_Point_That_Has_the_Same_X_or_Y_Coordinate_1779_h___
+
+/* testCase
+x, y : 3 4
+[[1,2],[3,1],[2,4],[2,3],[4,4]]
+*/
 
 class Solution {
 public:
@@ -55,19 +53,3 @@ public:
 
 #endif
 
-/*
-x, y : 3 4
-[[1,2],[3,1],[2,4],[2,3],[4,4]]
-*/
-
-	
-int main(void)
-{
-	Solution s = Solution();
-	int x = 3;
-	int y = 4;
-	vector<vector<int>> points = { {1,2},{3,1},{2,4},{2,3},{4,4} };
-	cout << s.nearestValidPoint(3, 4, points) << endl;
-
-	return 0;
-}
