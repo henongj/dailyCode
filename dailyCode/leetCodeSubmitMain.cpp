@@ -6,68 +6,74 @@
 #include<queue>
 using namespace std;
 
-/*
-1779. Find Nearest Point That Has the Same X or Y Coordinate
-https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/?envType=study-plan&id=programming-skills-i
+class Graph
+{
+private:	
+	int value;
+	vector<Graph*> neighbors;
 
-
-*/
-#ifndef ___Find_Nearest_Point_That_Has_the_Same_X_or_Y_Coordinate_1779_h___
-#define ___Find_Nearest_Point_That_Has_the_Same_X_or_Y_Coordinate_1779_h___
-
-class Solution {
 public:
-	/*
-	1. 유효한 좌표들을 선별한다. 해당 점이 유효하다면
-		1.1 그 점의 멘하탄 거리를 구한다
-	2. 멘하탄 거리를 구한 좌표의 점들 중 가장 가까운 점을 찾는다.
-	*/
-
-	inline int get_manhattan_distance(vector<int> v1, vector<int> v2)
+	Graph(int value) : value(value) {}
+	
+	void addNeighbor(Graph* neighbor) 
 	{
-		return abs(v1[0] - v2[0]) + abs(v1[1] - v2[1]);
+		neighbors.push_back(neighbor);
 	}
-
-	inline bool is_vaild_position(const int& x, const int& y, const vector<int>& point)
+	
+	void print() 
 	{
-		return point[0] == x || point[1] == y;
+		cout << value << " ";
 	}
-
-	int nearestValidPoint(int x, int y, vector<vector<int>>& points) {
-		int minimum_distance = INT_MAX;
-		int index = INT_MAX;
-		for (int i = 0; i < points.size(); i++)
+	
+	void printNeighbors() 
+	{
+		for (auto neighbor : neighbors)
 		{
-			if (is_vaild_position(x, y, points[i]))
-			{
-				vector<int> v = { x,y };
-				int distance = get_manhattan_distance(v, points[i]);
-				if (distance < minimum_distance)
-				{
-					minimum_distance = distance;
-					index = i;
-				}
-			}
+			neighbor->print();
 		}
-		return minimum_distance == INT_MAX ? -1 : index;
+	}
+
+	vector<Graph*> getNeighbors() 
+	{
+		return neighbors;
 	}
 };
 
-#endif
 
-/*
-x, y : 3 4
-[[1,2],[3,1],[2,4],[2,3],[4,4]]
-*/
+
+// depth limited search
 
 	
 int main(void)
 {
-	Solution s = Solution();
-	int x = 3;
-	int y = 4;
-	vector<vector<int>> points = { {1,2},{3,1},{2,4},{2,3},{4,4} };
-	cout << s.nearestValidPoint(3, 4, points) << endl;
-
+	vector<Graph*> graphs;
+	for (int i = 0; i < 10; i++)
+	{
+		Graph* g = new Graph(i);
+		graphs.push_back(g);
+	}
+	/*
+	0 -> 1, 2
+	1 -> 3, 4
+	2 -> 5
+	4 -> 6, 7
+	5 -> 8
+	6 -> 9
+	*/
+	graphs[0]->addNeighbor(graphs[1]); graphs[0]->addNeighbor(graphs[2]); 
+	graphs[1]->addNeighbor(graphs[3]); graphs[1]->addNeighbor(graphs[4]);
+	graphs[2]->addNeighbor(graphs[5]);
+	graphs[4]->addNeighbor(graphs[6]); graphs[4]->addNeighbor(graphs[7]);
+	graphs[5]->addNeighbor(graphs[8]);
+	graphs[6]->addNeighbor(graphs[9]);
+	
+	for (int i = 0; i < 10; i++)
+	{
+		cout << "Node " << i << " has neighbors: ";
+		graphs[i]->printNeighbors();
+		cout << endl;
+	}
+	
+	
 	return 0;
 }
