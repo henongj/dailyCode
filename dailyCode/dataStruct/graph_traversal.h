@@ -148,6 +148,8 @@ void test_depth_limited_search()
 
 	is_searched = iterativeDeepeningDepthFirstSearch(graphs[0], graphs[9]);
 	cout << "iterative deepning depth first search is_searched: " << is_searched << endl;
+	is_searched = iterative_deepning_depth_first_search(graphs[0], graphs[9], 5);
+	cout << "iterative deepning depth first search with max level is_searched: " << is_searched << endl;
 
 };
 
