@@ -70,6 +70,7 @@ int get_max_level_of_tree(Graph* root)
 }
 
 // iterative deepning depth first search
+// complete traversal
 bool iterativeDeepeningDepthFirstSearch(Graph* start, Graph* end)
 {
 	cout << "max level : " << get_max_level_of_tree(start) << endl;
@@ -77,6 +78,24 @@ bool iterativeDeepeningDepthFirstSearch(Graph* start, Graph* end)
 	for (int i = 0; i < max_level; i++)
 	{
 		if (depthLimitedSearch(start, end, max_level))
+			return true;
+	}
+	return false;
+}
+// suggest maximum level of tree
+bool iterative_deepning_depth_first_search(Graph* start, Graph* target, int max_level)
+{
+	if (max_level == 0)
+	{
+		return false;
+	}
+	if (start == target)
+	{
+		return true;
+	}
+	for (auto neighbor : start->getNeighbors())
+	{
+		if (iterative_deepning_depth_first_search(neighbor, target, max_level - 1))
 			return true;
 	}
 	return false;
