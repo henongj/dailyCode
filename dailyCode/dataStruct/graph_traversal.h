@@ -34,6 +34,7 @@ public:
 	{
 		return neighbors;
 	}
+
 };
 // depth limited search
 bool depthLimitedSearch(Graph* start, Graph* end, int depth)
@@ -48,12 +49,39 @@ bool depthLimitedSearch(Graph* start, Graph* end, int depth)
 	}
 	for (auto neighbor : start->getNeighbors())
 	{
-		if (depthLimitedSearch(neighbor, end, depth - 1))
+		if (depthLimitedSearch(neighbor, end, depth - 1)) // recursion
 			return true;
 
 	}
 	return false;
 }
+int get_max_level_of_tree(Graph* root)
+{
+	if (root == nullptr)
+	{
+		return 0;
+	}
+	int max_level = 0;
+	for (auto neighbor : root->getNeighbors())
+	{
+		max_level = max(max_level, get_max_level_of_tree(neighbor));
+	}
+	return max_level + 1;
+}
+
+// iterative deepning depth first search
+bool iterativeDeepeningDepthFirstSearch(Graph* start, Graph* end)
+{
+	cout << "max level : " << get_max_level_of_tree(start) << endl;
+	int max_level = get_max_level_of_tree(start);
+	for (int i = 0; i < max_level; i++)
+	{
+		if (depthLimitedSearch(start, end, max_level))
+			return true;
+	}
+	return false;
+}
+
 
 void test_depth_limited_search()
 {
@@ -87,20 +115,21 @@ void test_depth_limited_search()
 	bool is_searched;
 
 	is_searched = depthLimitedSearch(graphs[0], graphs[9], 0);
-	cout << "is_searched: " << is_searched << endl;
+	cout << "depth : 0 " << "is_searched: " << is_searched << endl;
 	is_searched = depthLimitedSearch(graphs[0], graphs[9], 1);
-	cout << "is_searched: " << is_searched << endl;
+	cout << "depth : 1 " << "is_searched: " << is_searched << endl;
 	is_searched = depthLimitedSearch(graphs[0], graphs[9], 2);
-	cout << "is_searched: " << is_searched << endl;
+	cout << "depth : 2 " << "is_searched: " << is_searched << endl;
 	is_searched = depthLimitedSearch(graphs[0], graphs[9], 3);
-	cout << "is_searched: " << is_searched << endl;
+	cout << "depth : 3 " << "is_searched: " << is_searched << endl;
 	is_searched = depthLimitedSearch(graphs[0], graphs[9], 4);
-	cout << "is_searched: " << is_searched << endl;
+	cout << "depth : 4 " << "is_searched: " << is_searched << endl;
 	is_searched = depthLimitedSearch(graphs[0], graphs[9], 5);
-	cout << "is_searched: " << is_searched << endl;
+	cout << "depth : 5 " << "is_searched: " << is_searched << endl << endl;
+
+	is_searched = iterativeDeepeningDepthFirstSearch(graphs[0], graphs[9]);
+	cout << "iterative deepning depth first search is_searched: " << is_searched << endl;
 
 };
-
-
 
 #endif
