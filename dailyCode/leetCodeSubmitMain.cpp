@@ -11,6 +11,7 @@ using namespace std;
 	
 int main(void)
 {
-	test_depth_limited_search();
+
+	
 	return 0;
 }

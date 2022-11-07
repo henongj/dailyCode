@@ -101,7 +101,6 @@ bool iterative_deepning_depth_first_search(Graph* start, Graph* target, int max_
 	return false;
 }
 
-
 void test_depth_limited_search()
 {
 	vector<Graph*> graphs;
