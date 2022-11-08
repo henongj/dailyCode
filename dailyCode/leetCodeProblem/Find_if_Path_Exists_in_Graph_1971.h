@@ -3,10 +3,12 @@
 
 //1971. Find if Path Exists in Graph
 //https://leetcode.com/problems/find-if-path-exists-in-graph/
-
+#include<vector>
+#include<queue>
+using namespace std;
 class Solution {
 public:
-	
+
 	bool validPath(int n, vector<vector<int>>& edges, int source, int destination) {
 		vector<int> neighbors[n];
 		for (auto edge : edges) { // ¿Œ¡¢
@@ -30,7 +32,7 @@ public:
 			{
 				for (auto adjacent : neighbors[target])
 				{
-					if (!visited[adjacent)
+					if (!visited[adjacent])
 					{
 						q.push(adjacent);
 						visited[adjacent] = true;
