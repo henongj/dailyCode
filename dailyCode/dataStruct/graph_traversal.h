@@ -12,7 +12,7 @@ class Graph
 private:
 	int value;
 	vector<Graph*> neighbors;
-
+	
 public:
 	Graph(int value) : value(value) {}
 	void addNeighbor(Graph* neighbor)
@@ -34,7 +34,6 @@ public:
 	{
 		return neighbors;
 	}
-
 };
 // depth limited search
 bool depthLimitedSearch(Graph* start, Graph* end, int depth)
