@@ -8,54 +8,58 @@
 #include<map>
 using namespace std;
 
-// 131 167 797
+//  167 797
+// https://leetcode.com/problems/palindrome-partitioning/
+// 131. Palindrome Partitioning
+// ___Palindrome_Partitioning_131_h___
 
 /*
-200. Number of Islands
-___Number_of_Islands_200_h___
-https://leetcode.com/problems/number-of-islands/
+* ---- recursion ---
+1. (팰린드롬인지 검사) push_back
+2. (string 길이에 맞춰서 반복 호출)
+3. ( 검사할 string 길이를 늘려서 recursion)
 
+*/
 class Solution {
 public:
-
-	void visite_new_island(vector<vector<char>>& grid, int ypos, int xpos)
+	inline bool is_palindrome(const string& s)
 	{
-		if (grid[ypos][xpos] == '0')
-			return;
-		cout << "ypos xpos " << ypos << " " << xpos << "\n";
-		//방문체크 // 물로 바꿔버림
-		grid[ypos][xpos] = '0';
-
-		vector<vector<int>> movePos = { {-1,0},{1,0},{0,-1},{0,1} };
-
-		for (int i = 0; i < movePos.size(); i++)
+		if (s.size() == 1)
+			return true;
+		
+		int start = 0;
+		int end = s.size() - 1;
+		while(start < end)
 		{
-			int x = xpos + movePos[i][0];
-			int y = ypos + movePos[i][1];
-			// 인접한 곳이 좌표 안이면서, '1'이면 계속 탐색
-			if (x < 0 || x == grid.size() || y < 0 || y == grid[0].size() || grid[x][y] == '0')
-				return;
-			visite_new_island(grid, y, x);
+			if (s[start++] != s[end--])
+				return false;
+		}
+		return true;
+	}
+	void get_palindrome_string_same_length(vector<string>& v , const string& s, int length)
+	{
+		for (int i = 0; i < s.size() - length + 1; i++)
+		{
+			if (is_palindrome(s.substr(i, length)))
+				v.push_back(s.substr(i, length));
 		}
 	}
-	int numIslands(vector<vector<char>>& grid) {
-		int count = 0;
-
-		for (int row = 0; row < grid.size(); row++)
-			for (int col = 0; col < grid[0].size(); col++)
-			{// 섬인데, 방문을 안 했으면
-				if (grid[row][col] == '1')
-				{
-					cout << "grid : " << row << ", " << col << "\n";
-					visite_new_island(grid, row,col);
-					count++;
-				}
-			}
-		return count;
-	}
+	
+    vector<vector<string>> partition(string s) {
+		vector<vector<string>> result;
+		if (s.size() == 0)
+			return result;
+		
+		vector<string> palindromes;
+		for (int len = 1; len < s.size(); len++)
+		{
+			get_palindrome_string_same_length(palindromes, s, len);
+			result.push_back(palindromes);
+			palindromes.clear();
+		}
+		return result;
+    }
 };
-*/
-
 
 
 
