@@ -44,8 +44,10 @@ public:
 				while (!q.empty()) {
 					int node = q.front();
 					q.pop();
-					for (int next = 0; next < isConnected.size(); next++) {
-						if (isConnected[node][next] == 1 && !visited[next]) {
+					for (int next = 0; next < isConnected.size(); next++) 
+					{
+						if (isConnected[node][next] == 1 && !visited[next]) 
+						{
 							q.push(next);
 							visited[next] = true;
 						}
