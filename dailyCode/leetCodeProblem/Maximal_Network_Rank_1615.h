@@ -1,26 +1,21 @@
-#include<iostream>
-#include<vector>
-#include<utility>
-#include<string>
-#include<algorithm>
-#include<queue>
-#include<unordered_map>
-#include<map>
-using namespace std;
-
+#ifndef ___Maximal_Network_Rank_1615_h___
+#define ___Maximal_Network_Rank_1615_h___
 
 /*
-1615. 
+1615.
 ___Maximal_Network_Rank_1615_h___
 https://leetcode.com/problems/maximal-network-rank
 */
+#include<vector>
+#include<iostream>
+using namespace std;
 class Solution {
 public:
-    int maximalNetworkRank(int n, vector<vector<int>>& roads) {
-		
-		vector<vector<int>> adj(n, vector<int>(n,0));
+	int maximalNetworkRank(int n, vector<vector<int>>& roads) {
+
+		vector<vector<int>> adj(n, vector<int>(n, 0));
 		vector<int> edge_count(n, 0);
-		
+
 		int result = 0;
 
 		for (int road = 0; road < roads.size(); road++)
@@ -30,7 +25,7 @@ public:
 			edge_count[roads[road][1]] += 1;
 			adj[roads[road][0]][roads[road][1]] = 1;
 			adj[roads[road][1]][roads[road][0]] = 1;
-			
+
 		}
 
 		for (int node1 = 0; node1 < n; node1++)
@@ -45,13 +40,9 @@ public:
 		}
 
 		return result;
-		
-    }
+
+	}
 };
 
+#endif // !___Maximal_Network_Rank_1615_h___
 
-int main(void)
-{
-	
-	return 0;
-}
