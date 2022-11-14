@@ -15,16 +15,13 @@ https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
 */
 #ifndef ___Most_Stones_Removed_with_Same_Row_or_Column_947_h___
 #define ___Most_Stones_Removed_with_Same_Row_or_Column_947_h___
-
 class Solution {
 public:
     int removeStones(vector<vector<int>>& stones) {
-		vector<vector<int>> graph = 
-    }
+		
 };
 
 #endif
-
 
 
 int main(void)
