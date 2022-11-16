@@ -9,20 +9,6 @@
 using namespace std;
 
 
-/*
-// leetcide 974 ___Most_Stones_Removed_with_Same_Row_or_Column_947_h___
-https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
-*/
-#ifndef ___Most_Stones_Removed_with_Same_Row_or_Column_947_h___
-#define ___Most_Stones_Removed_with_Same_Row_or_Column_947_h___
-class Solution {
-public:
-    int removeStones(vector<vector<int>>& stones) {
-		
-};
-
-#endif
-
 
 int main(void)
 {
