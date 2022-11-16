@@ -92,7 +92,7 @@ public:
 
 		MaxHeap heap = MaxHeap(converter);
 
-		// 사전순으로 정렬해야함
+		// 같은 빈도는 사전순으로 정렬해야함
 		for (int i = 0; i < k; i++)
 		{
 			result.push_back(heap.front().first);
