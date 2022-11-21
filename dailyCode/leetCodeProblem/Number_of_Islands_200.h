@@ -5,6 +5,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<queue>
 using namespace std;
 class Solution {
 public:
@@ -44,6 +45,39 @@ public:
 			}
 		}
 		return count;
+	}
+	
+};
+
+class Solution2 {
+public:
+	int numIslands(vector<vector<char>>& grid) {
+		// Use BFS
+		queue<pair<int, int>> q;
+		int count = 0;
+		for (int ypos = 0; ypos < grid.size(); ypos++) {
+			for (int xpos = 0; xpos < grid[ypos].size(); xpos++) {
+				if (grid[ypos][xpos] == '1') {
+					count++;
+					q.push({ ypos, xpos });
+					while (!q.empty()) {
+						auto [ypos, xpos] = q.front();
+						q.pop();
+						if (grid[ypos][xpos] == '0')
+							continue;
+						grid[ypos][xpos] = '0';
+						if (ypos + 1 < grid.size())
+							q.push({ ypos + 1, xpos });
+						if (ypos - 1 >= 0)
+							q.push({ ypos - 1, xpos });
+						if (xpos + 1 < grid[ypos].size())
+							q.push({ ypos, xpos + 1 });
+						if (xpos - 1 >= 0)
+							q.push({ ypos, xpos - 1 });
+					}
+				}
+			}
+		}
 	}
 };
 #endif
