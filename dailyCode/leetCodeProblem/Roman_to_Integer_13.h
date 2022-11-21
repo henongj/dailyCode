@@ -1,3 +1,8 @@
+
+//https://leetcode.com/problems/roman-to-integer/
+// 13. Roman to Integer
+#ifndef ___Roman_to_Integer_13_h___
+#define ___Roman_to_Integer_13_h___
 #include<iostream>
 #include<vector>
 #include<utility>
@@ -7,12 +12,6 @@
 #include<unordered_map>
 #include<map>
 using namespace std;
-
-//https://leetcode.com/problems/roman-to-integer/
-// 13. Roman to Integer
-#ifndef ___Roman_to_Integer_13_h___
-#define ___Roman_to_Integer_13_h___
-
 class Solution {
 public:
 
@@ -46,18 +45,6 @@ public:
 		return result;
 	}
 };
-	
+
 
 #endif
-
-int main(void)
-{
-	
-	Solution sol;
-	string s = "MCMXCIV";
-	int result = sol.romanToInt(s);
-	cout << result << endl;
-	
-	return 0;
-}
-
