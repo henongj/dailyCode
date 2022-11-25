@@ -18,7 +18,7 @@ public:
 	{
 		if (parent[edge] == edge)
 			return edge;
-		return find(parent, parent[edge]);
+		return parent[edge] = find(parent, parent[edge]);
 	}
 	void union_graph(vector<int>& parent, int& edge1, int& edge2)
 	{
