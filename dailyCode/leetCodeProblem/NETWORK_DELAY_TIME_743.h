@@ -13,6 +13,7 @@
 #include<vector>
 using namespace std;
 
+// solution : bellman-ford algorithm
 class Solution {
 public:
 	int networkDelayTime(vector<vector<int>>& times, int n, int k) {
