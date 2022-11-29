@@ -39,4 +39,23 @@ using namespace std;
       }
   };
 
-#endif
+  class Solution2 {
+  public:
+      int countDepth(TreeNode* node, int depth)
+      {
+          if (node == nullptr)
+              return depth;
+          int left = countDepth(node->left, depth + 1);
+          int right = countDepth(node->right, depth + 1);
+
+          return max(left, right);
+      }
+      int maxDepth(TreeNode* root) {
+          int depth = 0;
+          if (root == nullptr) return depth;
+          return countDepth(root, depth);
+      }
+  };
+#endif // ___Maximum_Depth_of_Binary_Tree_104_h___
+
+
