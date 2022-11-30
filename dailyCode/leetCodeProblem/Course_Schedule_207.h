@@ -115,3 +115,78 @@ public:
 	}
 };
 #endif // ___Course_Schedule_207_h___
+
+/*
+
+// https://leetcode.com/problems/course-schedule-ii/
+// 210. Course Schedule II
+#ifndef ___Course_Schedule_II_210_h___
+#define ___Course_Schedule_II_210_h___
+#include<algorithm>
+#include<iostream>
+#include<map>
+#include<queue>
+#include<string>
+#include<unordered_map>
+#include<utility>
+#include<vector>
+#include<sstream>
+#include<stack>
+using namespace std;
+
+class Solution {
+public:
+	//use DFS topologhical sort to solve this problem
+	bool DFS(vector<vector<int>>& graph, vector<int>& visited, stack<int>& s, int nodeNum)
+	{
+		// visited[nodeNum] : (0, not visited) (1, visited) (2, no cycle)
+		visited[nodeNum] = 1;
+		// true = cycle 있고, false = 사이클 없고
+
+		// find cycle
+		for (int i = 0; i < graph[nodeNum].size(); i++)
+		{
+			if ( visited[graph[nodeNum][i]] == 1)
+				return false;
+			if (visited[graph[nodeNum][i]] == 0)
+			{
+				if (DFS(graph, visited, s, i))
+					return false;
+			}
+		}
+
+		//check there is no cycle
+		visited[nodeNum] = 2;
+		s.push(nodeNum);
+		return true;
+	}
+
+	vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+		vector<vector<int>> graph(numCourses, vector<int>());
+		for (auto pre : prerequisites)
+			graph[pre[0]].push_back(pre[1]);
+		vector<int> visited(numCourses, 0);
+		stack<int> s;
+
+		for (int i = 0; i < graph.size(); i++) {
+			if(!visited[i])
+				DFS(graph, visited, s, i);
+		}
+
+		vector<int> result;
+		if (s.empty())
+			return vector<int>();
+
+		while (!s.empty())
+		{
+			result.push_back(s.top());
+			s.pop();
+		}
+		reverse(result.begin(), result.end());
+		return result;
+	}
+};
+
+
+#endif // ___Course_Schedule_II_210_h___
+*/
