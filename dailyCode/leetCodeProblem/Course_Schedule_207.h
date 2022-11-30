@@ -60,3 +60,56 @@ public:
 };
 
 #endif
+
+
+
+// https://leetcode.com/problems/course-schedule/
+// 207. Course Schedule
+#ifndef ___Course_Schedule_207_Topological_Sort_h___
+#define ___Course_Schedule_207_Topological_Sort_h___
+#include<algorithm>
+#include<iostream>
+#include<map>
+#include<queue>
+#include<string>
+#include<unordered_map>
+#include<utility>
+#include<vector>
+#include<stack>
+#include<sstream>
+using namespace std;
+
+class Solution2 {
+public:
+	// use topological sort with dfs
+	bool dfs(int node, vector<vector<int>>& graph, vector<int>& visited) {
+		// visited val 1 == visited
+		visited[node] = 1;
+
+		// value 0 == not visited
+		for (int i = 0; i < graph[node].size(); i++) {
+			if (visited[graph[node][i]] == 1)
+				return false;
+			if (visited[graph[node][i]] == 0) {
+				if (!dfs(graph[node][i], graph, visited)) return false;
+			}
+		}
+
+		// value 2 == there is no cycle
+		visited[node] = 2;
+		return true;
+	}
+
+	bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+		vector<vector<int>> graph(numCourses, vector<int>());
+		vector<int> visited(numCourses, 0);
+		// want to take p[0], you must take to p[1]	
+		for (auto p : prerequisites)
+			graph[p[1]].push_back(p[0]);
+		for (int i = 0; i < numCourses; i++) {
+			if (!dfs(i, graph, visited)) return false;
+		}
+		return true;
+	}
+};
+#endif // ___Course_Schedule_207_h___
