@@ -86,10 +86,12 @@ public:
 		// visited val 1 == visited
 		visited[node] = 1;
 
-		// value 0 == not visited
+		// visit all the neighbors to know if there is a cycle
 		for (int i = 0; i < graph[node].size(); i++) {
+			// if the neighbor is visited and not finished, then there is a cycle
 			if (visited[graph[node][i]] == 1)
 				return false;
+			// if the neighbor is not visited, visit it
 			if (visited[graph[node][i]] == 0) {
 				if (!dfs(graph[node][i], graph, visited)) return false;
 			}
