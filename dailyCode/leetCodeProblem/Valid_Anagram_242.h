@@ -12,6 +12,7 @@
 #include<utility>
 #include<vector>
 #include<sstream>
+using namespace std;
 class Solution {
 public:
 	bool isAnagram(string s, string t) {
