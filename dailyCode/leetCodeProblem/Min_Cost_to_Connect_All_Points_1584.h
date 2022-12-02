@@ -28,7 +28,7 @@ struct Edge {
 		return weight < e.weight;
 	}
 };
-class Solution {
+class Solution_1 {
 public:
 	int findParent(vector<int>& parents, int i)
 	{
@@ -78,9 +78,8 @@ public:
 	}
 };
 
-
 class Solution_3 {
-public://prim
+public:
 	int minCostConnectPoints(vector<vector<int>>& points) {
 		int N = points.size();
 		vector<vector<int>> dist(N, vector<int>(N, 0));
@@ -94,8 +93,10 @@ public://prim
 		for (int i = 0; i < N; ++i) {
 			int u = -1;
 			for (int j = 0; j < N; ++j)
+				// 방문 안 했거나, 방문 했는데 cost가 더 작은 경우
 				if (!seen[j] && (u == -1 || cost[j] < cost[u]))
 					u = j;
+			// 방문표시
 			seen[u] = true;
 			ans += cost[u];
 			for (int v = 0; v < N; ++v)
@@ -163,6 +164,7 @@ public:
 		return cost;
 	}
 };
+
 
 /*
 * timelimit case
