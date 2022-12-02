@@ -14,16 +14,16 @@ using namespace std;
 
 class Solution {
 public:
-	int find(vector<int>& parent, int& edge)
+	int find_parent(vector<int>& parent, int& edge)
 	{
 		if (parent[edge] == edge)
 			return edge;
-		return parent[edge] = find(parent, parent[edge]);
+		return parent[edge] = find_parent(parent, parent[edge]);
 	}
 	void union_graph(vector<int>& parent, int& edge1, int& edge2)
 	{
-		int parent1 = find(parent, edge1);
-		int parent2 = find(parent, edge2);
+		int parent1 = find_parent(parent, edge1);
+		int parent2 = find_parent(parent, edge2);
 		if (parent1 != parent2)
 			parent[parent1] = parent2;
 	}
@@ -39,8 +39,8 @@ public:
 		{
 			// 부모가 같으면 사이클이 생기는 것이다
 			// 사이클이 생기면 해당 edge를 제출한다
-			int parent1 = find(parent, edges[i][0]);
-			int parent2 = find(parent, edges[i][1]);
+			int parent1 = find_parent(parent, edges[i][0]);
+			int parent2 = find_parent(parent, edges[i][1]);
 			if (parent1 == parent2)
 			{
 				result.push_back(edges[i][0]);
