@@ -29,4 +29,25 @@ public:
 	}
 };
 
+class Solution2 {
+public:
+	int get_step_count(vector<int>& memo, int n)
+	{
+		if (memo[n] != 0)
+			return memo[n];
+		memo[n] = get_step_count(memo, n - 1) + get_step_count(memo, n - 2);
+		return memo[n];
+	}
+	int climbStairs(int n) {
+		vector<int> memo(n + 2, 0);
+
+		memo[0] = 0; memo[1] = 1; memo[2] = 2;
+
+		if (n < 3)
+			return memo[n];
+
+		return get_step_count(memo, n);
+	}
+};
+
 #endif // ___Climbing_Stairs_70_h___
