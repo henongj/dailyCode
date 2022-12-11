@@ -1,14 +1,3 @@
-#include<algorithm>
-#include<iostream>
-#include<map>
-#include<queue>
-#include<string>
-#include<unordered_map>
-#include<utility>
-#include<vector>
-#include<sstream>
-#include<stack>
-using namespace std;
 
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 // 124. Binary Tree Maximum Path Sum
@@ -35,7 +24,6 @@ struct TreeNode {
 	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
-
 class Solution {
 public:
 	void get_max_Path_Sum(TreeNode* root, int& max_sum) {
@@ -54,7 +42,7 @@ public:
 		root->val += max(left, right);
 	}
 	int maxPathSum(TreeNode* root) {
-		int maxSum = 0;
+		int maxSum = -1000000;
 		get_max_Path_Sum(root, maxSum);
 		return maxSum;
 	}
@@ -62,11 +50,3 @@ public:
 
 
 #endif // ___Binary_Tree_Maximum_Path_Sum_124_h___
-
-
-int main(void)
-{
-
-	return 0;
-}
-
