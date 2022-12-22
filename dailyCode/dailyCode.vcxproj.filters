@@ -16,6 +16,12 @@
     <Filter Include="헤더 파일\leetCodeProblem">
       <UniqueIdentifier>{32ba82bd-ccb2-4533-ad68-d3e5b45ed8d3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\programmers">
+      <UniqueIdentifier>{3d753642-c774-4e75-b711-4a6919f9a813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\dataStruct">
+      <UniqueIdentifier>{e367fc8f-1199-4091-8c3a-181f29943ef8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Find_Peak_Element_162.h">
@@ -30,9 +36,450 @@
     <ClInclude Include="world_search_DFS_79.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
+    <ClInclude Include="leetCodeProblem\All_Paths_From_Source_to_Target_797.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Arithmetic_Slices_413.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Average_Salary_Excluding_the_Minimum_and_Maximum_Salary_1491.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Balanced_Binary_Tree_110.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Battleships_in_a_Board_419.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Best_Sightseeing_Pair_1014.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Best_Time_to_Buy_and_Sell_Stock_121.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Best_Time_to_Buy_and_Sell_Stock_II_122.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Best_Time_to_Buy_and_Sell_Stock_with_Cooldown_309.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee_714.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Binary_Tree_Inorder_Traversal_94.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Binary_Tree_Level_Order_Traversal_102.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Binary_Tree_Maximum_Path_Sum_124.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Binary_Tree_Zigzag_Level_Order_Traversal_103.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Can_Make_Arithmetic_Progression_From_Sequence_1502.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Check_If_It_Is_a_Straight_Line_1232.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Check_if_One_String_Swap_Can_Make_Strings_Equal_1790.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Climbing_Stairs_70.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Clone_Graph_133.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Coin_Change_2_518.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Coin_Change_322.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Combination_Sum_IV_377.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Contains_Duplicate_217.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Convert_Binary_Number_in_a_Linke_List_to_Integer_1290.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Count_Odd_Numbers_in_an_Interval_Range_1523.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Course_Schedule_207.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Course_Schedule_II_210.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Course_Schedule_II_With_BFS_210.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Daily_Temperatures_739.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Decode_Ways.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Delete_and_Earn_740.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Design_Parking_System_1683.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Edit_Distance_72.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\EVALUATE_DIVISION_399.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Evaluate_Reverse_Polish_Notation_150.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Fibonacchi_Number_509.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Find_Center_of_Star_Graph_1791.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Find_if_Path_Exists_in_Graph_1971.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Find_Nearest_Point_That_Has_the_Same_X_or_Y_Coordinate_1779.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Find_Peak_Element_162.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\FIND_THE_CITY_WITH_THE_SMALLEST_NUMBER_OF_NEIGHBORS_AT_A_THRESHOLD_DISTANCE_1334.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Find_the_Difference_389.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Find_the_Index_of_the_First_Occurence_in_a_String_28.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Find_the_Town_Judge_997.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Goal_Parser_Interpretation_1678.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Happy_Number_202.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\House_Robber_198.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\House_Robber_II_213.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Implement_Queue_using_Stacks_232.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Integer_Break_343.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Is_Subsequence_392.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Jump_Game_55.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Jump_Game_II_45.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Keys_and_Rooms_841.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\koko_eating_bananas_875.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Largest_Perimeter_Triangle_976.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Leaf-Similar_Trees_872.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Linked_List_in_Binary_Tree_1367.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Longest_Common_Prefix_14.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Longest_Common_Subsequence_1143.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Longest_Increasing_Subsequence_300.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Longest_Palindromic_Subsequence_516.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Longest_Palindromic_Substring_5.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Map_of_Highest_Peak_1765.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Matrix_Block_Sum_1314.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Matrix_Diagonal_Sum_1572.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Max_Area_of_Island_695.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximal_Network_Rank_1615.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximal_Squre_221.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximum_Depth_of_Binary_Tree_104.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximum_Difference_Between_Node_and_Ancestor_1026.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximum_Length_of_Subarray_With_Positive_Product_1567.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximum_Product_of_Two_Elements_in_an_Array_1464.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximum_Product_Subarray_152.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximum_Subarray_53.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximum_Sum_Circular_Subarray_918.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Merge_Strings_Alternately_1768.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Middle_of_the_Linked_List_876.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Min_Cost_Climbing_Stairs_746.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Min_Cost_to_Connect_All_Points_1584.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Minimum_Falling_Path_Sum_931.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Minimum_Path_Sum_64.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Monotonic_Array_896.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Move_Zeroes_283.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\N-ary_Tree_Preorder_Traversal_589.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\NETWORK_DELAY_TIME_743.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Next_Greater_Element_I_496.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\N-th_Tribonacci_Number_1137.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Number_of_1_Bits_191.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Number_of_Islands_200.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Number_of_Operations_to_Make_Network_Connected_1319.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Number_of_Provinces_547.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Odd_Even_Linked_List_328.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Palindrome_Partitioning_131.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Palindromic_Substrings_647.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Pascal_s_Triangle_118.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Pascal_s_Triangle_II_119.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Path_Sum_112.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Path_Sum_II_113.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Perfect_Squares_279.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Plus_One_66.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Populating_Next_Right_Pointers_in_Each_Node_116.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Possible_Bipartition_886.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Range_Sum_of_BST_938.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Range_Sum_Query_2D_Immutable_304.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\RANGE_SUM_QUERY_IMMUTABLE_303.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Redundant_Connection_684.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Redundant_Connection_II_685.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Repeated_Substring_Pattern_459.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Reshape_the_Matrix_566.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Reverse_Integer_7.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Reverse_Linked_List_206.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Reverse_String_344.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Richest_Customer_Wealth_1672.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Roman_to_Integer_13.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Rotting_Oranges_994.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Running_Sum_of_1d_Array_1480.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Sign_of_the_Product_of_an_Array_1822.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Sort_Integers_by_The_Number_of_1_Bits_1356.h.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Subtract_the_Product_and_Sum_of_Digits_of_an_Integer_1281.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Sum_of_All_Odd_Length_Subarrays_1588.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Sum_of_Distances_in_Tree_834.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Sum_of_Left_Leaves_404.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Sum_Root_to_Leaf_Numbers_129.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\target_sum_494.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\To_Lower_Case_709.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Toeplitz_Matrix_766.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Top_K_Frequent_Elements_347.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Trapping_Rain_Water_42.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Triangle_120.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Ugly_Number_II_264.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Unique_Binary_Search_Trees_96.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Unique_Paths_62.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Unique_Paths_II_63.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Valid_Anagram_242.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Wiggle_Subsequence_376.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Word_Break_139.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\word_search_79.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\world_search_DFS_79.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Wrod_Ladder_127.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="programmers\lesston77884.h">
+      <Filter>헤더 파일\programmers</Filter>
+    </ClInclude>
+    <ClInclude Include="programmers\make_hamburger.h">
+      <Filter>헤더 파일\programmers</Filter>
+    </ClInclude>
+    <ClInclude Include="programmers\sql_query.h">
+      <Filter>헤더 파일\programmers</Filter>
+    </ClInclude>
+    <ClInclude Include="dataStruct\graph_implement_adjacency.h">
+      <Filter>헤더 파일\dataStruct</Filter>
+    </ClInclude>
+    <ClInclude Include="dataStruct\graph_traversal.h">
+      <Filter>헤더 파일\dataStruct</Filter>
+    </ClInclude>
+    <ClInclude Include="dataStruct\implement_binary_tree.h">
+      <Filter>헤더 파일\dataStruct</Filter>
+    </ClInclude>
+    <ClInclude Include="dataStruct\max_heap.h">
+      <Filter>헤더 파일\dataStruct</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="leetCodeSubmitMain.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
