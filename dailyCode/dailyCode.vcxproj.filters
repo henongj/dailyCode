@@ -22,6 +22,9 @@
     <Filter Include="헤더 파일\dataStruct">
       <UniqueIdentifier>{e367fc8f-1199-4091-8c3a-181f29943ef8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\acmicpc">
+      <UniqueIdentifier>{0743441c-372d-4663-a699-9548c243ccd0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Find_Peak_Element_162.h">
@@ -476,6 +479,9 @@
     </ClInclude>
     <ClInclude Include="dataStruct\max_heap.h">
       <Filter>헤더 파일\dataStruct</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc_1759.h">
+      <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
