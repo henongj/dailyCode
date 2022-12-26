@@ -480,7 +480,7 @@
     <ClInclude Include="dataStruct\max_heap.h">
       <Filter>헤더 파일\dataStruct</Filter>
     </ClInclude>
-    <ClInclude Include="acmicpc_1759.h">
+    <ClInclude Include="acmicpc\acmicpc_1759.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
   </ItemGroup>
