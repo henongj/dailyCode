@@ -127,7 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="acmicpc\acmicpc_1759.h" />
+    <ClInclude Include="acmicpc\problem_14890.h" />
+    <ClInclude Include="acmicpc\problem_1759.h" />
     <ClInclude Include="dataStruct\graph_implement_adjacency.h" />
     <ClInclude Include="dataStruct\graph_traversal.h" />
     <ClInclude Include="dataStruct\implement_binary_tree.h" />
