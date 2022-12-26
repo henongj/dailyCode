@@ -10,8 +10,8 @@
 #include<stack>
 using namespace std;
 
-#ifndef ___acmicpc_1759_h___
-#define ___acmicpc_1759_h___
+#ifndef ___problem_1759_h___
+#define ___problem_1759_h___
 //https://www.acmicpc.net/problem/1759
 // 1759. 암호 만들기
 
@@ -90,7 +90,7 @@ void solution(void)
 
 }
 
-#endif // ___acmicpc_1759_h___
+#endif // ___problem_1759_h___
 
 /*
 
