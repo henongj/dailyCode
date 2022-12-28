@@ -486,6 +486,12 @@
     <ClInclude Include="acmicpc\problem_14890.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc\problem_1916.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Remove_Stones_to_Minimize_the_Total_1962.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

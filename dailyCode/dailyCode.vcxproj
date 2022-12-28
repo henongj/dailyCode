@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="acmicpc\problem_14890.h" />
     <ClInclude Include="acmicpc\problem_1759.h" />
+    <ClInclude Include="acmicpc\problem_1916.h" />
     <ClInclude Include="dataStruct\graph_implement_adjacency.h" />
     <ClInclude Include="dataStruct\graph_traversal.h" />
     <ClInclude Include="dataStruct\implement_binary_tree.h" />
@@ -243,6 +244,7 @@
     <ClInclude Include="leetCodeProblem\RANGE_SUM_QUERY_IMMUTABLE_303.h" />
     <ClInclude Include="leetCodeProblem\Redundant_Connection_684.h" />
     <ClInclude Include="leetCodeProblem\Redundant_Connection_II_685.h" />
+    <ClInclude Include="leetCodeProblem\Remove_Stones_to_Minimize_the_Total_1962.h" />
     <ClInclude Include="leetCodeProblem\Repeated_Substring_Pattern_459.h" />
     <ClInclude Include="leetCodeProblem\Reshape_the_Matrix_566.h" />
     <ClInclude Include="leetCodeProblem\Reverse_Integer_7.h" />
