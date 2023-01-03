@@ -492,6 +492,27 @@
     <ClInclude Include="leetCodeProblem\Remove_Stones_to_Minimize_the_Total_1962.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
+    <ClInclude Include="Delete_Columns_to_Make_Sorted_944.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Delete_Columns_to_Make_Sorted_944.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Detect_Capital_520.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Single_Threaded_CPU_1834.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Word_Pattern_290.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc\acmicpc_1011.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc\acmicpc_1197.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

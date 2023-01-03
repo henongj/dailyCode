@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="acmicpc\acmicpc_1011.h" />
+    <ClInclude Include="acmicpc\acmicpc_1197.h" />
     <ClInclude Include="acmicpc\problem_14890.h" />
     <ClInclude Include="acmicpc\problem_1759.h" />
     <ClInclude Include="acmicpc\problem_1916.h" />
@@ -134,6 +136,7 @@
     <ClInclude Include="dataStruct\graph_traversal.h" />
     <ClInclude Include="dataStruct\implement_binary_tree.h" />
     <ClInclude Include="dataStruct\max_heap.h" />
+    <ClInclude Include="Delete_Columns_to_Make_Sorted_944.h" />
     <ClInclude Include="Find_Peak_Element_162.h" />
     <ClInclude Include="koko_eating_bananas_875.h" />
     <ClInclude Include="leetCodeProblem\All_Paths_From_Source_to_Target_797.h" />
@@ -167,7 +170,9 @@
     <ClInclude Include="leetCodeProblem\Daily_Temperatures_739.h" />
     <ClInclude Include="leetCodeProblem\Decode_Ways.h" />
     <ClInclude Include="leetCodeProblem\Delete_and_Earn_740.h" />
+    <ClInclude Include="leetCodeProblem\Delete_Columns_to_Make_Sorted_944.h" />
     <ClInclude Include="leetCodeProblem\Design_Parking_System_1683.h" />
+    <ClInclude Include="leetCodeProblem\Detect_Capital_520.h" />
     <ClInclude Include="leetCodeProblem\Edit_Distance_72.h" />
     <ClInclude Include="leetCodeProblem\EVALUATE_DIVISION_399.h" />
     <ClInclude Include="leetCodeProblem\Evaluate_Reverse_Polish_Notation_150.h" />
@@ -255,6 +260,7 @@
     <ClInclude Include="leetCodeProblem\Rotting_Oranges_994.h" />
     <ClInclude Include="leetCodeProblem\Running_Sum_of_1d_Array_1480.h" />
     <ClInclude Include="leetCodeProblem\Sign_of_the_Product_of_an_Array_1822.h" />
+    <ClInclude Include="leetCodeProblem\Single_Threaded_CPU_1834.h" />
     <ClInclude Include="leetCodeProblem\Sort_Integers_by_The_Number_of_1_Bits_1356.h.h" />
     <ClInclude Include="leetCodeProblem\Subtract_the_Product_and_Sum_of_Digits_of_an_Integer_1281.h" />
     <ClInclude Include="leetCodeProblem\Sum_of_All_Odd_Length_Subarrays_1588.h" />
@@ -274,6 +280,7 @@
     <ClInclude Include="leetCodeProblem\Valid_Anagram_242.h" />
     <ClInclude Include="leetCodeProblem\Wiggle_Subsequence_376.h" />
     <ClInclude Include="leetCodeProblem\Word_Break_139.h" />
+    <ClInclude Include="leetCodeProblem\Word_Pattern_290.h" />
     <ClInclude Include="leetCodeProblem\word_search_79.h" />
     <ClInclude Include="leetCodeProblem\world_search_DFS_79.h" />
     <ClInclude Include="leetCodeProblem\Wrod_Ladder_127.h" />
