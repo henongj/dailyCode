@@ -513,6 +513,27 @@
     <ClInclude Include="acmicpc\acmicpc_1197.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="leetCodeProblem\Binary_Tree_Preorder_Traversal_144.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Gas_Station_134.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Max_Points_on_a_Line_149.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Maximum_Ice_Cream_Bars_1833.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Minimum_Number_of_Arrows_to_Burst_Balloons_452.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Minimum_Rounds_to_Complete_All_Tasks_2244.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc\acmicpc_1309.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

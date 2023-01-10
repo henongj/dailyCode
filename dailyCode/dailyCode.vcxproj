@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClInclude Include="acmicpc\acmicpc_1011.h" />
     <ClInclude Include="acmicpc\acmicpc_1197.h" />
+    <ClInclude Include="acmicpc\acmicpc_1309.h" />
     <ClInclude Include="acmicpc\problem_14890.h" />
     <ClInclude Include="acmicpc\problem_1759.h" />
     <ClInclude Include="acmicpc\problem_1916.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="leetCodeProblem\Binary_Tree_Inorder_Traversal_94.h" />
     <ClInclude Include="leetCodeProblem\Binary_Tree_Level_Order_Traversal_102.h" />
     <ClInclude Include="leetCodeProblem\Binary_Tree_Maximum_Path_Sum_124.h" />
+    <ClInclude Include="leetCodeProblem\Binary_Tree_Preorder_Traversal_144.h" />
     <ClInclude Include="leetCodeProblem\Binary_Tree_Zigzag_Level_Order_Traversal_103.h" />
     <ClInclude Include="leetCodeProblem\Can_Make_Arithmetic_Progression_From_Sequence_1502.h" />
     <ClInclude Include="leetCodeProblem\Check_If_It_Is_a_Straight_Line_1232.h" />
@@ -186,6 +188,7 @@
     <ClInclude Include="leetCodeProblem\Find_the_Difference_389.h" />
     <ClInclude Include="leetCodeProblem\Find_the_Index_of_the_First_Occurence_in_a_String_28.h" />
     <ClInclude Include="leetCodeProblem\Find_the_Town_Judge_997.h" />
+    <ClInclude Include="leetCodeProblem\Gas_Station_134.h" />
     <ClInclude Include="leetCodeProblem\Goal_Parser_Interpretation_1678.h" />
     <ClInclude Include="leetCodeProblem\Happy_Number_202.h" />
     <ClInclude Include="leetCodeProblem\House_Robber_198.h" />
@@ -212,16 +215,20 @@
     <ClInclude Include="leetCodeProblem\Maximal_Squre_221.h" />
     <ClInclude Include="leetCodeProblem\Maximum_Depth_of_Binary_Tree_104.h" />
     <ClInclude Include="leetCodeProblem\Maximum_Difference_Between_Node_and_Ancestor_1026.h" />
+    <ClInclude Include="leetCodeProblem\Maximum_Ice_Cream_Bars_1833.h" />
     <ClInclude Include="leetCodeProblem\Maximum_Length_of_Subarray_With_Positive_Product_1567.h" />
     <ClInclude Include="leetCodeProblem\Maximum_Product_of_Two_Elements_in_an_Array_1464.h" />
     <ClInclude Include="leetCodeProblem\Maximum_Product_Subarray_152.h" />
     <ClInclude Include="leetCodeProblem\Maximum_Subarray_53.h" />
     <ClInclude Include="leetCodeProblem\Maximum_Sum_Circular_Subarray_918.h" />
     <ClInclude Include="leetCodeProblem\Max_Area_of_Island_695.h" />
+    <ClInclude Include="leetCodeProblem\Max_Points_on_a_Line_149.h" />
     <ClInclude Include="leetCodeProblem\Merge_Strings_Alternately_1768.h" />
     <ClInclude Include="leetCodeProblem\Middle_of_the_Linked_List_876.h" />
     <ClInclude Include="leetCodeProblem\Minimum_Falling_Path_Sum_931.h" />
+    <ClInclude Include="leetCodeProblem\Minimum_Number_of_Arrows_to_Burst_Balloons_452.h" />
     <ClInclude Include="leetCodeProblem\Minimum_Path_Sum_64.h" />
+    <ClInclude Include="leetCodeProblem\Minimum_Rounds_to_Complete_All_Tasks_2244.h" />
     <ClInclude Include="leetCodeProblem\Min_Cost_Climbing_Stairs_746.h" />
     <ClInclude Include="leetCodeProblem\Min_Cost_to_Connect_All_Points_1584.h" />
     <ClInclude Include="leetCodeProblem\Monotonic_Array_896.h" />
