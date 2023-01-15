@@ -8,12 +8,10 @@
 #include<vector>
 #include<sstream>
 #include<stack>
-#include<cmath>
+#include<cmath>	
 using namespace std;
 
-
 int main() {
-
 	return 0;
 }
 
