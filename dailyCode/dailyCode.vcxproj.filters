@@ -534,6 +534,24 @@
     <ClInclude Include="acmicpc\acmicpc_1309.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="leetCodeProblem\Same_Tree_100.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Lexicographically_Smallest_Equivalent_String_1061.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Longest_Path_With_Different_Adjacent_characters_2246.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Minimum_Time_to_Collect_All_Apples_in_a_Tree_1443_wrong_answer.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc\acmicpc_10757.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc\acmicpc_11279.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

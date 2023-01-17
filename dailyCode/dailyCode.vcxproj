@@ -129,6 +129,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="acmicpc\acmicpc_1011.h" />
+    <ClInclude Include="acmicpc\acmicpc_10757.h" />
+    <ClInclude Include="acmicpc\acmicpc_11279.h" />
     <ClInclude Include="acmicpc\acmicpc_1197.h" />
     <ClInclude Include="acmicpc\acmicpc_1309.h" />
     <ClInclude Include="acmicpc\problem_14890.h" />
@@ -202,12 +204,14 @@
     <ClInclude Include="leetCodeProblem\koko_eating_bananas_875.h" />
     <ClInclude Include="leetCodeProblem\Largest_Perimeter_Triangle_976.h" />
     <ClInclude Include="leetCodeProblem\Leaf-Similar_Trees_872.h" />
+    <ClInclude Include="leetCodeProblem\Lexicographically_Smallest_Equivalent_String_1061.h" />
     <ClInclude Include="leetCodeProblem\Linked_List_in_Binary_Tree_1367.h" />
     <ClInclude Include="leetCodeProblem\Longest_Common_Prefix_14.h" />
     <ClInclude Include="leetCodeProblem\Longest_Common_Subsequence_1143.h" />
     <ClInclude Include="leetCodeProblem\Longest_Increasing_Subsequence_300.h" />
     <ClInclude Include="leetCodeProblem\Longest_Palindromic_Subsequence_516.h" />
     <ClInclude Include="leetCodeProblem\Longest_Palindromic_Substring_5.h" />
+    <ClInclude Include="leetCodeProblem\Longest_Path_With_Different_Adjacent_characters_2246.h" />
     <ClInclude Include="leetCodeProblem\Map_of_Highest_Peak_1765.h" />
     <ClInclude Include="leetCodeProblem\Matrix_Block_Sum_1314.h" />
     <ClInclude Include="leetCodeProblem\Matrix_Diagonal_Sum_1572.h" />
@@ -229,6 +233,7 @@
     <ClInclude Include="leetCodeProblem\Minimum_Number_of_Arrows_to_Burst_Balloons_452.h" />
     <ClInclude Include="leetCodeProblem\Minimum_Path_Sum_64.h" />
     <ClInclude Include="leetCodeProblem\Minimum_Rounds_to_Complete_All_Tasks_2244.h" />
+    <ClInclude Include="leetCodeProblem\Minimum_Time_to_Collect_All_Apples_in_a_Tree_1443_wrong_answer.h" />
     <ClInclude Include="leetCodeProblem\Min_Cost_Climbing_Stairs_746.h" />
     <ClInclude Include="leetCodeProblem\Min_Cost_to_Connect_All_Points_1584.h" />
     <ClInclude Include="leetCodeProblem\Monotonic_Array_896.h" />
@@ -267,6 +272,7 @@
     <ClInclude Include="leetCodeProblem\Roman_to_Integer_13.h" />
     <ClInclude Include="leetCodeProblem\Rotting_Oranges_994.h" />
     <ClInclude Include="leetCodeProblem\Running_Sum_of_1d_Array_1480.h" />
+    <ClInclude Include="leetCodeProblem\Same_Tree_100.h" />
     <ClInclude Include="leetCodeProblem\Sign_of_the_Product_of_an_Array_1822.h" />
     <ClInclude Include="leetCodeProblem\Single_Threaded_CPU_1834.h" />
     <ClInclude Include="leetCodeProblem\Sort_Integers_by_The_Number_of_1_Bits_1356.h.h" />
