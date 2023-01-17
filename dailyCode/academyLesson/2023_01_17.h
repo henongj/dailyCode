@@ -1,3 +1,4 @@
+#include<iostream>
 
 void remind(void)
 {
@@ -10,7 +11,7 @@ void remind(void)
 
 	nData1 = nData2 + nData3;
 
-	cout << nData1;
+	std::cout << nData1;
 }
 
 void firstProgramToGetRectangleArea(void)
