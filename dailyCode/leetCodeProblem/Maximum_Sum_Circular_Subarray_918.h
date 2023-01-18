@@ -21,18 +21,17 @@ public:
 		int maxSum = nums[0];
 		int minSum = nums[0];
 		int sum = nums[0];
-		int maxSumAll = nums[0];
-		int minSumAll = nums[0];
+		int maxSumSoFar = nums[0];
+		int minSumSoFar = nums[0];
 		for (int i = 1; i < n; i++) {
-			maxSum = max(maxSum + nums[i], nums[i]);
-			minSum = min(minSum + nums[i], nums[i]);
 			sum += nums[i];
-			maxSumAll = max(maxSumAll, maxSum);
-			minSumAll = min(minSumAll, minSum);
+			maxSumSoFar = max(maxSumSoFar + nums[i], nums[i]);
+			maxSum = max(maxSum, maxSumSoFar);
+			minSumSoFar = min(minSumSoFar + nums[i], nums[i]);
+			minSum = min(minSum, minSumSoFar);
 		}
-		if (sum == minSumAll) return maxSumAll;
-		return max(maxSumAll, sum - minSumAll);
-
+		if (maxSum < 0) return maxSum;
+		return max(maxSum, sum - minSum);
 	}
 };
 #endif // !___Maximum_Sum_Circular_Subarray_918_h___
