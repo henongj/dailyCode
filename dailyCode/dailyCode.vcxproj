@@ -128,6 +128,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="academyLesson\2023_01_17.h" />
+    <ClInclude Include="academyLesson\2023_01_18.h" />
+    <ClInclude Include="academyLesson\2023_01_19.h" />
     <ClInclude Include="acmicpc\acmicpc_1011.h" />
     <ClInclude Include="acmicpc\acmicpc_10757.h" />
     <ClInclude Include="acmicpc\acmicpc_11279.h" />

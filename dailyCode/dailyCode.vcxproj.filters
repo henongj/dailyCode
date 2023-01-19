@@ -25,6 +25,9 @@
     <Filter Include="헤더 파일\acmicpc">
       <UniqueIdentifier>{0743441c-372d-4663-a699-9548c243ccd0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\academyLesson">
+      <UniqueIdentifier>{a0fbdb63-6cd3-4109-9fbe-71fedc4b5b6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Find_Peak_Element_162.h">
@@ -551,6 +554,15 @@
     </ClInclude>
     <ClInclude Include="acmicpc\acmicpc_11279.h">
       <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_01_17.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_01_18.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_01_19.h">
+      <Filter>헤더 파일\academyLesson</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
