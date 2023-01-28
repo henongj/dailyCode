@@ -564,18 +564,6 @@
     <ClInclude Include="academyLesson\2023_01_19.h">
       <Filter>헤더 파일\academyLesson</Filter>
     </ClInclude>
-    <ClInclude Include="academyLesson\2023_01_20.h">
-      <Filter>헤더 파일\academyLesson</Filter>
-    </ClInclude>
-    <ClInclude Include="academyLesson\2023_01_25.h">
-      <Filter>헤더 파일\academyLesson</Filter>
-    </ClInclude>
-    <ClInclude Include="academyLesson\2023_01_26.h">
-      <Filter>헤더 파일\academyLesson</Filter>
-    </ClInclude>
-    <ClInclude Include="academyLesson\2023_01_27.h">
-      <Filter>헤더 파일\academyLesson</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
