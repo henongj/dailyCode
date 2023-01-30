@@ -58,4 +58,22 @@ namespace lecture_2023_01_30
 		for (int nIterator = nSmallNumber; nIterator <= nBigNumber; nIterator++)
 			printf("for : %d\n", nIterator);
 	}
+
+	void fGetAllDivisor(void)
+	{
+		int nData{};
+		int nDivisor{};
+		int nDividend{};
+
+		scanf_s("%d", &nData);
+		nDivisor = 1;
+		nDividend = nData;
+
+		while (nDivisor <= nDividend)
+		{
+			if (nDividend % nDivisor == 0)
+				printf("¾à¼ö : %d\n", nDivisor);
+			nDivisor++;
+		}
+	}
 }
