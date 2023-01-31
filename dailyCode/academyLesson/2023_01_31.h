@@ -122,4 +122,29 @@ namespace lecture_2023_01_31
 			printf("소수가 아닙니다.\n");
 
 	}
+
+	void fGetAllOfCommonDivisor(void)
+	{
+		int nSmallerNumber{};
+		int nBiggerNumber{};
+		int nDivisor1{};
+
+		scanf_s("%d", &nSmallerNumber);
+		scanf_s("%d", &nBiggerNumber);
+		nDivisor1 = 1;
+		if (nBiggerNumber < nSmallerNumber)
+		{
+			int nTemporaryNumberForSwap = nSmallerNumber;
+			nSmallerNumber = nBiggerNumber;
+			nBiggerNumber = nTemporaryNumberForSwap;
+		}
+
+		while (nDivisor1 <= nSmallerNumber)
+		{
+			if (nSmallerNumber % nDivisor1 == 0 && nBiggerNumber % nDivisor1 == 0)
+				printf("%d\n", nDivisor1);
+
+			nDivisor1++;
+		}
+	}
 }
