@@ -74,4 +74,52 @@ namespace lecture_2023_01_31
 			nDivisor1++;
 		}
 	}
+
+	void fIsPrimeNumber(void)
+	{
+		int nInput{};
+		int nNumOfDivisor = 0;
+		int nDivisor2{};
+		
+		scanf_s("%d", &nInput);
+
+		nDivisor2 = 1;
+		while (nDivisor2 <= nInput)
+		{
+			if (nInput % nDivisor2 == 0)
+				nNumOfDivisor++;
+
+			nDivisor2++;
+		}
+		if (nNumOfDivisor == 2)
+			printf("Prime Number\n");
+		else
+			printf("Not Prime Number\n");
+	}
+
+	void fIsPrimeNumber2(void)
+	{
+		int nInput{};
+		int rootOfInput{};
+		int nNumOfDivisor{};
+		int divisor{};
+
+		scanf_s("%d", &nInput);
+		rootOfInput = (int)sqrt((double)nInput);
+
+		divisor = 2;
+		while (nNumOfDivisor < 1 && divisor <= rootOfInput)
+		{
+			if (nInput % divisor == 0)
+				nNumOfDivisor++;
+
+			divisor++;
+		}
+
+		if (nNumOfDivisor == 0)
+			printf("소수입니다.\n");
+		else
+			printf("소수가 아닙니다.\n");
+
+	}
 }
