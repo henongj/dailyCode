@@ -2,6 +2,36 @@
 
 namespace academyLecture_2023_02_02
 {
+	void fPrintStarWithDoNotModifyCodeWhenModifyShape2(void) {
+		int nXCount{};
+		int nOCount{};
+		int nXIncrementValue{};
+		int nOIncrementValue{};
+		int nNumberOfLines{};
+
+		nXCount = 4;
+		nOCount = 1;
+		nXIncrementValue = -1;
+		nOIncrementValue = 1;
+		nNumberOfLines = nXCount + nOCount;
+
+		for (int i = 0; i < nNumberOfLines; i++)
+		{
+			for (int i = 0; i < nOCount; i++)
+			{
+				printf("O");
+			}
+			for (int i = 0; i < nXCount; i++)
+			{
+				printf("X");
+			}
+
+			nOCount += nOIncrementValue;
+			nXCount += nXIncrementValue;
+			printf("\n");
+		}
+	}
+
 	void fPrintStartWithDoNotModifyCodeWhenModifyShape(void)
 	{
 		// 1. 별을 출력하는 코드를 수정하지 않고, 별의 모양을 바꾸는 코드
