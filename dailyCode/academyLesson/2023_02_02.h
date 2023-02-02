@@ -35,6 +35,7 @@ namespace academyLecture_2023_02_02
 	void fPrintStartWithDoNotModifyCodeWhenModifyShape(void)
 	{
 		// 1. 별을 출력하는 코드를 수정하지 않고, 별의 모양을 바꾸는 코드
+		
 		int nNumberOfStar{};
 		int nAdd{};
 
