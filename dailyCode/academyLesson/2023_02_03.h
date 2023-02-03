@@ -25,7 +25,8 @@ namespace academyLecture_2023_02_03
 		{
 			for (int j = 0; j < 9; j++)
 			{
-				if ((i % 4 == j % 4) || ((i % 4) + (j % 4) == 4))
+				if (((i % 4) == (j % 4)) || 
+					((i % 4) + (j % 4) == 4))
 					printf("X");
 				else
 					printf("O");
