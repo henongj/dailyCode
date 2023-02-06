@@ -32,21 +32,21 @@ namespace academyLecture_2023_02_06
 		int nStartIndex{};
 		int nEndIndex{};
 		int nIncrementValue{};
-		int nInputValue{};
+		int nValueForAssignment{};
 		bool bIsSameStartAndEnd{};
 
 		scanf_s("%d", &nMultipleValue);
 		scanf_s("%d", &nStartIndex);
 		scanf_s("%d", &nEndIndex);
-		nInputValue = nMultipleValue;
+		nValueForAssignment = nMultipleValue;
 
 		nIncrementValue = 1;
 		if (nStartIndex > nEndIndex)
 			nIncrementValue = -1;
 		while (bIsSameStartAndEnd == false)
 		{
-			arData[nStartIndex] = nInputValue;
-			nInputValue += nMultipleValue;
+			arData[nStartIndex] = nValueForAssignment;
+			nValueForAssignment += nMultipleValue;
 
 			nStartIndex += nIncrementValue;
 			if (nStartIndex == nEndIndex)
