@@ -33,7 +33,7 @@ namespace academyLecture_2023_02_06
 		int nEndIndex{};
 		int nIncrementValue{};
 		int nInputValue{};
-		bool bBreaker{};
+		bool bIsSameStartAndEnd{};
 
 		scanf_s("%d", &nMultipleValue);
 		scanf_s("%d", &nStartIndex);
@@ -43,6 +43,16 @@ namespace academyLecture_2023_02_06
 		nIncrementValue = 1;
 		if (nStartIndex > nEndIndex)
 			nIncrementValue = -1;
+		while (bIsSameStartAndEnd == false)
+		{
+			arData[nStartIndex] = nInputValue;
+			nInputValue += nMultipleValue;
+
+			nStartIndex += nIncrementValue;
+			if (nStartIndex == nEndIndex)
+				bIsSameStartAndEnd = true;
+		}
+		/*		
 		for (int i = nStartIndex; bBreaker != true; i += nIncrementValue)
 		{
 			arData[i] = nInputValue;
@@ -52,6 +62,7 @@ namespace academyLecture_2023_02_06
 			if (i == nEndIndex)
 				bBreaker = true;
 		}
+		*/
 
 		/*
 		for (int i = nStartIndex; bBreaker != true ; i += nIncrementValue)
