@@ -564,6 +564,30 @@
     <ClInclude Include="academyLesson\2023_01_19.h">
       <Filter>헤더 파일\academyLesson</Filter>
     </ClInclude>
+    <ClInclude Include="academyLesson\2023_01_20.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_01_30.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_01_31.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_01.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_02.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_03.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_06.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_07.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
