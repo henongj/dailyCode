@@ -588,48 +588,6 @@
     <ClInclude Include="academyLesson\2023_02_07.h">
       <Filter>헤더 파일\academyLesson</Filter>
     </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_1406.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_1629.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_2225.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_2293.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_2480.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_2525.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_3003.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_10926.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_18108.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc\acmicpc_25083.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="academyLesson\2023_02_08.h">
-      <Filter>헤더 파일\academyLesson</Filter>
-    </ClInclude>
-    <ClInclude Include="academyLesson\2023_02_09.h">
-      <Filter>헤더 파일\academyLesson</Filter>
-    </ClInclude>
-    <ClInclude Include="academyLesson\2023_02_10.h">
-      <Filter>헤더 파일\academyLesson</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc_25304.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

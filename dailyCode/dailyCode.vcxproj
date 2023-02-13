@@ -139,24 +139,11 @@
     <ClInclude Include="academyLesson\2023_02_03.h" />
     <ClInclude Include="academyLesson\2023_02_06.h" />
     <ClInclude Include="academyLesson\2023_02_07.h" />
-    <ClInclude Include="academyLesson\2023_02_08.h" />
-    <ClInclude Include="academyLesson\2023_02_09.h" />
-    <ClInclude Include="academyLesson\2023_02_10.h" />
     <ClInclude Include="acmicpc\acmicpc_1011.h" />
     <ClInclude Include="acmicpc\acmicpc_10757.h" />
-    <ClInclude Include="acmicpc\acmicpc_10926.h" />
     <ClInclude Include="acmicpc\acmicpc_11279.h" />
     <ClInclude Include="acmicpc\acmicpc_1197.h" />
     <ClInclude Include="acmicpc\acmicpc_1309.h" />
-    <ClInclude Include="acmicpc\acmicpc_1406.h" />
-    <ClInclude Include="acmicpc\acmicpc_1629.h" />
-    <ClInclude Include="acmicpc\acmicpc_18108.h" />
-    <ClInclude Include="acmicpc\acmicpc_2225.h" />
-    <ClInclude Include="acmicpc\acmicpc_2293.h" />
-    <ClInclude Include="acmicpc\acmicpc_2480.h" />
-    <ClInclude Include="acmicpc\acmicpc_25083.h" />
-    <ClInclude Include="acmicpc\acmicpc_2525.h" />
-    <ClInclude Include="acmicpc\acmicpc_3003.h" />
     <ClInclude Include="acmicpc\problem_14890.h" />
     <ClInclude Include="acmicpc\problem_1759.h" />
     <ClInclude Include="acmicpc\problem_1916.h" />
@@ -327,7 +314,6 @@
     <ClInclude Include="programmers\sql_query.h" />
     <ClInclude Include="word_search_79.h" />
     <ClInclude Include="world_search_DFS_79.h" />
-    <ClInclude Include="acmicpc_25304.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
