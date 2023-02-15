@@ -3,8 +3,28 @@
 
 namespace academyLecture_2023_02_13
 {
+	void fArrayAndPointer2(void)
+	{
+		int arData[2][3]{ {6,5,4,},{3,2,1} };
+		int(*p)[3] {};
 
-	void fArrayAndPointer(void)
+		p = arData;
+
+		for (int i = 0; i < 3; i++)
+			printf("%d ", (*p)[i]);
+
+		p = &arData[1];
+
+		for (int i = 0; i < 3; i++)
+			printf("%d ", (*p)[i]);
+
+		p = arData;
+		printf("\n%zd", p);
+		printf("\n%zd\n", p + 1);
+		printf("\n%zd ", *(*(p + 1) + 2));
+		printf("%zd", p[1][1]);
+	}
+	void fArrayAndPointer1(void)
 	{
 		int arData[5]{ 5,4,3,2,1 };
 
