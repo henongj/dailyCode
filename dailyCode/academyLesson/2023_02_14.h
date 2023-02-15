@@ -2,6 +2,34 @@
 
 namespace academyLecture_2023_02_13
 {
+	void fGetMin(void)
+	{
+
+		int arData[5]{ 4,7,1,3,2 };
+		int* pMin{};
+
+		pMin = &arData[0];
+		for (int i = 0; i < 5; i++)
+		{
+			if (*pMin > arData[i])
+				pMin = &arData[i];
+		}
+	}
+	void fAccessMatrixByPointer(void)
+	{
+		// make matrix and print it by pointer
+		int nMatrix[3][3] = { {1,2,3},{4,5,6},{7,8,9} };
+		int* pMatrix = nMatrix[0];
+
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				printf("%d ", pMatrix[i * 3 + j]);
+			}
+			printf("\n");
+		}
+	}
 	void fGetSmallestNumber(void)
 	{
 		int nInput1{};
