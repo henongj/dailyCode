@@ -1,6 +1,7 @@
+#pragma once
 #include<iostream>
 
-namespace academyLecture_2023_02_13
+namespace academyLecture_2023_02_14
 {
 	void fGetMin(void)
 	{

@@ -1,3 +1,4 @@
+#pragma once
 #include<iostream>
 
 namespace academyLecture_2023_02_13
