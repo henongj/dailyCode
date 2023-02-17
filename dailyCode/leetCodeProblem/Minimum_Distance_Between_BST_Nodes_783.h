@@ -12,6 +12,26 @@ struct TreeNode {
 	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
+class Solution {
+public:
+	int minDiffInBST(TreeNode* root) {
+		int min = INT_MAX;
+		int prev = -1;
+		inorder(root, min, prev);
+		return min;
+	}
+	void inorder(TreeNode* root, int& min, int& prev) {
+		if (root == nullptr) return;
+		inorder(root->left, min, prev);
+		if (prev != -1) {
+			int diff = root->val - prev;
+			if (diff < min) min = diff;
+		}
+		prev = root->val;
+		inorder(root->right, min, prev);
+	}
+
+};
 
 /* 肋给等 立辟过
 class Solution {
