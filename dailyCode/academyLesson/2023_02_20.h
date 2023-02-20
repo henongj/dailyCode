@@ -5,6 +5,7 @@
 namespace academyLecture_2023_02_20
 {
 	void printData(const int* arData, int nLength);
+	
 	// 자 int** p 에서 *p가 배열일까 **p가 배열일까.
 	void exampleFunc1(int** p, int nSize);
 	// 자료형이 꼬일 것 같으면 이렇게 해준다. 그리고 이러면 번거로우니 이렇게 안 만든다
