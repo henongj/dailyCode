@@ -8,19 +8,13 @@
 #include<vector>
 #include<sstream>
 #include<stack>
-#include<cmath>	
+#include<cmath>
 #include<set>
-#include<unordered_set>
-#include<numeric>
 using namespace std;
 
 int main(void)
 {
 
-	
-	
+	return 0;
 }
-
-
-
 
