@@ -630,6 +630,84 @@
     <ClInclude Include="acmicpc_25304.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc\acmicpc_1528.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc\acmicpc_11653.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_13.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_14.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_15.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_16.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_20.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_21.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Add_Binary_67.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Add_to_Array-Form_of_Integer_989.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\As_Far_from_Land_as_Possible_1162.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Best_Team_With_No_Conflicts_1626.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Flip_String_to_Monotone_Increasing_926.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Fruit_Into_Baskets_904.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Greatest_Common_Divisor_of_Strings_1071.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Invert_Binary_Tree_226.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\LFU_Cahe_461.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Merge_Two_Sorted_Lists_21.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Minimum_Distance_Between_BST_Nodes_783.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Non-decreasing_Subsequences_491.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Number_of_Good_Paths_2421.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Restore_IP_Addresses_93.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Search_Insert_Position_35.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Shuffle_the_Array.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\Single_Element_in_a_Sorted_Array_540.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="leetCodeProblem\SubarraySumsDivisibleByK_974.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
