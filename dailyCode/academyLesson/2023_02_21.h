@@ -8,6 +8,8 @@ namespace academyLecture_2023_02_21
 	int func();
 	int add(int nData1, int nData2);
 
+	bool divide(int nDst, int nSrc, int* pQuotient);
+
 	int mainFunc(void)
 	{
 		// 리턴되는 값을 사용하지 않아도 된다
@@ -70,13 +72,22 @@ namespace academyLecture_2023_02_21
 		scanf_s("%d", &nData1);
 		scanf_s("%d", &nData2);
 
-		divide(nData1, nData2, &nResult);
+
+		bTest = divide(nData1, nData2, &nResult);
 
 		printf("%d\n", nResult);
+		printf("%d\n", bTest);
 	}
 
-	void divide(int nDst, int nSrc, int* pQuotient)
+
+	bool divide(int nDst, int nSrc, int* pQuotient)
 	{
+		if (nSrc == 0)
+			return false;
+
 		*pQuotient = nDst / nSrc;
+
+		return true;
 	}
+
 }
