@@ -5,7 +5,6 @@
 namespace academyLecture_2023_02_20
 {
 	void printData(const int* arData, int nLength);
-	
 	// 자 int** p 에서 *p가 배열일까 **p가 배열일까.
 	void exampleFunc1(int** p, int nSize);
 	// 자료형이 꼬일 것 같으면 이렇게 해준다. 그리고 이러면 번거로우니 이렇게 안 만든다
@@ -15,12 +14,13 @@ namespace academyLecture_2023_02_20
 	void getSumOfArray(const int* arrNumbers, const int nSize, int* nSum);
 	void swapTwoNumber(int* nNumber1, int* nNumber2);
 
+
 	int funcMain(void)
 	{
 		int arMain1[3]{ 3,2,1 };
 		int arMain2[5]{ 5,4,3,2,1 };
-		printData(arMain1, 3);
-		printData(arMain2, 5);
+		//printData(arMain1, 3);
+		//printData(arMain2, 5);
 
 		int nSmallest{};
 		int nN{};
@@ -35,11 +35,20 @@ namespace academyLecture_2023_02_20
 		printf("Swapped number is %d, %d\n", nSmallest, nN);
 	}
 
+
 	void printData(const int* arData, int nLength)
 	{
 		for (int i = 0; i < nLength; i++)
 			printf("%d ", arData[i]);
 		puts("");
+	}
+
+	void exampleFunc1(int** p, int nSize)
+	{
+	}
+
+	void exampleFunc2(int(*p)[], int nSize)
+	{
 	}
 
 	void getSmallestNumber(int nNumber1, int nNumber2, int nNumber3, int* nSmallest)
@@ -60,6 +69,8 @@ namespace academyLecture_2023_02_20
 
 	void swapTwoNumber(int* nNumber1, int* nNumber2)
 	{
+		//수를 담아서 내주면
+		//수를 바꿔서 돌려주는, 입출력 겸용
 		int nTemp = *nNumber1;
 		*nNumber1 = *nNumber2;
 		*nNumber2 = nTemp;
