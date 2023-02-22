@@ -13,9 +13,12 @@ namespace academyLecture_2023_02_21
 	bool getCircleRoundAndArea(float fRadius, float* pArea, float* pRound);
 
 	bool getTriangleArea(float nLength1, float nLength2, float nLength3, float* fResult);
+	float getTriangleArea(float nLength1, float nLength2, float nLength3);
 
 	void getArraySum(int nArray[], int nSize, int* pSum);
 	int getArraySum(int nArray[], int nSize);
+
+	bool sortArray(const int* arrData, int* arrResult, int nSize);
 
 	bool isPrimeNumber(int nNumber);
 
@@ -24,6 +27,7 @@ namespace academyLecture_2023_02_21
 
 
 	}
+
 
 	int add(int nData1, int nData2)
 	{
@@ -65,7 +69,7 @@ namespace academyLecture_2023_02_21
 
 	bool getTriangleArea(float fLength1, float fLength2, float fLength3, float* fResult)
 	{
-		if (fLength1 < 0 || fLength2 < 0 || fLength3 < 0)
+		if (fLength1 < (float)0 || fLength2 < (float)0 || fLength3 < (float)0)
 			return false;
 
 		float fResult{};
@@ -77,9 +81,18 @@ namespace academyLecture_2023_02_21
 		return true;
 	}
 
+	float getTriangleArea(float fLength1, float fLength2, float fLength3)
+	{
 
+		float fResult{};
+		float fHalfSum{};
+		fHalfSum = (fLength1 + fLength2 + fLength3 / (float)2);
 
+		fResult = sqrt(fHalfSum * (fHalfSum - fLength1) * (fHalfSum - fLength2) * (fHalfSum - fLength3));
 
+		return fResult;
+
+	}
 
 	void getArraySum(int nArray[], int nSize, int* pSum)
 	{
