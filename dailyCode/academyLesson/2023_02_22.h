@@ -1,7 +1,7 @@
 #pragma once
 #include<iostream>
 
-namespace academyLecture_2023_02_21
+namespace academyLecture_2023_02_22
 {
 	using namespace std;
 
