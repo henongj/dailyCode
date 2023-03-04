@@ -13,8 +13,10 @@
 #include<set>
 using namespace std;
 
-
+bool getQuotientFourSeven(int nNumber, int* pFour, int* pSeven);
+void generateQuotientPairToMakeGeumMinSu(vector<pair<int, int>>* vGeumMinSuQuotientPair, vector<int>* vGeumMinSuTable);
 bool generateGeumMinSu(vector<int>* vGeumMinSu, int nLimitValueOfGeumMinSu);
+
 void getSequenceSumOfGeumMinSu(vector<int>* vSequenceSumOfGeumMinSu, const vector<int>* vGeumMinSuTable, int nTarget);
 
 int mainSpace(void)
@@ -157,4 +159,125 @@ void getSequenceSumOfGeumMinSu(vector<int>* vSequenceSumOfGeumMinSu, const vecto
 		qGeumMinSu.pop();
 	}
 
+}
+
+bool getQuotientFourSeven(int nNumber, int* pFour, int* pSeven)
+{
+	if (nNumber < 4)
+		return true;
+
+	int nSevenQuotient{};
+	int nFourQuotient{};
+
+	int nFourRemainder{};
+	int nSevenRemainder{};
+
+	// 4로 나눈 몫, 나머지
+	nFourQuotient = nNumber / 4;
+	nFourRemainder = nNumber % 4;
+
+	// 4로 나누어 떨어지지 않는 경우, 몫을 1씩 줄이면서 나머지에 4를 더하고 7로 나누어 떨어지는지 확인
+	while (nFourQuotient >= 0)
+	{
+		nSevenQuotient = nFourRemainder / 7;
+		nSevenRemainder = nFourRemainder % 7;
+
+		if (nSevenRemainder == 0)
+			break;
+
+		nFourQuotient--;
+		nFourRemainder += 4;
+	}
+
+	// 만들 수 없는 경우
+	if (nNumber == nFourRemainder - 4)
+		return true;
+
+	*pFour = nFourQuotient;
+	*pSeven = nSevenQuotient;
+
+	return false;
+}
+
+void generateQuotientPairToMakeGeumMinSu(vector<pair<int, int>>* vGeumMinSuQuotientPair, vector<int>* vGeumMinSuTable)
+{
+	size_t szGeumMinSuTableSize{};
+	int nFour{};
+	int nSeven{};
+	bool isError{};
+	int nTargetNumber{};
+	pair<int, int> prGeumMinSuQuotient{};
+
+	szGeumMinSuTableSize = vGeumMinSuTable->size();
+	vGeumMinSuQuotientPair->reserve(szGeumMinSuTableSize);
+
+	for (size_t i = 0; i < szGeumMinSuTableSize; i++)
+	{
+		prGeumMinSuQuotient.first = 0;
+		prGeumMinSuQuotient.second = 0;
+
+		isError = getQuotientFourSeven((*vGeumMinSuTable)[i], &nFour, &nSeven);
+		if (isError)
+			vGeumMinSuQuotientPair->push_back(prGeumMinSuQuotient);
+		else
+		{
+			prGeumMinSuQuotient.first = nFour;
+			prGeumMinSuQuotient.second = nSeven;
+			vGeumMinSuQuotientPair->push_back(prGeumMinSuQuotient);
+		}
+
+		nTargetNumber++;
+	}
+
+}
+
+
+bool generateGeumMinSu(vector<int>* vGeumMinSu, int nLimitValueOfGeumMinSu)
+{
+	if (nLimitValueOfGeumMinSu < 4)
+		return false;
+
+	queue<int> qGeumMinSu{};
+	int nGeumMinSu{};
+	int nDataToInput{};
+	int nFour{};
+	int nSeven{};
+	int count{};
+	size_t nQueueSize{};
+
+	vGeumMinSu->reserve(1025);
+
+	nFour = 4;
+	nSeven = 7;
+
+	// 1. stackGMS에 strGMS 에 "4"를 붙인 것 또는 "7"을 붙인 것을 push
+	// 2. nLimitNthGMS 만큼 반복
+
+	qGeumMinSu.push(nFour);
+	vGeumMinSu->push_back(nFour);
+	qGeumMinSu.push(nSeven);
+	vGeumMinSu->push_back(nSeven);
+	count = 7;
+
+	while (count * 2 <= nLimitValueOfGeumMinSu)
+	{
+		nQueueSize = (qGeumMinSu.size());
+
+		for (int i = 0; i < nQueueSize; i++)
+		{
+			nGeumMinSu = qGeumMinSu.front();
+			qGeumMinSu.pop();
+
+			nDataToInput = (nGeumMinSu * 10) + nFour;
+			vGeumMinSu->push_back(nDataToInput);
+			qGeumMinSu.push(nDataToInput);
+
+			nDataToInput = (nGeumMinSu * 10) + nSeven;
+			vGeumMinSu->push_back(nDataToInput);
+			qGeumMinSu.push(nDataToInput);
+		}
+		count = (count * 10) + 7;
+	}
+
+	return true;
 }
