@@ -3,6 +3,15 @@
 
 namespace academyLecture_2023_03_06
 {
+
+	struct S_DATA
+	{
+		int nData1;
+		int nData2;
+		float fData1;
+		float fData2;
+	};
+	
 	void countAlphabet(void)
 	{
 		char strOfAlphabet[256] = "asdfNNfobauQWFrowetaieboyAAvhpnfoYqHErJahfEDGaDWzxcqryuiokjnm";
@@ -23,6 +32,8 @@ namespace academyLecture_2023_03_06
 	
 	void mainSpace(void)
 	{
-		
+		S_DATA sData{};
+
+		sData.nData1 = 1;
 	}
 }
