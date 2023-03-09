@@ -3,12 +3,33 @@ namespace academyLecture_2023_03_06
 {
 
 	void func();
-
+	class C_Test
+	{
+	private:
+		int m_nData1;
+		int m_nData2;
+		int m_nData3;
+		int m_nData4;
+	public:
+		void dsetData(int nData);
+		void printData(void);
+	};
 	namespace N_MATH
 	{
 		int add(int nData1, int nData2);
 		int multiple(int nData1, int nData2);
 		void func();
+	}
+	void mainSpace2(void)
+	{
+		C_Test cTest1{};
+		C_Test cTest2{};
+
+		cTest1.dsetData(10);
+		cTest2.dsetData(20);
+
+		cTest1.printData();
+		cTest2.printData();
 	}
 	void mainSpace(void)
 	{
@@ -53,6 +74,17 @@ namespace academyLecture_2023_03_06
 	{
 		//외부에서 가져왔다고 가정
 		printf("전역 함수\n");
+	}
+
+	void C_Test::dsetData(int nData1)
+	{
+		C_Test::m_nData1 = nData1;
+		printf("테스트 입니다. %d\n", nData1);
+	}
+
+	void C_Test::printData(void)
+	{
+		printf("%d %d %d %d\n", m_nData1, m_nData2, m_nData3, m_nData4);
 	}
 
 }
