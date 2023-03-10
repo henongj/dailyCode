@@ -88,4 +88,43 @@ namespace lecture_2023_03_10
 	{
 		printf("기본 생성자\n");
 	}
+
+
+
+	class C_NOW
+	{
+	private:
+		int m_nData;
+
+	public:
+		void init(int nData);
+		void printData();
+		int getData();
+	};
+
+	int mainSpace4(void)
+	{
+		C_NOW cNow{};
+
+		cNow.init(15);
+		cNow.printData();
+
+		printf("%d\n", cNow.getData());
+
+	}
+
+	void C_NOW::init(int nData) {
+		m_nData = nData;
+	}
+
+	void C_NOW::printData()
+	{
+		printf("%d\n", m_nData);
+	}
+
+	int C_NOW::getData()
+	{
+		return m_nData;
+	}
+
 }
