@@ -2,12 +2,12 @@
 namespace lecture_2023_03_10
 {
 
-	class C_DATA
+	class C_DATA_23_03_10
 	{
 	private:
 		int m_nData;
 	public:
-		C_DATA();
+		C_DATA_23_03_10();
 		void setData(int nData);
 		int getData();
 	};
@@ -18,24 +18,24 @@ namespace lecture_2023_03_10
 		int nData1{}; // 생성
 		int nData2 = 10; // 생성하면서 동시에 초기화 
 
-		C_DATA cData1{}; // 생성
+		C_DATA_23_03_10 cData1{}; // 생성
 
 		printf("get data 호출,\n m_nData : %d ", cData1.getData());
 	}
 
 	
 	// 기본으로 설정된 생성자이고, 이때 m_nData가 초기화되지 않는다
-	C_DATA::C_DATA() : m_nData{}
+	C_DATA_23_03_10::C_DATA_23_03_10() : m_nData{}
 	{
 		printf("constructor 호출\n");
 	}
 
-	void C_DATA::setData(int nData)
+	void C_DATA_23_03_10::setData(int nData)
 	{
 		m_nData = nData;
 	}
 
-	int C_DATA::getData()
+	int C_DATA_23_03_10::getData()
 	{
 		return m_nData;
 	}
