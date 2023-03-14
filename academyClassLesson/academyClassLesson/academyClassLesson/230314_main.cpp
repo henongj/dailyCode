@@ -1,5 +1,5 @@
 #include<iostream>
-
+/*
 #include"print_20230314.h"
 #include"230314_unit.h"
 #include"230314_data.h"
@@ -26,4 +26,4 @@ void main230314_2(void)
 	C_TEST cTest{ 5 };
 
 	cTest.print();
-}
+}*/
