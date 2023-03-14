@@ -9,4 +9,5 @@ private:
 public:
 	C_PRINT() = default;
 	void print(void);
+	C_DATA_230314* getData(void);
 };

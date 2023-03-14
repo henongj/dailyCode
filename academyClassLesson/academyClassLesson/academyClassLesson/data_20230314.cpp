@@ -9,3 +9,4 @@ int C_DATA_230314::getData(void)
 {
 	return m_nData;
 }
+

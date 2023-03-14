@@ -42,6 +42,15 @@
     <ClCompile Include="print_20230314.cpp">
       <Filter>강의 날짜\2023_03_14</Filter>
     </ClCompile>
+    <ClCompile Include="230314_move.cpp">
+      <Filter>강의 날짜\2023_03_14</Filter>
+    </ClCompile>
+    <ClCompile Include="230314_unit.cpp">
+      <Filter>강의 날짜\2023_03_14</Filter>
+    </ClCompile>
+    <ClCompile Include="230314_main.cpp">
+      <Filter>강의 날짜\2023_03_14</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -54,6 +63,12 @@
       <Filter>강의 날짜\2023_03_14</Filter>
     </ClInclude>
     <ClInclude Include="print_20230314.h">
+      <Filter>강의 날짜\2023_03_14</Filter>
+    </ClInclude>
+    <ClInclude Include="230314_move.h">
+      <Filter>강의 날짜\2023_03_14</Filter>
+    </ClInclude>
+    <ClInclude Include="230314_unit.h">
       <Filter>강의 날짜\2023_03_14</Filter>
     </ClInclude>
   </ItemGroup>
