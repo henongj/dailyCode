@@ -130,11 +130,15 @@
     <ClCompile Include="add_230313.cpp" />
     <ClCompile Include="Data_230313.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="print_20230314.cpp" />
     <ClCompile Include="testMain.cpp" />
+    <ClCompile Include="data_20230314.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add_230313.h" />
     <ClInclude Include="Data_230313.h" />
+    <ClInclude Include="data_20230314.h" />
+    <ClInclude Include="print_20230314.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

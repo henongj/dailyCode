@@ -1,7 +1,10 @@
 #include<iostream>
-#include"add_230313.h"
+
+#include"print_20230314.h"
 
 int main(void)
 {
-
+	C_PRINT cPrint{};
+	
+	cPrint.print();
 }

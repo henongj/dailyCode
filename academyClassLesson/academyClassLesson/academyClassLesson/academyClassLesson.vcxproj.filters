@@ -13,30 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\2023_03_13">
+    <Filter Include="강의 날짜">
+      <UniqueIdentifier>{a7fec309-4066-41f2-b570-eb5536b15ab2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023_03_13">
       <UniqueIdentifier>{b72e3cb3-bf64-47f7-8a21-fce6943259e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023_03_14">
+      <UniqueIdentifier>{88a4af03-df37-4404-9b67-44e225eea9af}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
-      <Filter>소스 파일\2023_03_13</Filter>
+      <Filter>강의 날짜\2023_03_13</Filter>
     </ClCompile>
     <ClCompile Include="testMain.cpp">
-      <Filter>소스 파일\2023_03_13</Filter>
+      <Filter>강의 날짜\2023_03_13</Filter>
     </ClCompile>
     <ClCompile Include="add_230313.cpp">
-      <Filter>소스 파일\2023_03_13</Filter>
+      <Filter>강의 날짜\2023_03_13</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="data_20230314.cpp">
+      <Filter>강의 날짜\2023_03_14</Filter>
+    </ClCompile>
+    <ClCompile Include="print_20230314.cpp">
+      <Filter>강의 날짜\2023_03_14</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>강의 날짜\2023_03_13</Filter>
     </ClInclude>
     <ClInclude Include="add_230313.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>강의 날짜\2023_03_13</Filter>
+    </ClInclude>
+    <ClInclude Include="data_20230314.h">
+      <Filter>강의 날짜\2023_03_14</Filter>
+    </ClInclude>
+    <ClInclude Include="print_20230314.h">
+      <Filter>강의 날짜\2023_03_14</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
