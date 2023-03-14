@@ -127,8 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
     <ClCompile Include="230314_move.cpp" />
+    <ClCompile Include="230314_test.cpp" />
+    <ClCompile Include="230314_testPrint.cpp" />
     <ClCompile Include="230314_unit.cpp" />
     <ClCompile Include="add_230313.cpp" />
     <ClCompile Include="Data_230313.cpp" />
@@ -138,7 +141,10 @@
     <ClCompile Include="data_20230314.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="230314_data.h" />
     <ClInclude Include="230314_move.h" />
+    <ClInclude Include="230314_test.h" />
+    <ClInclude Include="230314_testPrint.h" />
     <ClInclude Include="230314_unit.h" />
     <ClInclude Include="add_230313.h" />
     <ClInclude Include="Data_230313.h" />
