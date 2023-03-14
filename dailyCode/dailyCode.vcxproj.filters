@@ -19,14 +19,14 @@
     <Filter Include="헤더 파일\programmers">
       <UniqueIdentifier>{3d753642-c774-4e75-b711-4a6919f9a813}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\dataStruct">
-      <UniqueIdentifier>{e367fc8f-1199-4091-8c3a-181f29943ef8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="헤더 파일\acmicpc">
       <UniqueIdentifier>{0743441c-372d-4663-a699-9548c243ccd0}</UniqueIdentifier>
     </Filter>
     <Filter Include="헤더 파일\academyLesson">
       <UniqueIdentifier>{a0fbdb63-6cd3-4109-9fbe-71fedc4b5b6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\codePractice">
+      <UniqueIdentifier>{e367fc8f-1199-4091-8c3a-181f29943ef8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -472,16 +472,16 @@
       <Filter>헤더 파일\programmers</Filter>
     </ClInclude>
     <ClInclude Include="dataStruct\graph_implement_adjacency.h">
-      <Filter>헤더 파일\dataStruct</Filter>
+      <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
     <ClInclude Include="dataStruct\graph_traversal.h">
-      <Filter>헤더 파일\dataStruct</Filter>
+      <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
     <ClInclude Include="dataStruct\implement_binary_tree.h">
-      <Filter>헤더 파일\dataStruct</Filter>
+      <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
     <ClInclude Include="dataStruct\max_heap.h">
-      <Filter>헤더 파일\dataStruct</Filter>
+      <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
     <ClInclude Include="acmicpc\problem_1759.h">
       <Filter>헤더 파일\acmicpc</Filter>
@@ -708,9 +708,57 @@
     <ClInclude Include="leetCodeProblem\SubarraySumsDivisibleByK_974.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
+    <ClInclude Include="academyLesson\2023_03_13.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_22.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_23.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_24.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_27.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_02_28.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_03_06.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_03_07.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_03_08.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_03_09.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="academyLesson\2023_03_10.h">
+      <Filter>헤더 파일\academyLesson</Filter>
+    </ClInclude>
+    <ClInclude Include="classTest230314_0.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="classTest230314_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="classTest230314_0.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="classTest230314_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="classTest230314_main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
