@@ -1,5 +1,6 @@
 #pragma once
-
+#include<vector>
+#include<queue>
 //https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
 struct TreeNode {
 	int val;
@@ -15,29 +16,28 @@ public:
 	bool isCompleteTree(TreeNode* root) {
 		if (root == nullptr)
 			return true;
-		
-		bool isRight = true;
+		std::queue<TreeNode*> que;
+		que.push(root);
+		bool flag = false;
+			
+		while (!que.empty())
+		{
+			TreeNode* cur = que.front();
+			que.pop();
+			if (cur == nullptr)
+			{
+				flag = true;
+				continue;
+			}
+			if (flag)
+				return false;
+			que.push(cur->left);
+			que.push(cur->right);
+		}
 
-		isRightBinaryTree(root, &isRight);
-
-		return isRight;
+		return true;
 	}
-	
-	void isRightBinaryTree(TreeNode* node, bool* bResult)
-	{
-		TreeNode* tLeft = node->left;
-		TreeNode* tRight = node->right;
 
-		if (tLeft == nullptr && tRight != nullptr)
-			*bResult = false;
-
-		if(tLeft != nullptr)
-			isRightBinaryTree(tLeft, bResult);
-		
-		if (tRight != nullptr)
-			isRightBinaryTree(tRight, bResult);
-		
-	}
 };
 
 /*
