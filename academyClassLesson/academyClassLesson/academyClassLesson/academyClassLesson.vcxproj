@@ -146,6 +146,7 @@
     <ClInclude Include="230314_test.h" />
     <ClInclude Include="230314_testPrint.h" />
     <ClInclude Include="230314_unit.h" />
+    <ClInclude Include="230316_reference.h" />
     <ClInclude Include="add_230313.h" />
     <ClInclude Include="Data_230313.h" />
     <ClInclude Include="data_20230314.h" />

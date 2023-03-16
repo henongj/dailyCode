@@ -25,6 +25,9 @@
     <Filter Include="강의 날짜\2023_03_15">
       <UniqueIdentifier>{9258f0dd-aca0-495f-aa16-27122b034920}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023_03_16">
+      <UniqueIdentifier>{72e45fcd-fa38-4cd1-a7ff-98a341271d95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -94,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="data_2303150.h">
       <Filter>강의 날짜\2023_03_15</Filter>
+    </ClInclude>
+    <ClInclude Include="230316_reference.h">
+      <Filter>강의 날짜\2023_03_16</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
