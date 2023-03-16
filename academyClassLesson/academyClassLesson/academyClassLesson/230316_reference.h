@@ -51,3 +51,17 @@ void usePrintDataTemplate(void)
 	printData(arr3);
 
 }
+
+void add(const int& n1, const int& n2, int& nResult);
+void add(const int& n1, const int& n2, int* nResult);
+
+
+void add(const int& n1, const int& n2, int& nResult)
+{
+	nResult = n1 + n2;
+}
+
+void add(const int& n1, const int& n2, int* nResult)
+{
+	*nResult = n1 + n2;
+}
