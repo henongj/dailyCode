@@ -187,6 +187,7 @@
     <ClInclude Include="dataStruct\implement_binary_tree.h" />
     <ClInclude Include="dataStruct\max_heap.h" />
     <ClInclude Include="Delete_Columns_to_Make_Sorted_944.h" />
+    <ClInclude Include="Design_Browser_History_1472.h" />
     <ClInclude Include="Find_Peak_Element_162.h" />
     <ClInclude Include="koko_eating_bananas_875.h" />
     <ClInclude Include="leetCodeProblem\Add_Binary_67.h" />
