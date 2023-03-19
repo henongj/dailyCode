@@ -753,6 +753,9 @@
     <ClInclude Include="Design_Browser_History_1472.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc10811.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
