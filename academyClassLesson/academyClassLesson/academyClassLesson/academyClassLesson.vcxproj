@@ -141,6 +141,8 @@
     <ClCompile Include="data_20230314.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="20230320_class01.h" />
+    <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="230314_data.h" />
     <ClInclude Include="230314_move.h" />
     <ClInclude Include="230314_test.h" />
@@ -148,6 +150,7 @@
     <ClInclude Include="230314_unit.h" />
     <ClInclude Include="230316_reference.h" />
     <ClInclude Include="add_230313.h" />
+    <ClInclude Include="C_TEST_MALLOC.h" />
     <ClInclude Include="Data_230313.h" />
     <ClInclude Include="data_20230314.h" />
     <ClInclude Include="data_2303150.h" />

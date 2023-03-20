@@ -28,6 +28,9 @@
     <Filter Include="강의 날짜\2023_03_16">
       <UniqueIdentifier>{72e45fcd-fa38-4cd1-a7ff-98a341271d95}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023_03_20">
+      <UniqueIdentifier>{d03d7173-b226-478e-af6d-b09d1e96fae4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -100,6 +103,15 @@
     </ClInclude>
     <ClInclude Include="230316_reference.h">
       <Filter>강의 날짜\2023_03_16</Filter>
+    </ClInclude>
+    <ClInclude Include="20230320_class01.h">
+      <Filter>강의 날짜\2023_03_20</Filter>
+    </ClInclude>
+    <ClInclude Include="2023_03_20_lectureMain.h">
+      <Filter>강의 날짜\2023_03_20</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TEST_MALLOC.h">
+      <Filter>강의 날짜\2023_03_20</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
