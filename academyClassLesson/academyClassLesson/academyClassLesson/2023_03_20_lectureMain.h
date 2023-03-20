@@ -5,19 +5,17 @@
 #include <crtdbg.h>
 //
 #include<iostream>
+#include"C_TEST_MALLOC.h"
 
-int mainSpace01(void)
+int mainSpace03(void)
 {
-	int* p{};
+	C_TEST_MALLOC* p{};
 
-	p = new int[5] {};
+	p = (C_TEST_MALLOC*)malloc(sizeof(C_TEST_MALLOC));
 
-	p[3] = 123;
-	for (int i = 0; i < 5; i++)
-		printf("%d ", p[i]);
-
-	delete[] p;
+	free(p);
 }
+
 
 int mainSpace02(void)
 {
@@ -40,4 +38,18 @@ int mainSpace02(void)
 
 	delete p1;
 	delete[] p3;
+}
+
+
+int mainSpace01(void)
+{
+	int* p{};
+
+	p = new int[5] {};
+
+	p[3] = 123;
+	for (int i = 0; i < 5; i++)
+		printf("%d ", p[i]);
+
+	delete[] p;
 }

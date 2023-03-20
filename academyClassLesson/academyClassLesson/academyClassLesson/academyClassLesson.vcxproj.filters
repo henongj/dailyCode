@@ -110,5 +110,8 @@
     <ClInclude Include="2023_03_20_lectureMain.h">
       <Filter>강의 날짜\2023_03_20</Filter>
     </ClInclude>
+    <ClInclude Include="C_TEST_MALLOC.h">
+      <Filter>강의 날짜\2023_03_20</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

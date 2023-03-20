@@ -17,3 +17,4 @@ private:
 public:
 	void init();
 };
+
