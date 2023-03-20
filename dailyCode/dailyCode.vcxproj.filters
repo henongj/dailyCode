@@ -756,6 +756,12 @@
     <ClInclude Include="acmicpc10811.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="classTest230320.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="classTest230320_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -768,6 +774,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="classTest230314_main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="classTest230320.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="classTest230320_2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

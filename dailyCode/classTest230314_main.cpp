@@ -13,10 +13,8 @@ void mainSpace1(void)
 
 void mainSpace2(void)
 {
-
 	classTest230314_1 cClassTest230314_1{};
-
-
+	
 	cClassTest230314_1.setTestData(25);
 
 	printf("setTestData : %d\n", cClassTest230314_1.getTestData()->getTestData());
