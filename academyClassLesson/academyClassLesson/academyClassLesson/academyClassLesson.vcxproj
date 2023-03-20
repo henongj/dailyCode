@@ -141,6 +141,8 @@
     <ClCompile Include="data_20230314.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="20230320_class01.h" />
+    <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="230314_data.h" />
     <ClInclude Include="230314_move.h" />
     <ClInclude Include="230314_test.h" />
