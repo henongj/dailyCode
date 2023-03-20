@@ -762,6 +762,9 @@
     <ClInclude Include="classTest230320_2.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc_1920.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

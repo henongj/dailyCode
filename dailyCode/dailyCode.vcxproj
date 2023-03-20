@@ -180,6 +180,7 @@
     <ClInclude Include="acmicpc\problem_14890.h" />
     <ClInclude Include="acmicpc\problem_1759.h" />
     <ClInclude Include="acmicpc\problem_1916.h" />
+    <ClInclude Include="acmicpc_1920.h" />
     <ClInclude Include="Check_Completeness_of_a_Binary_Tree_958.h" />
     <ClInclude Include="classTest230314_0.h" />
     <ClInclude Include="classTest230314_1.h" />
