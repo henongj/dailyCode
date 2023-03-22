@@ -6,6 +6,13 @@ C_20230322_class01::C_20230322_class01() :
 	m_pData = new int{};
 }
 
+C_20230322_class01::C_20230322_class01(const C_20230322_class01& cInput) :
+	m_pData{}
+{
+	m_pData = new int{};
+	*m_pData = *cInput.m_pData;
+}
+
 C_20230322_class01::~C_20230322_class01()
 {
 	delete m_pData;
