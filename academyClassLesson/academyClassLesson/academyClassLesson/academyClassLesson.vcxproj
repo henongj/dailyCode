@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="20230321_class01.cpp" />
     <ClCompile Include="20230321_code.cpp" />
+    <ClCompile Include="20230322_class01.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
     <ClCompile Include="230314_move.cpp" />
@@ -145,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="20230320_class01.h" />
     <ClInclude Include="20230321_class01.h" />
+    <ClInclude Include="20230322_class01.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="230314_data.h" />
     <ClInclude Include="230314_move.h" />
