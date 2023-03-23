@@ -20,7 +20,7 @@ int _20230322mainSpace_01(void)
 	return 0;
 }
 
-int _20230322mainSpace_02(void)
+void _20230322mainSpace_02(void)
 {
 	int* pMain{};
 	pMain = new int{};

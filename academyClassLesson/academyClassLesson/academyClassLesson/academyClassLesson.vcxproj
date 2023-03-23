@@ -132,6 +132,8 @@
     <ClCompile Include="20230322_class01.cpp" />
     <ClCompile Include="20230322_class02.cpp" />
     <ClCompile Include="20230322_code.cpp" />
+    <ClCompile Include="20230323_mainSpace.cpp" />
+    <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
     <ClCompile Include="230314_move.cpp" />
@@ -151,6 +153,7 @@
     <ClInclude Include="20230322_class01.h" />
     <ClInclude Include="20230322_class02.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
+    <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
     <ClInclude Include="230314_move.h" />
     <ClInclude Include="230314_test.h" />
