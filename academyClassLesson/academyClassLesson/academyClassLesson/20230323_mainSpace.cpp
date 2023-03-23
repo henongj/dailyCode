@@ -20,3 +20,14 @@ void mainSpace_20230323_01(void)
 
 
 }
+void mainSpace_20230323_02(void)
+{
+	C20230323ClassOperator cData1{};
+	C20230323ClassOperator cData2{};
+
+	cData1 = 100;
+	cData2 = cData1 + 22;
+
+	cData2.printData();
+
+}
