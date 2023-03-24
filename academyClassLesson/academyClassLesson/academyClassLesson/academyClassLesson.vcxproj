@@ -133,6 +133,8 @@
     <ClCompile Include="20230322_class02.cpp" />
     <ClCompile Include="20230322_code.cpp" />
     <ClCompile Include="20230323_mainSpace.cpp" />
+    <ClCompile Include="20230324_mainSpace.cpp" />
+    <ClCompile Include="20230324_operator.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -152,6 +154,8 @@
     <ClInclude Include="20230321_class01.h" />
     <ClInclude Include="20230322_class01.h" />
     <ClInclude Include="20230322_class02.h" />
+    <ClInclude Include="20230324_class.h" />
+    <ClInclude Include="20230324_operator.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
