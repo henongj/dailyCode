@@ -774,6 +774,9 @@
     <ClInclude Include="acmicpc_10816.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc_10866.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
