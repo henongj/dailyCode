@@ -2,6 +2,8 @@
 
 #include"20230324_operator.h"
 #include"20230324_class.h"
+//https://learn.microsoft.com/ko-kr/cpp/cpp/increment-and-decrement-operator-overloading-cpp?view=msvc-170
+// 기억 안 나면 다시 보고
 
 void func_C20230324_DATA_01(C20230324_DATA_01 c);
 void func_C20230324_C_DATA_02(C20230324_C_DATA_02 c);
