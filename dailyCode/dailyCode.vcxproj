@@ -180,6 +180,7 @@
     <ClInclude Include="acmicpc\problem_14890.h" />
     <ClInclude Include="acmicpc\problem_1759.h" />
     <ClInclude Include="acmicpc\problem_1916.h" />
+    <ClInclude Include="acmicpc_1654.h" />
     <ClInclude Include="acmicpc_10816.h" />
     <ClInclude Include="acmicpc_10866.h" />
     <ClInclude Include="acmicpc_11866.h" />
