@@ -5,6 +5,6 @@
 class C20230328_SUBCLASS_CAT : public C20230328_SUPERCLASS_ANIMAL
 {
 public:
-	~C20230328_SUBCLASS_CAT();
-	virtual void move(void);
+	virtual ~C20230328_SUBCLASS_CAT();
+	virtual void move(void) override;
 };
