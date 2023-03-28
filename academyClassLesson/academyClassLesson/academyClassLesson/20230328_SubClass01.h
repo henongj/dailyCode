@@ -1,0 +1,9 @@
+#pragma once
+#include"20230328_SuperClass01.h"
+
+class C20230328_SUBCLASS : public C20230328_SUPERCLASS
+{
+public:
+	C20230328_SUBCLASS();
+	~C20230328_SUBCLASS();
+};
