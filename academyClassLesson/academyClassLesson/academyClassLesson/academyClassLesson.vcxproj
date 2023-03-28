@@ -138,6 +138,13 @@
     <ClCompile Include="20230327_class.cpp" />
     <ClCompile Include="20230327_mainSpace.cpp" />
     <ClCompile Include="20230327_parent02.cpp" />
+    <ClCompile Include="20230328_mainSpace.cpp" />
+    <ClCompile Include="20230328_SubClass01.cpp" />
+    <ClCompile Include="20230328_SubClass02.cpp" />
+    <ClCompile Include="20230328_SubClass03.cpp" />
+    <ClCompile Include="20230328_SubClass04.cpp" />
+    <ClCompile Include="20230328_SuperClass01.cpp" />
+    <ClCompile Include="20230328_SuperClass02.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -162,6 +169,11 @@
     <ClInclude Include="20230327_child.h" />
     <ClInclude Include="20230327_parent01.h" />
     <ClInclude Include="20230327_parent02.h" />
+    <ClInclude Include="20230328_SubClass01.h" />
+    <ClInclude Include="20230328_SubClass02.h" />
+    <ClInclude Include="20230328_SubClass03.h" />
+    <ClInclude Include="20230328_SubClass04.h" />
+    <ClInclude Include="20230328_SuperClass02.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
@@ -176,6 +188,7 @@
     <ClInclude Include="data_20230314.h" />
     <ClInclude Include="data_2303150.h" />
     <ClInclude Include="print_20230314.h" />
+    <ClInclude Include="20230328_SuperClass01.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -46,6 +46,12 @@
     <Filter Include="강의 날짜\2023_03_27">
       <UniqueIdentifier>{371d7f49-30ad-44b8-bc38-c71db80427ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023_03_28">
+      <UniqueIdentifier>{abf57b83-f387-473f-8303-948617feb5c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{217738a8-feef-4bdf-9206-f6260c79c915}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -56,9 +62,6 @@
     </ClCompile>
     <ClCompile Include="add_230313.cpp">
       <Filter>강의 날짜\2023_03_13</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="data_20230314.cpp">
       <Filter>강의 날짜\2023_03_14</Filter>
@@ -119,6 +122,30 @@
     </ClCompile>
     <ClCompile Include="20230327_mainSpace.cpp">
       <Filter>강의 날짜\2023_03_27</Filter>
+    </ClCompile>
+    <ClCompile Include="20230328_SuperClass01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230328_SubClass01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230328_mainSpace.cpp">
+      <Filter>강의 날짜\2023_03_28</Filter>
+    </ClCompile>
+    <ClCompile Include="20230328_SuperClass02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230328_SubClass02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230328_SubClass03.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230328_SubClass04.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +217,24 @@
     </ClInclude>
     <ClInclude Include="20230327_parent02.h">
       <Filter>강의 날짜\2023_03_27</Filter>
+    </ClInclude>
+    <ClInclude Include="20230328_SuperClass01.h">
+      <Filter>강의 날짜\2023_03_28</Filter>
+    </ClInclude>
+    <ClInclude Include="20230328_SubClass01.h">
+      <Filter>강의 날짜\2023_03_28</Filter>
+    </ClInclude>
+    <ClInclude Include="20230328_SuperClass02.h">
+      <Filter>강의 날짜\2023_03_28</Filter>
+    </ClInclude>
+    <ClInclude Include="20230328_SubClass02.h">
+      <Filter>강의 날짜\2023_03_28</Filter>
+    </ClInclude>
+    <ClInclude Include="20230328_SubClass03.h">
+      <Filter>강의 날짜\2023_03_28</Filter>
+    </ClInclude>
+    <ClInclude Include="20230328_SubClass04.h">
+      <Filter>강의 날짜\2023_03_28</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
