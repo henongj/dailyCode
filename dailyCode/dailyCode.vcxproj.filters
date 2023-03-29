@@ -28,6 +28,9 @@
     <Filter Include="헤더 파일\codePractice">
       <UniqueIdentifier>{e367fc8f-1199-4091-8c3a-181f29943ef8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="메인">
+      <UniqueIdentifier>{83a293f3-540b-47f9-b9ac-a6c59f04bfd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Find_Peak_Element_162.h">
@@ -741,12 +744,6 @@
     <ClInclude Include="academyLesson\2023_03_10.h">
       <Filter>헤더 파일\academyLesson</Filter>
     </ClInclude>
-    <ClInclude Include="classTest230314_0.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="classTest230314_1.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Check_Completeness_of_a_Binary_Tree_958.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
@@ -755,12 +752,6 @@
     </ClInclude>
     <ClInclude Include="acmicpc10811.h">
       <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="classTest230320.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="classTest230320_2.h">
-      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="acmicpc_1920.h">
       <Filter>헤더 파일\acmicpc</Filter>
@@ -783,11 +774,26 @@
     <ClInclude Include="acmicpc_1654.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="classTest230320_2.h">
+      <Filter>헤더 파일\codePractice</Filter>
+    </ClInclude>
+    <ClInclude Include="classTest230314_0.h">
+      <Filter>헤더 파일\codePractice</Filter>
+    </ClInclude>
+    <ClInclude Include="classTest230314_1.h">
+      <Filter>헤더 파일\codePractice</Filter>
+    </ClInclude>
+    <ClInclude Include="classTest230320.h">
+      <Filter>헤더 파일\codePractice</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc_2164.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="classCopyConstructor.h">
+      <Filter>헤더 파일\codePractice</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="classTest230314_0.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -801,6 +807,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="classTest230320_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>메인</Filter>
+    </ClCompile>
+    <ClCompile Include="classCopyConstructor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
