@@ -200,6 +200,7 @@
     <ClInclude Include="Delete_Columns_to_Make_Sorted_944.h" />
     <ClInclude Include="Design_Browser_History_1472.h" />
     <ClInclude Include="Find_Peak_Element_162.h" />
+    <ClInclude Include="inheritanceConstructorCall.h" />
     <ClInclude Include="koko_eating_bananas_875.h" />
     <ClInclude Include="leetCodeProblem\Add_Binary_67.h" />
     <ClInclude Include="leetCodeProblem\Add_to_Array-Form_of_Integer_989.h" />
@@ -389,6 +390,7 @@
     <ClCompile Include="classTest230314_main.cpp" />
     <ClCompile Include="classTest230320.cpp" />
     <ClCompile Include="classTest230320_2.cpp" />
+    <ClCompile Include="inheritanceConstructorCall.cpp" />
     <ClCompile Include="main.cpp">
       <LanguageStandard_C Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdc17</LanguageStandard_C>
     </ClCompile>
