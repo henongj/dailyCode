@@ -153,6 +153,9 @@
     <ClCompile Include="20230329_mainSpace.cpp">
       <Filter>강의 날짜\2023_03_29</Filter>
     </ClCompile>
+    <ClCompile Include="20230329_Child_Dog.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -245,7 +248,7 @@
     <ClInclude Include="20230329_OldStyle_Parent.h">
       <Filter>강의 날짜\2023_03_29</Filter>
     </ClInclude>
-    <ClInclude Include="20230329_OldStyle_Child.h">
+    <ClInclude Include="20230329_Child_Dog.h">
       <Filter>강의 날짜\2023_03_29</Filter>
     </ClInclude>
   </ItemGroup>
