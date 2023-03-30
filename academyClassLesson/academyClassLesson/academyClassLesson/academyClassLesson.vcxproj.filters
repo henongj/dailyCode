@@ -55,6 +55,9 @@
     <Filter Include="강의 날짜\2023_03_29">
       <UniqueIdentifier>{a8b83772-6f54-4b41-a27d-ecb4b590efc9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023_03_30">
+      <UniqueIdentifier>{089288ba-a591-4608-a666-c3377512b34b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -156,6 +159,24 @@
     <ClCompile Include="20230329_Child_Dog.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230330_duck.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230330_walk.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230330_move.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230330_swim.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230330_run.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230330_mainSpace.cpp">
+      <Filter>강의 날짜\2023_03_30</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -250,6 +271,21 @@
     </ClInclude>
     <ClInclude Include="20230329_Child_Dog.h">
       <Filter>강의 날짜\2023_03_29</Filter>
+    </ClInclude>
+    <ClInclude Include="20230330_duck.h">
+      <Filter>강의 날짜\2023_03_30</Filter>
+    </ClInclude>
+    <ClInclude Include="20230330_move.h">
+      <Filter>강의 날짜\2023_03_30</Filter>
+    </ClInclude>
+    <ClInclude Include="20230330_walk.h">
+      <Filter>강의 날짜\2023_03_30</Filter>
+    </ClInclude>
+    <ClInclude Include="20230330_swim.h">
+      <Filter>강의 날짜\2023_03_30</Filter>
+    </ClInclude>
+    <ClInclude Include="20230330_run.h">
+      <Filter>강의 날짜\2023_03_30</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
