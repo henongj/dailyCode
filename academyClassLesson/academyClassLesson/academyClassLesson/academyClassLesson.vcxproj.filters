@@ -58,6 +58,9 @@
     <Filter Include="강의 날짜\2023_03_30">
       <UniqueIdentifier>{089288ba-a591-4608-a666-c3377512b34b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023_03_31">
+      <UniqueIdentifier>{0a133a0e-ff04-4d28-aae7-ccea560f43e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -177,6 +180,15 @@
     <ClCompile Include="20230330_mainSpace.cpp">
       <Filter>강의 날짜\2023_03_30</Filter>
     </ClCompile>
+    <ClCompile Include="20230331_mainSpace.cpp">
+      <Filter>강의 날짜\2023_03_31</Filter>
+    </ClCompile>
+    <ClCompile Include="20230331_move.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230331_move_manager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -286,6 +298,12 @@
     </ClInclude>
     <ClInclude Include="20230330_run.h">
       <Filter>강의 날짜\2023_03_30</Filter>
+    </ClInclude>
+    <ClInclude Include="20230331_move.h">
+      <Filter>강의 날짜\2023_03_31</Filter>
+    </ClInclude>
+    <ClInclude Include="20230331_move_manager.h">
+      <Filter>강의 날짜\2023_03_31</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

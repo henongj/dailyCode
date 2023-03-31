@@ -153,6 +153,9 @@
     <ClCompile Include="20230330_run.cpp" />
     <ClCompile Include="20230330_swim.cpp" />
     <ClCompile Include="20230330_walk.cpp" />
+    <ClCompile Include="20230331_mainSpace.cpp" />
+    <ClCompile Include="20230331_move.cpp" />
+    <ClCompile Include="20230331_move_manager.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -189,6 +192,8 @@
     <ClInclude Include="20230330_run.h" />
     <ClInclude Include="20230330_swim.h" />
     <ClInclude Include="20230330_walk.h" />
+    <ClInclude Include="20230331_move.h" />
+    <ClInclude Include="20230331_move_manager.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
