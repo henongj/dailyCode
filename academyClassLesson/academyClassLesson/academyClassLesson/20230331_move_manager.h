@@ -10,9 +10,10 @@ private:
 
 public:
 	C20230331_MOVE_MANAGER() = default;
-	~C20230331_MOVE_MANAGER();
+	~C20230331_MOVE_MANAGER() = default;
 	
 	void init();
+	void release();
 	C20230331_MOVE* getMove(int nIndex);
 	
 };

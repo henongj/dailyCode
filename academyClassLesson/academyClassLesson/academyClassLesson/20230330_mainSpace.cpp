@@ -26,6 +26,7 @@ int mainSpace03_20230330(void)
 	for (int i = 0; i < 3; i++)
 		cDuck[i].getMove()->move();
 
+	return 0;
 }
 int mainSpace02_20230330(void)
 {

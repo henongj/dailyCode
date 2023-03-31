@@ -3,7 +3,7 @@
 
 __interface C20230331_MOVE_INTERFACE
 {
-	void Move();
+	void Move() const;
 	void upgrade();
 };
 
@@ -18,6 +18,8 @@ public:
 	
 	C20230331_MOVE(const C20230331_MOVE&) = delete;
 	C20230331_MOVE& operator=(const C20230331_MOVE&) = delete;
+
+	virtual void Move() const override;
 };
 
 
@@ -30,7 +32,7 @@ public:
 	C20230331_WALK(const C20230331_WALK&) = delete;
 	C20230331_WALK& operator=(const C20230331_WALK&) = delete;
 
-	virtual void Move() override;
+	virtual void Move() const override;
 	virtual void upgrade() override;
 	
 };
@@ -45,7 +47,7 @@ public:
 	C20230331_SWIM(const C20230331_SWIM&) = delete;
 	C20230331_SWIM& operator=(const C20230331_SWIM&) = delete;
 
-	virtual void Move() override;
+	virtual void Move() const override;
 	virtual void upgrade() override;
 
 };
@@ -59,7 +61,7 @@ public:
 	C20230331_FLY(const C20230331_FLY&) = delete;
 	C20230331_FLY& operator=(const C20230331_FLY&) = delete;
 
-	virtual void Move() override;
+	virtual void Move() const override;
 	virtual void upgrade() override;
 
 };
