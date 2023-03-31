@@ -798,6 +798,9 @@
     <ClInclude Include="C20230330_machine.h">
       <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
+    <ClInclude Include="C20230331_PureVirtualFunctionTest.h">
+      <Filter>헤더 파일\codePractice</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
@@ -825,6 +828,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="C20230330_machine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C20230331_PureVirtualFunctionTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C20230331_MainSpace.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

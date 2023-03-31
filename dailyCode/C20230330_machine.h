@@ -14,10 +14,8 @@ class C20230330_machine_interface abstract
 __interface C20230330_machine_interface2
 {
 	void start();
-	void start();
 
 	int* getFuel(int nFuel);
-	void setFuel(int nFuel);
 };
 
 // 인터페이스를 상속받아서 추상 클래스 만들기
