@@ -128,6 +128,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="C20230404_Fly.h" />
+    <ClInclude Include="C20230404_strategyClass.h" />
     <ClInclude Include="academyLesson\2023_01_17.h" />
     <ClInclude Include="academyLesson\2023_01_18.h" />
     <ClInclude Include="academyLesson\2023_01_19.h" />
@@ -192,6 +194,7 @@
     <ClInclude Include="Binary_Search_704.h" />
     <ClInclude Include="C20230330_machine.h" />
     <ClInclude Include="C20230331_PureVirtualFunctionTest.h" />
+    <ClInclude Include="C20230404_move.h" />
     <ClInclude Include="Check_Completeness_of_a_Binary_Tree_958.h" />
     <ClInclude Include="classCopyConstructor.h" />
     <ClInclude Include="classTest230314_0.h" />
@@ -392,6 +395,8 @@
     <ClCompile Include="C20230330_machine.cpp" />
     <ClCompile Include="C20230331_MainSpace.cpp" />
     <ClCompile Include="C20230331_PureVirtualFunctionTest.cpp" />
+    <ClCompile Include="C20230404_Fly.cpp" />
+    <ClCompile Include="C20230404_strategyClass.cpp" />
     <ClCompile Include="classCopyConstructor.cpp" />
     <ClCompile Include="classTest230314_0.cpp" />
     <ClCompile Include="classTest230314_1.cpp" />
