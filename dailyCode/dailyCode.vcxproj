@@ -187,6 +187,7 @@
     <ClInclude Include="acmicpc_1920.h" />
     <ClInclude Include="acmicpc_2609.h" />
     <ClInclude Include="acmicpc_2805.h" />
+    <ClInclude Include="acmicpc_4949.h" />
     <ClInclude Include="Binary_Search_704.h" />
     <ClInclude Include="C20230330_machine.h" />
     <ClInclude Include="C20230331_PureVirtualFunctionTest.h" />

@@ -801,6 +801,12 @@
     <ClInclude Include="C20230331_PureVirtualFunctionTest.h">
       <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
+    <ClInclude Include="Binary_Search_704.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc_4949.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
