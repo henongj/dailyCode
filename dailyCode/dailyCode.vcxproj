@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="20230405_BubbleSort.h" />
     <ClInclude Include="C20230404_Fly.h" />
     <ClInclude Include="C20230404_strategyClass.h" />
     <ClInclude Include="academyLesson\2023_01_17.h" />
@@ -392,11 +393,10 @@
     <ClInclude Include="acmicpc_2164.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="20230405_BubbleSort.cpp" />
     <ClCompile Include="C20230330_machine.cpp" />
     <ClCompile Include="C20230331_MainSpace.cpp" />
     <ClCompile Include="C20230331_PureVirtualFunctionTest.cpp" />
-    <ClCompile Include="C20230404_Fly.cpp" />
-    <ClCompile Include="C20230404_strategyClass.cpp" />
     <ClCompile Include="classCopyConstructor.cpp" />
     <ClCompile Include="classTest230314_0.cpp" />
     <ClCompile Include="classTest230314_1.cpp" />
