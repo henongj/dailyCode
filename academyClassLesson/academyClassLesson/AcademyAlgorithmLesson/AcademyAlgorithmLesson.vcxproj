@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{cf1920e7-0190-4f37-ba35-3123974a442c}</ProjectGuid>
-    <RootNamespace>academyClassLesson</RootNamespace>
+    <ProjectGuid>{01e5ccd4-a3fa-4786-a67d-db227695dab0}</ProjectGuid>
+    <RootNamespace>AcademyAlgorithmLesson</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>academyClassLesson</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,97 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="20230321_class01.cpp" />
-    <ClCompile Include="20230321_code.cpp" />
-    <ClCompile Include="20230322_class01.cpp" />
-    <ClCompile Include="20230322_class02.cpp" />
-    <ClCompile Include="20230322_code.cpp" />
-    <ClCompile Include="20230323_mainSpace.cpp" />
-    <ClCompile Include="20230324_mainSpace.cpp" />
-    <ClCompile Include="20230324_operator.cpp" />
-    <ClCompile Include="20230327_class.cpp" />
-    <ClCompile Include="20230327_mainSpace.cpp" />
-    <ClCompile Include="20230327_parent02.cpp" />
-    <ClCompile Include="20230328_mainSpace.cpp" />
-    <ClCompile Include="20230328_SubClass01.cpp" />
-    <ClCompile Include="20230328_SubClass02.cpp" />
-    <ClCompile Include="20230328_SubClass03.cpp" />
-    <ClCompile Include="20230328_SubClass04.cpp" />
-    <ClCompile Include="20230328_SuperClass01.cpp" />
-    <ClCompile Include="20230328_SuperClass02.cpp" />
-    <ClCompile Include="20230329_Child_Dog.cpp" />
-    <ClCompile Include="20230329_mainSpace.cpp" />
-    <ClCompile Include="20230330_duck.cpp" />
-    <ClCompile Include="20230330_mainSpace.cpp" />
-    <ClCompile Include="20230330_move.cpp" />
-    <ClCompile Include="20230330_run.cpp" />
-    <ClCompile Include="20230330_swim.cpp" />
-    <ClCompile Include="20230330_walk.cpp" />
-    <ClCompile Include="20230331_mainSpace.cpp" />
-    <ClCompile Include="20230331_move.cpp" />
-    <ClCompile Include="20230331_move_manager.cpp" />
-    <ClCompile Include="20230331_unit.cpp" />
-    <ClCompile Include="20230403_class.cpp" />
-    <ClCompile Include="20230403_factoryClass.cpp" />
-    <ClCompile Include="20230403_mainSpace.cpp" />
-    <ClCompile Include="20230403_moveManager.cpp" />
-    <ClCompile Include="2023_03_23_classOperator.cpp" />
-    <ClCompile Include="230314_data.cpp" />
-    <ClCompile Include="230314_main.cpp" />
-    <ClCompile Include="230314_move.cpp" />
-    <ClCompile Include="230314_test.cpp" />
-    <ClCompile Include="230314_testPrint.cpp" />
-    <ClCompile Include="230314_unit.cpp" />
-    <ClCompile Include="add_230313.cpp" />
-    <ClCompile Include="Data_230313.cpp" />
+    <ClCompile Include="insertionSort.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="print_20230314.cpp" />
-    <ClCompile Include="testMain.cpp" />
-    <ClCompile Include="data_20230314.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="20230320_class01.h" />
-    <ClInclude Include="20230321_class01.h" />
-    <ClInclude Include="20230322_class01.h" />
-    <ClInclude Include="20230322_class02.h" />
-    <ClInclude Include="20230324_class.h" />
-    <ClInclude Include="20230324_operator.h" />
-    <ClInclude Include="20230327_child.h" />
-    <ClInclude Include="20230327_parent01.h" />
-    <ClInclude Include="20230327_parent02.h" />
-    <ClInclude Include="20230328_SubClass01.h" />
-    <ClInclude Include="20230328_SubClass02.h" />
-    <ClInclude Include="20230328_SubClass03.h" />
-    <ClInclude Include="20230328_SubClass04.h" />
-    <ClInclude Include="20230328_SuperClass02.h" />
-    <ClInclude Include="20230329_Child_Dog.h" />
-    <ClInclude Include="20230329_OldStyle_Parent.h" />
-    <ClInclude Include="20230330_duck.h" />
-    <ClInclude Include="20230330_move.h" />
-    <ClInclude Include="20230330_run.h" />
-    <ClInclude Include="20230330_swim.h" />
-    <ClInclude Include="20230330_walk.h" />
-    <ClInclude Include="20230331_move.h" />
-    <ClInclude Include="20230331_move_manager.h" />
-    <ClInclude Include="20230331_unit.h" />
-    <ClInclude Include="20230403_class.h" />
-    <ClInclude Include="20230403_factoryClass.h" />
-    <ClInclude Include="20230403_moveManager.h" />
-    <ClInclude Include="2023_03_20_lectureMain.h" />
-    <ClInclude Include="2023_03_23_classOperator.h" />
-    <ClInclude Include="230314_data.h" />
-    <ClInclude Include="230314_move.h" />
-    <ClInclude Include="230314_test.h" />
-    <ClInclude Include="230314_testPrint.h" />
-    <ClInclude Include="230314_unit.h" />
-    <ClInclude Include="230316_reference.h" />
-    <ClInclude Include="add_230313.h" />
-    <ClInclude Include="C_TEST_MALLOC.h" />
-    <ClInclude Include="Data_230313.h" />
-    <ClInclude Include="data_20230314.h" />
-    <ClInclude Include="data_2303150.h" />
-    <ClInclude Include="print_20230314.h" />
-    <ClInclude Include="20230328_SuperClass01.h" />
+    <ClInclude Include="insertionSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
