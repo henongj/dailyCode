@@ -807,6 +807,12 @@
     <ClInclude Include="acmicpc_4949.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc_11651.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="C20230404_factory.h">
+      <Filter>헤더 파일\codePractice</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
