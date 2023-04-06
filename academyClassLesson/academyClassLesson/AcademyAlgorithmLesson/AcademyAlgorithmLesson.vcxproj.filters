@@ -19,6 +19,9 @@
     <Filter Include="헤더 파일\2023_04_05">
       <UniqueIdentifier>{eb812231-44a3-4ce4-a97f-1abcdef6ac13}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\2023_04_06">
+      <UniqueIdentifier>{54ffdf05-e80b-41dd-932f-d3929a3412df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,10 +30,16 @@
     <ClCompile Include="insertionSort.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="bubbleSort.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="insertionSort.h">
       <Filter>헤더 파일\2023_04_05</Filter>
+    </ClInclude>
+    <ClInclude Include="bubbleSort.h">
+      <Filter>헤더 파일\2023_04_06</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
