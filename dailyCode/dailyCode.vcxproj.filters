@@ -822,6 +822,9 @@
     <ClInclude Include="20230405_BubbleSort.h">
       <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc_1966.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
