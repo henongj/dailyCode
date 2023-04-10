@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="20230405_BubbleSort.h" />
+    <ClInclude Include="acmicpc_1966.h" />
     <ClInclude Include="C20230404_Fly.h" />
     <ClInclude Include="C20230404_strategyClass.h" />
     <ClInclude Include="academyLesson\2023_01_17.h" />
