@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="20230417_list.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="insertionSort.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="20230412_recursion.h" />
     <ClInclude Include="20230413_recursion.h" />
     <ClInclude Include="20230414_linkedList_01.h" />
+    <ClInclude Include="20230417_list.h" />
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="insertionSort.h" />
