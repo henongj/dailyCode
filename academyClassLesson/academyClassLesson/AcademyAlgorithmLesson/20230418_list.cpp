@@ -51,15 +51,14 @@ void C_20230418_LIST::remove(int nData)
 			else
 				pPrevious->pNext = pNext;
 
-			delete pDeleteTarget;
-
-			if(m_pEnd == nullptr)
+			if (pDeleteTarget == m_pEnd)
 				m_pEnd = pPrevious;
+
+			delete pDeleteTarget;
+			pDeleteTarget = nullptr;
 		}
 		else
-		{
 			pPrevious = pCurrent;
-		}
 
 		pCurrent = pNext;
 	}
