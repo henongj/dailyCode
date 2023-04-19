@@ -132,6 +132,7 @@
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="insertionSort.cpp" />
+    <ClCompile Include="linkedList_20230419.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="insertionSort.h" />
+    <ClInclude Include="linkedList_20230419.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
