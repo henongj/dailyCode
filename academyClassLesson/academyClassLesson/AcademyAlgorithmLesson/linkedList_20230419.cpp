@@ -50,4 +50,6 @@ void C_LIST_20230419::remove(int nData)
 		else
 			ppNode = &(*ppNode)->pNext;
 	}
+
+	m_ppEnd = ppNode;
 }
