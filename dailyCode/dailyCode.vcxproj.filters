@@ -872,5 +872,8 @@
     <ClCompile Include="20230420_Node.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230420_LinkedList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

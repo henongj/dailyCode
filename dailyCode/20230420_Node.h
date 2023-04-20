@@ -1,7 +1,10 @@
 #pragma once
 
+#include"20230420_LinkedList.h"
+
 class C20230420_Node
 {
+	friend class C20230420_LinkedList;
 private:
 	int m_nData;
 	C20230420_Node* m_pNextNode;

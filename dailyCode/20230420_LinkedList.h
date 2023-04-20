@@ -4,7 +4,7 @@
 
 class C20230420_LinkedList
 {
-	friend C20230420_Node;
+	
 private:
 	C20230420_Node* m_pBeginNode;
 	C20230420_Node* m_pEndNode;

@@ -397,6 +397,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="20230405_BubbleSort.cpp" />
+    <ClCompile Include="20230420_LinkedList.cpp" />
     <ClCompile Include="20230420_Node.cpp" />
     <ClCompile Include="C20230330_machine.cpp" />
     <ClCompile Include="C20230331_MainSpace.cpp" />
