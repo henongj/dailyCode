@@ -1,8 +1,8 @@
 #pragma once
-
+/*
 #include"20230420_LinkedList.h"
 
-class C20230420_Node
+class C20230420_Node 
 {
 	friend class C20230420_LinkedList;
 private:
@@ -17,3 +17,4 @@ public:
 	int getData(void);
 	C20230420_Node* getNextNode(void);
 };
+*/
