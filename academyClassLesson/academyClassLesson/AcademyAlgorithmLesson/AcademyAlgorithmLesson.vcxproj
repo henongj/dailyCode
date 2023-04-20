@@ -133,7 +133,9 @@
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="insertionSort.cpp" />
     <ClCompile Include="linkedList_20230419.cpp" />
+    <ClCompile Include="linkedList_20230420.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="node_20230420.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="20230411_recursion.h" />
@@ -146,6 +148,8 @@
     <ClInclude Include="debug.h" />
     <ClInclude Include="insertionSort.h" />
     <ClInclude Include="linkedList_20230419.h" />
+    <ClInclude Include="linkedList_20230420.h" />
+    <ClInclude Include="node_20230420.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

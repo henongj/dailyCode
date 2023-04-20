@@ -46,6 +46,9 @@
     <Filter Include="헤더 파일\2023_04_19">
       <UniqueIdentifier>{4221235c-a05e-4750-8e7e-0a3b5e506bb8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\2023_04_20">
+      <UniqueIdentifier>{50d7146f-404e-4224-b70f-7fb92352f002}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -67,6 +70,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="linkedList_20230419.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="node_20230420.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="linkedList_20230420.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -100,6 +109,12 @@
     </ClInclude>
     <ClInclude Include="linkedList_20230419.h">
       <Filter>헤더 파일\2023_04_19</Filter>
+    </ClInclude>
+    <ClInclude Include="linkedList_20230420.h">
+      <Filter>헤더 파일\2023_04_20</Filter>
+    </ClInclude>
+    <ClInclude Include="node_20230420.h">
+      <Filter>헤더 파일\2023_04_20</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
