@@ -386,6 +386,7 @@
     <ClInclude Include="leetCodeProblem\word_search_79.h" />
     <ClInclude Include="leetCodeProblem\world_search_DFS_79.h" />
     <ClInclude Include="leetCodeProblem\Wrod_Ladder_127.h" />
+    <ClInclude Include="leetcode_problem_1312.h" />
     <ClInclude Include="programmers\lesston77884.h" />
     <ClInclude Include="programmers\make_hamburger.h" />
     <ClInclude Include="programmers\sql_query.h" />
