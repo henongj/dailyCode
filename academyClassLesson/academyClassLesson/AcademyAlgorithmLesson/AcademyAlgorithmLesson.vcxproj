@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="20230417_list.cpp" />
     <ClCompile Include="20230418_list.cpp" />
+    <ClCompile Include="20230421_linkedList_List.cpp" />
+    <ClCompile Include="20230421_linkedList_node.cpp" />
+    <ClCompile Include="20230421_mainSpace_01.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="insertionSort.cpp" />
@@ -144,6 +147,8 @@
     <ClInclude Include="20230414_linkedList_01.h" />
     <ClInclude Include="20230417_list.h" />
     <ClInclude Include="20230418_list.h" />
+    <ClInclude Include="20230421_linkedList_List.h" />
+    <ClInclude Include="20230421_linkedList_node.h" />
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="insertionSort.h" />
