@@ -15,6 +15,8 @@ private:
 
 private:
 	void swapData(int& nDst, int& nSrc);
+	bool add_recursion_logic(int nIndex, int nUp);
+
 public:
 	C20230424_HEAP() = default;
 	~C20230424_HEAP() = default;
@@ -25,7 +27,10 @@ public:
 
 	void init(int nLength);
 	void release(void);
+	
 	bool add(int nData);
+	bool add_recursion(int nData);
+	
 	void print(void);
 	int getLength(void);
 };
