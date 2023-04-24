@@ -831,6 +831,12 @@
     <ClInclude Include="20230420_LinkedList.h">
       <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
+    <ClInclude Include="leetcode_problem_1312.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="Restore_The_Array_1416.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
