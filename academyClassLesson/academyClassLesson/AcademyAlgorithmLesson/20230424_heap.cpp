@@ -61,6 +61,17 @@ bool C20230424_HEAP::add_recursion_logic(int nIndex, int nUp)
 	return true;
 }
 
+int C20230424_HEAP::getBig(int n1, int n2)
+{
+	int nBig{};
+	nBig = n2;
+
+	if (nBig < n1)
+		nBig = n1;
+	
+	return nBig;
+}
+
 bool C20230424_HEAP::add_recursion(int nData)
 {
 	if (m_nCount >= m_nLength - 1)
@@ -88,4 +99,44 @@ void C20230424_HEAP::print(void)
 int C20230424_HEAP::getLength(void)
 {
 	return m_nLength - 1;
+}
+
+bool C20230424_HEAP::pop(void)
+{
+	if(m_nCount - 1 <= 0)
+		return false;
+	
+	erase();
+	
+	return true;
+}
+
+void C20230424_HEAP::erase()
+{
+	m_pBuffer[1] = m_pBuffer[m_nCount];
+	m_nCount = m_nCount - 1;
+
+	int nIndex{};
+	int nLeft{};
+	int nRight{};
+	int nBig{};
+
+	nIndex = 1;
+
+	nLeft = nIndex * 2;
+	nRight = nIndex * 2 + 1;
+	nBig = getBig(nLeft, nRight);
+
+	// 노드가 둘 다 있는 경우만 작업
+	while (nRight <= m_nCount && m_pBuffer[nBig] > m_pBuffer[nIndex])
+	{
+		swapData(m_pBuffer[nBig], m_pBuffer[nIndex]);
+
+		nIndex = nBig;
+
+		nLeft = nIndex * 2;
+		nRight = nIndex * 2 + 1;
+		nBig = getBig(nLeft, nRight);
+	}
+
 }
