@@ -20,11 +20,56 @@ void C20230426_biniarySearch::print()
 	printf("\n");
 }
 
-void C20230426_biniarySearch::getDataAddress(int nTarget, int* pResult)
+void C20230426_biniarySearch::search_loop(int nTarget, int*& pResult)
 {
 	int nFind = m_nLength / 2;
 	int nLength = m_nLength;
 	int* pData = m_pArrayData;
+
+	while (nLength > 0 && !pResult)
+	{
+		if (pData[nFind] > nTarget)
+			nLength = nFind;
+		else if (pData[nFind] < nTarget)
+		{
+			pData = &pData[nFind + 1];
+			nLength = nLength - (nFind + 1);
+		}
+		else
+			pResult = &pData[nFind];
+
+		nFind = nLength / 2;
+	}	
+}
+
+void C20230426_biniarySearch::search_recursion_logic(int* pArrayData, int nLength, int nTarget, int*& pResult)
+{
+	if (nLength <= 0 || !(pResult == nullptr))
+		return;
+
+	int nFind = nLength / 2;
+	int* pData = pArrayData;
+
+	if (pData[nFind] > nTarget)
+	{
+		nLength = nFind;
+		search_recursion_logic(pData, nLength, nTarget, pResult);
+	}
+	else if (pData[nFind] < nTarget)
+	{
+		pData = &pData[nFind + 1];
+		nLength = nLength - (nFind + 1);
+		search_recursion_logic(pData, nLength, nTarget, pResult);
+	}
+	else
+		pResult = &pData[nFind];
+}
+
+
+void binarySearch_20230426(int* arData, int nLength, int nTarget, int*& pResult)
+{
+	int nFind = nLength / 2;
+	int* pData = arData;
 
 	while (nLength > 0 && !pResult)
 	{
