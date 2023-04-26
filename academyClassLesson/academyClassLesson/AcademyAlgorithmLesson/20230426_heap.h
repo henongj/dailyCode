@@ -1,6 +1,7 @@
 #pragma once
+#pragma once
 
-class C20230424_HEAP
+class C20230426_HEAP
 {
 private:
 	enum
@@ -19,12 +20,12 @@ private:
 	void erase();
 	int getBig(int n1, int n2);
 public:
-	C20230424_HEAP() = default;
-	~C20230424_HEAP() = default;
+	C20230426_HEAP() = default;
+	~C20230426_HEAP() = default;
 
 	//delete copy assnginment and operator =
-	C20230424_HEAP& operator=(const C20230424_HEAP&) = delete;
-	C20230424_HEAP(const C20230424_HEAP&) = delete;
+	C20230426_HEAP& operator=(const C20230426_HEAP&) = delete;
+	C20230426_HEAP(const C20230426_HEAP&) = delete;
 
 	void init(int nLength);
 	void release(void);
@@ -34,6 +35,6 @@ public:
 
 	void print(void);
 	int getLength(void);
-	bool pop(int& nDataPopped);
+	bool pop(void);
 
 };
