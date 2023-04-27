@@ -23,6 +23,6 @@ public:
 	void print();
 
 	void search_loop(int nTarget, int*& pResult);
-	void search_recursion_logic(int* pArrayData, int nLength, int nTarget, int*& pResult);
+	void search_recursion_logic(const int* pArrayData, int nLength, int nTarget, const int*& pResult);
 
 };

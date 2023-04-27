@@ -156,6 +156,7 @@
     <ClInclude Include="20230424_heap.h" />
     <ClInclude Include="20230426_binarySearch.h" />
     <ClInclude Include="20230426_heap.h" />
+    <ClInclude Include="20230427_binarySearch.h" />
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="insertionSort.h" />

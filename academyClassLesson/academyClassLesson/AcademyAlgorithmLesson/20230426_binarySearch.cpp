@@ -42,13 +42,13 @@ void C20230426_biniarySearch::search_loop(int nTarget, int*& pResult)
 	}	
 }
 
-void C20230426_biniarySearch::search_recursion_logic(int* pArrayData, int nLength, int nTarget, int*& pResult)
+void C20230426_biniarySearch::search_recursion_logic(const int* pArrayData, int nLength, int nTarget,const int*& pResult)
 {
 	if (nLength <= 0 || !(pResult == nullptr))
 		return;
 
 	int nFind = nLength / 2;
-	int* pData = pArrayData;
+	const int* pData = pArrayData;
 
 	if (pData[nFind] > nTarget)
 	{
