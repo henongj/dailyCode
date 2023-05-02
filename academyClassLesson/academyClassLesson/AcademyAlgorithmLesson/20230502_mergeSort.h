@@ -10,7 +10,7 @@ int mainSpace01_20230502(void)
 {
 
 	//4 6 7 5 9 8 2 1 3
-	int arData[9] = { 3,5,6,7, 1, 2, 4, 8, 9 };
+	int arData[9] = { 5,7,9,8,1,3,2,4,6 };
 	int arrTemp[9] = { };
 	int nLength = 9;
 	
@@ -48,8 +48,12 @@ void printData02_20230502(const int* pData, int nLength)
 	printf("\n");
 }
 
+//must pTmpLength >= nLength
 void mergeSort01_20230502(int* pArr, int nLength, int* pDestArr)
 {
+	if (nLength <= 1)
+		return;
+	
 	int* pData = pArr;
 	int* pArrTemp = pDestArr;
 
@@ -59,6 +63,9 @@ void mergeSort01_20230502(int* pArr, int nLength, int* pDestArr)
 	int* pRightData = pData + nLeftLength;
 	int nRightLength = nLength - nLeftLength;
 
+	mergeSort01_20230502(pLeftData, nLeftLength, pArrTemp);
+	mergeSort01_20230502(pRightData, nRightLength, pArrTemp);
+	
 	int nLeftIndex{};
 	int nRightIndex{};
 
@@ -81,4 +88,9 @@ void mergeSort01_20230502(int* pArr, int nLength, int* pDestArr)
 		(*pTempIndex)++;
 	}
 
+	//임시공간에 있는 정렬 내용을 원본에 집어넣어 준다
+	for (int i = 0; i < nLength; i++)
+	{
+		pArr[i] = pArrTemp[i];
+	}
 }
