@@ -61,11 +61,17 @@
     <Filter Include="헤더 파일\2023_04\26">
       <UniqueIdentifier>{ecb91384-1516-4cc3-bbbc-afef4d82ae81}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\27">
+    <Filter Include="헤더 파일\2023_04\27">
       <UniqueIdentifier>{7c5ab541-4caa-4440-99d6-2ed4c2e20176}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\28">
+    <Filter Include="헤더 파일\2023_04\28">
       <UniqueIdentifier>{91035f56-f36b-41bd-bb11-dceeedc062e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\2023_05">
+      <UniqueIdentifier>{c67477b8-bb4d-4d45-a368-ec2acabefc47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\2023_05\02">
+      <UniqueIdentifier>{b5c1449c-364a-428c-94c9-fdf56d1ea3c0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -171,16 +177,19 @@
       <Filter>헤더 파일\2023_04\26</Filter>
     </ClInclude>
     <ClInclude Include="20230427_binarySearch.h">
-      <Filter>헤더 파일\27</Filter>
+      <Filter>헤더 파일\2023_04\27</Filter>
     </ClInclude>
     <ClInclude Include="20230427_quickSort.h">
-      <Filter>헤더 파일\27</Filter>
+      <Filter>헤더 파일\2023_04\27</Filter>
     </ClInclude>
     <ClInclude Include="20230428_quickSort.h">
-      <Filter>헤더 파일\28</Filter>
+      <Filter>헤더 파일\2023_04\28</Filter>
     </ClInclude>
     <ClInclude Include="20230428_mergeSort.h">
-      <Filter>헤더 파일\28</Filter>
+      <Filter>헤더 파일\2023_04\28</Filter>
+    </ClInclude>
+    <ClInclude Include="20230502_mergeSort.h">
+      <Filter>헤더 파일\2023_05\02</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

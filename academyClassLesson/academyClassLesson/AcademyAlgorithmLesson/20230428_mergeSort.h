@@ -62,8 +62,6 @@ void printData02_20230428(const int* pData, int nLength)
 
 void mergeSort01_20230428(int* pArr, int nLength, int* pDestArr)
 {
-	int nLength = 9;
-
 	int* pLeftData = pArr;
 	int nLeftLength = nLength / 2;
 

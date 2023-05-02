@@ -160,6 +160,7 @@
     <ClInclude Include="20230427_quickSort.h" />
     <ClInclude Include="20230428_mergeSort.h" />
     <ClInclude Include="20230428_quickSort.h" />
+    <ClInclude Include="20230502_mergeSort.h" />
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="insertionSort.h" />
