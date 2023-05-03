@@ -29,10 +29,13 @@ bool C_BST_20230503::add(int nData)
 	}
 
 	S_NODE* pFind = m_pRoot;
+	bool isDupulicate{};
+
+	isDupulicate = false;
 	
 	//주의 : 반복문에 break, return 사용 금지
 	//단일 포인터로만 작업할 것
-	while (true)
+	while (!isDupulicate) // 중복이 없다면
 	{
 		if (pFind->m_nData > nData)
 		{
@@ -40,8 +43,7 @@ bool C_BST_20230503::add(int nData)
 				pFind = pFind->m_pLeft;
 			else
 			{
-				pFind = createNode(nData);
-				return true;
+				pFind->m_pLeft = createNode(nData);
 			}
 
 		}
@@ -51,15 +53,14 @@ bool C_BST_20230503::add(int nData)
 				pFind = pFind->m_pRight;
 			else
 			{
-				pFind = createNode(nData);
-				return true;
+				pFind->m_pRight = createNode(nData);
 			}
 		}
 		else
-			return false;
+			isDupulicate = true;
 	}
 	
-    return true;
+	return !isDupulicate; // 중복이 있다 = 에러, 중복이 없다 = 성공, 중복이 없다면 성공이니 true를 반환.
 }
 
 void C_BST_20230503::erase(int nData)
@@ -77,3 +78,4 @@ void C_BST_20230503::print(void)
 	printf("\n");
 	
 }
+
