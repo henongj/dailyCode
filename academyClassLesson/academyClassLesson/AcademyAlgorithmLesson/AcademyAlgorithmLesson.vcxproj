@@ -136,6 +136,7 @@
     <ClCompile Include="20230424_mainSapce01.cpp" />
     <ClCompile Include="20230426_binarySearch.cpp" />
     <ClCompile Include="20230426_heap.cpp" />
+    <ClCompile Include="20230503_BinarySearchTree.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="insertionSort.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="20230428_mergeSort.h" />
     <ClInclude Include="20230428_quickSort.h" />
     <ClInclude Include="20230502_mergeSort.h" />
+    <ClInclude Include="20230503_BinarySearchTree.h" />
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="insertionSort.h" />

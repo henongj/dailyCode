@@ -73,6 +73,9 @@
     <Filter Include="헤더 파일\2023_05\02">
       <UniqueIdentifier>{b5c1449c-364a-428c-94c9-fdf56d1ea3c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\2023_05\03">
+      <UniqueIdentifier>{d3810b9a-0f73-4892-8a4c-e5ac8638f7d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -121,6 +124,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230426_binarySearch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230503_BinarySearchTree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -190,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="20230502_mergeSort.h">
       <Filter>헤더 파일\2023_05\02</Filter>
+    </ClInclude>
+    <ClInclude Include="20230503_BinarySearchTree.h">
+      <Filter>헤더 파일\2023_05\03</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
