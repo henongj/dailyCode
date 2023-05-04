@@ -30,7 +30,7 @@ C20230324_C_DATA_02& C20230324_C_DATA_02::operator++()
 	m_nData++;
 	return *this;
 }
-
+/*
 const C20230324_C_DATA_02& C20230324_C_DATA_02::operator++(int)
 {
 	printf("»ƒ¡ı∞°\n");
@@ -40,3 +40,4 @@ const C20230324_C_DATA_02& C20230324_C_DATA_02::operator++(int)
 	
 	return C20230324_C_DATA_02(nBackup);
 }
+*/

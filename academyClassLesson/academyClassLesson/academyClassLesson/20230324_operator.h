@@ -30,5 +30,5 @@ public:
 	// 이건 전증가다. 
 	C20230324_C_DATA_02& operator++();
 	// 이건 후증가다.
-	const C20230324_C_DATA_02& operator++(int);
+//	const C20230324_C_DATA_02& operator++(int);
 };

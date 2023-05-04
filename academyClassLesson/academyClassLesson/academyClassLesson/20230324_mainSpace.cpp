@@ -13,14 +13,14 @@ void mainSpace_20230324_04(void)
 	C20230324_C_DATA_02 cData{};
 
 	// 이건 후증가다.
-	cData++;
+//	cData++;
 	printf("%d\n", cData.getData());
 
 	// 이건 전증가다.
 	printf("%d\n", (++cData).getData());
 	printf("%d\n", cData.getData());
 
-	cData++;
+//	cData++;
 	printf("%d\n", cData.getData());
 
 }
