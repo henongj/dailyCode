@@ -1,17 +1,17 @@
+#include "20230504_BinarySearchTree.h"
 #include<stdio.h>
-#include "20230503_BinarySearchTree.h"
 
-void C_BST_20230503::printNode(S_NODE* pNode)
+void C_BST_20230504::printNode(S_NODE* pNode)
 {
 	if (!pNode)
 		return;
-    
+
 	printf("%d ", pNode->m_nData);
 	printNode(pNode->m_pLeft);
 	printNode(pNode->m_pRight);
 }
 
-C_BST_20230503::S_NODE* C_BST_20230503::createNode(int nData)
+C_BST_20230504::S_NODE* C_BST_20230504::createNode(int nData)
 {
 	S_NODE* pNode = new S_NODE{};
 	pNode->m_nData = nData;
@@ -20,9 +20,9 @@ C_BST_20230503::S_NODE* C_BST_20230503::createNode(int nData)
 	return pNode;
 }
 
-bool C_BST_20230503::add(int nData)
+bool C_BST_20230504::add(int nData)
 {
-	if(!m_pRoot)
+	if (!m_pRoot)
 	{
 		m_pRoot = createNode(nData);
 		return true;
@@ -32,7 +32,7 @@ bool C_BST_20230503::add(int nData)
 	bool isDupulicate{};
 
 	isDupulicate = false;
-	
+
 	//주의 : 반복문에 break, return 사용 금지
 	//단일 포인터로만 작업할 것
 	while (!isDupulicate) // 중복이 없다면
@@ -54,23 +54,63 @@ bool C_BST_20230503::add(int nData)
 		else
 			isDupulicate = true;
 	}
-	
+
 	return !isDupulicate; // 중복이 있다 = 에러, 중복이 없다 = 성공, 중복이 없다면 성공이니 true를 반환.
 }
 
-void C_BST_20230503::erase(int nData)
+void C_BST_20230504::erase(int nData)
 {
+	S_NODE* pUp{};
+	S_NODE* pFind{};
+
+	pFind = m_pRoot;
+	pUp = pFind;
+
+	while (pFind && pFind->m_nData != nData)
+	{
+		pUp = pFind;
+		
+		if (pFind->m_nData > nData)
+			pFind = pFind->m_pLeft;
+		else
+			pFind = pFind->m_pRight;
+	}
+
+	printf("pUp, pFind : %d, %d\n", pUp->m_nData, pFind->m_nData);
+	
+	if (!pFind)
+		return;
+
+	if (pFind->m_pLeft && pFind->m_pRight)
+		return;
+
+	if (pUp == pFind)
+		pUp = m_pRoot;
+	
+	S_NODE* pNextNode{};
+
+	pNextNode = pFind->m_pLeft;
+
+	if (pFind->m_pRight)
+		pNextNode = pFind->m_pRight;
+
+	if (pUp->m_pLeft == pFind)
+		pUp->m_pLeft = pNextNode;
+	else
+		pUp->m_pRight = pNextNode;
+
+	delete pFind;
 }
 
-bool C_BST_20230503::find(int nData)
+bool C_BST_20230504::find(int nData)
 {
-    return false;
+	return false;
 }
 
-void C_BST_20230503::print(void)
+void C_BST_20230504::print(void)
 {
 	printNode(m_pRoot);
 	printf("\n");
-	
+
 }
 
