@@ -64,7 +64,6 @@ void C_BST_20230504::erase(int nData)
 	S_NODE* pFind{};
 
 	pFind = m_pRoot;
-	pUp = pFind;
 
 	while (pFind && pFind->m_nData != nData)
 	{
@@ -74,29 +73,25 @@ void C_BST_20230504::erase(int nData)
 			pFind = pFind->m_pLeft;
 		else
 			pFind = pFind->m_pRight;
-	}
-
-	printf("pUp, pFind : %d, %d\n", pUp->m_nData, pFind->m_nData);
+	}	
 	
 	if (!pFind)
 		return;
-
 	if (pFind->m_pLeft && pFind->m_pRight)
 		return;
-
-	if (pUp == pFind)
-		pUp = m_pRoot;
 	
 	S_NODE* pNextNode{};
 
 	pNextNode = pFind->m_pLeft;
-
+	
 	if (pFind->m_pRight)
 		pNextNode = pFind->m_pRight;
 
-	if (pUp->m_pLeft == pFind)
+	if(!pUp)
+		m_pRoot = pNextNode;
+	else if (pUp->m_nData > pFind->m_nData)
 		pUp->m_pLeft = pNextNode;
-	else
+	else if (pUp->m_nData < pFind->m_nData)
 		pUp->m_pRight = pNextNode;
 
 	delete pFind;
