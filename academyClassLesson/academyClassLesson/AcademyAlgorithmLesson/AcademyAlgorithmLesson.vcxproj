@@ -138,6 +138,7 @@
     <ClCompile Include="20230426_heap.cpp" />
     <ClCompile Include="20230503_BinarySearchTree.cpp" />
     <ClCompile Include="20230504_BinarySearchTree.cpp" />
+    <ClCompile Include="20230504_mainSpace01.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="insertionSort.cpp" />
