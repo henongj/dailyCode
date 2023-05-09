@@ -58,6 +58,7 @@ void C20230509_BinarySearchTree::erase(int nData)
 {
 	S_Node** ppFind = findNode(&m_pRootNode, nData);
 
+	//대상이 존재하지 않는다.
 	if (!*ppFind)
 		return;
 
@@ -66,10 +67,11 @@ void C20230509_BinarySearchTree::erase(int nData)
 		return;
 	}
 
-	S_Node* pNode = (*ppFind)->pLeft;
+	// 반드시 자식 노드가 하나만 존재한다.
+	S_Node* pNodeChildOfFind = (*ppFind)->pLeft;
 	if((*ppFind)->pRight)
-		pNode = (*ppFind)->pRight;
+		pNodeChildOfFind = (*ppFind)->pRight;
 
 	delete* ppFind;
-	*ppFind = pNode;
+	*ppFind = pNodeChildOfFind;
 }
