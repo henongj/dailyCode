@@ -140,6 +140,7 @@
     <ClCompile Include="20230504_BinarySearchTree.cpp" />
     <ClCompile Include="20230504_mainSpace01.cpp" />
     <ClCompile Include="20230509_binarySearchTree.cpp" />
+    <ClCompile Include="20230509_BST_DoublePointer.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="insertionSort.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="20230503_BinarySearchTree.h" />
     <ClInclude Include="20230504_BinarySearchTree.h" />
     <ClInclude Include="20230509_binarySearchTree.h" />
+    <ClInclude Include="20230509_BST_DoublePointer.h" />
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="insertionSort.h" />

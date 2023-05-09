@@ -144,6 +144,9 @@
     <ClCompile Include="20230509_binarySearchTree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230509_BST_DoublePointer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="insertionSort.h">
@@ -219,6 +222,9 @@
       <Filter>헤더 파일\2023_05\04</Filter>
     </ClInclude>
     <ClInclude Include="20230509_binarySearchTree.h">
+      <Filter>헤더 파일\2023_05\09</Filter>
+    </ClInclude>
+    <ClInclude Include="20230509_BST_DoublePointer.h">
       <Filter>헤더 파일\2023_05\09</Filter>
     </ClInclude>
   </ItemGroup>
