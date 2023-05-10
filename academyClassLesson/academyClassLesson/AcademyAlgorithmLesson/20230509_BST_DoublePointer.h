@@ -29,4 +29,5 @@ public:
 	bool add(int nData);
 	void print();
 	void erase(int nData);
+	bool find(int nData);
 };

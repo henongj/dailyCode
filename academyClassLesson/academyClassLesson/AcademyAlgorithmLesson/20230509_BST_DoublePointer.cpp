@@ -87,3 +87,13 @@ void C20230509_BinarySearchTree::erase(int nData)
 	delete* ppFind;
 	*ppFind = pNodeChildOfFind;
 }
+
+bool C20230509_BinarySearchTree::find(int nData)
+{
+	S_Node** ppFind = findNode(&m_pRootNode, nData);
+
+	if (!*ppFind)
+		return false;
+
+	return true;
+}
