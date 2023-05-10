@@ -1,5 +1,14 @@
 #include "20230509_BST_DoublePointer.h"
 #include<stdio.h>
+void C20230509_BinarySearchTree::printInorderLogic(S_Node* pNode)
+{
+	if (!pNode)
+		return;
+
+	printInorderLogic(pNode->pLeft);
+	printf("%d, ", pNode->nData);
+	printInorderLogic(pNode->pRight);
+}
 C20230509_BinarySearchTree::S_Node** C20230509_BinarySearchTree::findNode(S_Node** ppNode, int nData)
 {
     if (!*ppNode)
@@ -96,4 +105,11 @@ bool C20230509_BinarySearchTree::find(int nData)
 		return false;
 
 	return true;
+}
+
+void C20230509_BinarySearchTree::printInorder(void)
+{
+	S_Node* pNode = m_pRootNode;
+	
+	printInorderLogic(pNode);
 }

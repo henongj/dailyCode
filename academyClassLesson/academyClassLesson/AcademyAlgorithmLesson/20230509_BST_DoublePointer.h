@@ -12,7 +12,7 @@ private:
 
 private:
 	S_Node* m_pRootNode;
-
+	void printInorderLogic(S_Node* pNode);
 private:
 	S_Node** findNode(S_Node** ppNode, int nData);
 	void printNode(S_Node* pNode);
@@ -30,4 +30,6 @@ public:
 	void print();
 	void erase(int nData);
 	bool find(int nData);
+
+	void printInorder(void);
 };
