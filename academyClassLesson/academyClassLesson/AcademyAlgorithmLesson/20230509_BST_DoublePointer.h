@@ -17,6 +17,8 @@ private:
 	S_Node** findNode(S_Node** ppNode, int nData);
 	void printNode(S_Node* pNode);
 	S_Node* createNode(int nData);
+	S_Node** findMaxNode(S_Node** ppNode);
+
 public:
 	C20230509_BinarySearchTree() = default;
 	~C20230509_BinarySearchTree() = default;

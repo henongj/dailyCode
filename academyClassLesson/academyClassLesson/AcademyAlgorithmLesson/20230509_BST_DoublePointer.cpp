@@ -34,6 +34,15 @@ C20230509_BinarySearchTree::S_Node* C20230509_BinarySearchTree::createNode(int n
 	return pNode;
 }
 
+C20230509_BinarySearchTree::S_Node** C20230509_BinarySearchTree::findMaxNode(S_Node** ppNode)
+{
+	if ( !(*ppNode)->pRight )
+		return ppNode;
+
+	return findMaxNode(&((*ppNode)->pRight));
+	
+}
+
 bool C20230509_BinarySearchTree::add(int nData)
 {
 	S_Node** ppFind = findNode(&m_pRootNode, nData);
@@ -64,7 +73,10 @@ void C20230509_BinarySearchTree::erase(int nData)
 
 	if ((*ppFind)->pLeft && (*ppFind)->pRight)
 	{
-		return;
+		S_Node** ppMaxNode = findMaxNode(&((*ppFind)->pLeft));
+		//printf("ppMaxNode : %d\n", (*ppMaxNode)->nData);
+		(*ppFind)->nData = (*ppMaxNode)->nData;
+		ppFind = ppMaxNode;
 	}
 
 	// 반드시 자식 노드가 하나만 존재한다.
