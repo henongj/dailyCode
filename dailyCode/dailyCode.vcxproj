@@ -391,6 +391,7 @@
     <ClInclude Include="programmers\make_hamburger.h" />
     <ClInclude Include="programmers\sql_query.h" />
     <ClInclude Include="Restore_The_Array_1416.h" />
+    <ClInclude Include="Uncrossed_Lines_1035.h" />
     <ClInclude Include="word_search_79.h" />
     <ClInclude Include="world_search_DFS_79.h" />
     <ClInclude Include="acmicpc_25304.h" />
