@@ -82,6 +82,12 @@
     <Filter Include="헤더 파일\2023_05\09">
       <UniqueIdentifier>{cd537fb2-c874-4d0a-8b6e-b5b1db03e2a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\2023_05\11">
+      <UniqueIdentifier>{30ddbaf2-3bd5-4063-930e-51c9c82406ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\2023_05\12">
+      <UniqueIdentifier>{00fee064-c1b8-472c-97db-dce54397e9a3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -148,6 +154,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230510_BST_codeSpace01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230511_codeSpace.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="dataStatic.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230512_Data.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -229,6 +244,12 @@
     </ClInclude>
     <ClInclude Include="20230509_BST_DoublePointer.h">
       <Filter>헤더 파일\2023_05\09</Filter>
+    </ClInclude>
+    <ClInclude Include="20230511_dataStatic.h">
+      <Filter>헤더 파일\2023_05\11</Filter>
+    </ClInclude>
+    <ClInclude Include="20230512_Data.h">
+      <Filter>헤더 파일\2023_05\12</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
