@@ -840,6 +840,15 @@
     <ClInclude Include="Uncrossed_Lines_1035.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
+    <ClInclude Include="178871_programmers.h">
+      <Filter>헤더 파일\programmers</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc_1025.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc1041.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
