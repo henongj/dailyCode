@@ -64,6 +64,15 @@
     <Filter Include="강의 날짜\2023_04_03">
       <UniqueIdentifier>{09087fac-e416-405f-ab49-1bbd12d19e0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023">
+      <UniqueIdentifier>{d5ac91e4-f337-442a-ab3a-7536c047a1d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\05">
+      <UniqueIdentifier>{98e88c2c-b504-41a5-982b-f4b4068e9b1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\05\15">
+      <UniqueIdentifier>{93b7d549-f0d1-46bb-809c-95b94cd11975}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -207,6 +216,9 @@
     <ClCompile Include="20230403_class.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230515_EmptyData.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -334,6 +346,15 @@
     </ClInclude>
     <ClInclude Include="20230403_class.h">
       <Filter>강의 날짜\2023_04_03</Filter>
+    </ClInclude>
+    <ClInclude Include="20230515_EmptyData.h">
+      <Filter>강의 날짜\2023\05\15</Filter>
+    </ClInclude>
+    <ClInclude Include="15_functionPointerExample.h">
+      <Filter>강의 날짜\2023\05\15</Filter>
+    </ClInclude>
+    <ClInclude Include="15_functionPointerBasic.h">
+      <Filter>강의 날짜\2023\05\15</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

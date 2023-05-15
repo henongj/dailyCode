@@ -162,6 +162,7 @@
     <ClCompile Include="20230403_factoryClass.cpp" />
     <ClCompile Include="20230403_mainSpace.cpp" />
     <ClCompile Include="20230403_moveManager.cpp" />
+    <ClCompile Include="20230515_EmptyData.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -177,6 +178,8 @@
     <ClCompile Include="data_20230314.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="15_functionPointerBasic.h" />
+    <ClInclude Include="15_functionPointerExample.h" />
     <ClInclude Include="20230320_class01.h" />
     <ClInclude Include="20230321_class01.h" />
     <ClInclude Include="20230322_class01.h" />
@@ -204,6 +207,7 @@
     <ClInclude Include="20230403_class.h" />
     <ClInclude Include="20230403_factoryClass.h" />
     <ClInclude Include="20230403_moveManager.h" />
+    <ClInclude Include="20230515_EmptyData.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
