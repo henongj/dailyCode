@@ -750,7 +750,7 @@
     <ClInclude Include="Design_Browser_History_1472.h">
       <Filter>헤더 파일\leetCodeProblem</Filter>
     </ClInclude>
-    <ClInclude Include="acmicpc10811.h">
+    <ClInclude Include="acmicpc_10811.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
     <ClInclude Include="acmicpc_1920.h">
@@ -801,14 +801,8 @@
     <ClInclude Include="C20230331_PureVirtualFunctionTest.h">
       <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
-    <ClInclude Include="Binary_Search_704.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="acmicpc_4949.h">
       <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="acmicpc_11651.h">
-      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="C20230404_Fly.h">
       <Filter>헤더 파일</Filter>
@@ -846,7 +840,16 @@
     <ClInclude Include="acmicpc_1025.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
-    <ClInclude Include="acmicpc1041.h">
+    <ClInclude Include="acmicpc_1041_TLE.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="Binary_Search_704.h">
+      <Filter>헤더 파일\leetCodeProblem</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc_11651.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc_1041_wrongAnswer.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
   </ItemGroup>

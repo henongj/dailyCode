@@ -131,8 +131,9 @@
     <ClInclude Include="178871_programmers.h" />
     <ClInclude Include="20230405_BubbleSort.h" />
     <ClInclude Include="20230420_Node.h" />
-    <ClInclude Include="acmicpc1041.h" />
+    <ClInclude Include="acmicpc_1041_TLE.h" />
     <ClInclude Include="acmicpc_1025.h" />
+    <ClInclude Include="acmicpc_1041_wrongAnswer.h" />
     <ClInclude Include="acmicpc_1966.h" />
     <ClInclude Include="C20230404_Fly.h" />
     <ClInclude Include="C20230404_strategyClass.h" />
@@ -167,7 +168,7 @@
     <ClInclude Include="academyLesson\2023_03_09.h" />
     <ClInclude Include="academyLesson\2023_03_10.h" />
     <ClInclude Include="academyLesson\2023_03_13.h" />
-    <ClInclude Include="acmicpc10811.h" />
+    <ClInclude Include="acmicpc_10811.h" />
     <ClInclude Include="acmicpc\acmicpc_1011.h" />
     <ClInclude Include="acmicpc\acmicpc_10757.h" />
     <ClInclude Include="acmicpc\acmicpc_10926.h" />

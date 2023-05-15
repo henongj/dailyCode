@@ -16,53 +16,8 @@
     <Filter Include="강의 날짜">
       <UniqueIdentifier>{a7fec309-4066-41f2-b570-eb5536b15ab2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="강의 날짜\2023_03_13">
-      <UniqueIdentifier>{b72e3cb3-bf64-47f7-8a21-fce6943259e1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_14">
-      <UniqueIdentifier>{88a4af03-df37-4404-9b67-44e225eea9af}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_15">
-      <UniqueIdentifier>{9258f0dd-aca0-495f-aa16-27122b034920}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_16">
-      <UniqueIdentifier>{72e45fcd-fa38-4cd1-a7ff-98a341271d95}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_20">
-      <UniqueIdentifier>{d03d7173-b226-478e-af6d-b09d1e96fae4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_21">
-      <UniqueIdentifier>{d14a4121-918f-4f1d-91d6-960366c20a6b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_22">
-      <UniqueIdentifier>{29f07364-585e-4f6d-97be-12efc6ae9b14}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_23">
-      <UniqueIdentifier>{abfdddd1-822f-4c46-b273-3b636e52e373}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_24">
-      <UniqueIdentifier>{427e9832-4dda-42dd-aac7-e6175be9bbb5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_27">
-      <UniqueIdentifier>{371d7f49-30ad-44b8-bc38-c71db80427ff}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_28">
-      <UniqueIdentifier>{abf57b83-f387-473f-8303-948617feb5c3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="main">
       <UniqueIdentifier>{217738a8-feef-4bdf-9206-f6260c79c915}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_29">
-      <UniqueIdentifier>{a8b83772-6f54-4b41-a27d-ecb4b590efc9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_30">
-      <UniqueIdentifier>{089288ba-a591-4608-a666-c3377512b34b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_03_31">
-      <UniqueIdentifier>{0a133a0e-ff04-4d28-aae7-ccea560f43e3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023_04_03">
-      <UniqueIdentifier>{09087fac-e416-405f-ab49-1bbd12d19e0f}</UniqueIdentifier>
     </Filter>
     <Filter Include="강의 날짜\2023">
       <UniqueIdentifier>{d5ac91e4-f337-442a-ab3a-7536c047a1d5}</UniqueIdentifier>
@@ -73,46 +28,94 @@
     <Filter Include="강의 날짜\2023\05\15">
       <UniqueIdentifier>{93b7d549-f0d1-46bb-809c-95b94cd11975}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023\04">
+      <UniqueIdentifier>{30fc7f8f-3f17-491e-a393-717614e28514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_13">
+      <UniqueIdentifier>{b72e3cb3-bf64-47f7-8a21-fce6943259e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_14">
+      <UniqueIdentifier>{88a4af03-df37-4404-9b67-44e225eea9af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_15">
+      <UniqueIdentifier>{9258f0dd-aca0-495f-aa16-27122b034920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_16">
+      <UniqueIdentifier>{72e45fcd-fa38-4cd1-a7ff-98a341271d95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_20">
+      <UniqueIdentifier>{d03d7173-b226-478e-af6d-b09d1e96fae4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_21">
+      <UniqueIdentifier>{d14a4121-918f-4f1d-91d6-960366c20a6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_22">
+      <UniqueIdentifier>{29f07364-585e-4f6d-97be-12efc6ae9b14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_23">
+      <UniqueIdentifier>{abfdddd1-822f-4c46-b273-3b636e52e373}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_24">
+      <UniqueIdentifier>{427e9832-4dda-42dd-aac7-e6175be9bbb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_27">
+      <UniqueIdentifier>{371d7f49-30ad-44b8-bc38-c71db80427ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_28">
+      <UniqueIdentifier>{abf57b83-f387-473f-8303-948617feb5c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_29">
+      <UniqueIdentifier>{a8b83772-6f54-4b41-a27d-ecb4b590efc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_30">
+      <UniqueIdentifier>{089288ba-a591-4608-a666-c3377512b34b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_03_31">
+      <UniqueIdentifier>{0a133a0e-ff04-4d28-aae7-ccea560f43e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="강의 날짜\2023\04\2023_04_03">
+      <UniqueIdentifier>{09087fac-e416-405f-ab49-1bbd12d19e0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
-      <Filter>강의 날짜\2023_03_13</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_13</Filter>
     </ClCompile>
     <ClCompile Include="testMain.cpp">
-      <Filter>강의 날짜\2023_03_13</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_13</Filter>
     </ClCompile>
     <ClCompile Include="add_230313.cpp">
-      <Filter>강의 날짜\2023_03_13</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_13</Filter>
     </ClCompile>
     <ClCompile Include="data_20230314.cpp">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClCompile>
     <ClCompile Include="print_20230314.cpp">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClCompile>
     <ClCompile Include="230314_move.cpp">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClCompile>
     <ClCompile Include="230314_unit.cpp">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClCompile>
     <ClCompile Include="230314_main.cpp">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClCompile>
     <ClCompile Include="230314_data.cpp">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClCompile>
     <ClCompile Include="230314_testPrint.cpp">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClCompile>
     <ClCompile Include="230314_test.cpp">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClCompile>
     <ClCompile Include="20230321_class01.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230321_code.cpp">
-      <Filter>강의 날짜\2023_03_21</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_21</Filter>
     </ClCompile>
     <ClCompile Include="20230322_class01.cpp">
       <Filter>소스 파일</Filter>
@@ -127,10 +130,10 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230323_mainSpace.cpp">
-      <Filter>강의 날짜\2023_03_23</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_23</Filter>
     </ClCompile>
     <ClCompile Include="20230324_mainSpace.cpp">
-      <Filter>강의 날짜\2023_03_24</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_24</Filter>
     </ClCompile>
     <ClCompile Include="20230324_operator.cpp">
       <Filter>소스 파일</Filter>
@@ -142,7 +145,7 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230327_mainSpace.cpp">
-      <Filter>강의 날짜\2023_03_27</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_27</Filter>
     </ClCompile>
     <ClCompile Include="20230328_SuperClass01.cpp">
       <Filter>소스 파일</Filter>
@@ -151,7 +154,7 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230328_mainSpace.cpp">
-      <Filter>강의 날짜\2023_03_28</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_28</Filter>
     </ClCompile>
     <ClCompile Include="20230328_SuperClass02.cpp">
       <Filter>소스 파일</Filter>
@@ -169,7 +172,7 @@
       <Filter>main</Filter>
     </ClCompile>
     <ClCompile Include="20230329_mainSpace.cpp">
-      <Filter>강의 날짜\2023_03_29</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_29</Filter>
     </ClCompile>
     <ClCompile Include="20230329_Child_Dog.cpp">
       <Filter>소스 파일</Filter>
@@ -190,10 +193,10 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230330_mainSpace.cpp">
-      <Filter>강의 날짜\2023_03_30</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_30</Filter>
     </ClCompile>
     <ClCompile Include="20230331_mainSpace.cpp">
-      <Filter>강의 날짜\2023_03_31</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_31</Filter>
     </ClCompile>
     <ClCompile Include="20230331_move.cpp">
       <Filter>소스 파일</Filter>
@@ -205,7 +208,7 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230403_mainSpace.cpp">
-      <Filter>강의 날짜\2023_04_03</Filter>
+      <Filter>강의 날짜\2023\04\2023_04_03</Filter>
     </ClCompile>
     <ClCompile Include="20230403_factoryClass.cpp">
       <Filter>소스 파일</Filter>
@@ -222,130 +225,130 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
-      <Filter>강의 날짜\2023_03_13</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_13</Filter>
     </ClInclude>
     <ClInclude Include="add_230313.h">
-      <Filter>강의 날짜\2023_03_13</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_13</Filter>
     </ClInclude>
     <ClInclude Include="data_20230314.h">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClInclude>
     <ClInclude Include="print_20230314.h">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClInclude>
     <ClInclude Include="230314_move.h">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClInclude>
     <ClInclude Include="230314_unit.h">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClInclude>
     <ClInclude Include="230314_data.h">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClInclude>
     <ClInclude Include="230314_test.h">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClInclude>
     <ClInclude Include="230314_testPrint.h">
-      <Filter>강의 날짜\2023_03_14</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_14</Filter>
     </ClInclude>
     <ClInclude Include="data_2303150.h">
-      <Filter>강의 날짜\2023_03_15</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_15</Filter>
     </ClInclude>
     <ClInclude Include="230316_reference.h">
-      <Filter>강의 날짜\2023_03_16</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_16</Filter>
     </ClInclude>
     <ClInclude Include="20230320_class01.h">
-      <Filter>강의 날짜\2023_03_20</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_20</Filter>
     </ClInclude>
     <ClInclude Include="2023_03_20_lectureMain.h">
-      <Filter>강의 날짜\2023_03_20</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_20</Filter>
     </ClInclude>
     <ClInclude Include="C_TEST_MALLOC.h">
-      <Filter>강의 날짜\2023_03_20</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_20</Filter>
     </ClInclude>
     <ClInclude Include="20230321_class01.h">
-      <Filter>강의 날짜\2023_03_21</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_21</Filter>
     </ClInclude>
     <ClInclude Include="20230322_class01.h">
-      <Filter>강의 날짜\2023_03_22</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_22</Filter>
     </ClInclude>
     <ClInclude Include="20230322_class02.h">
-      <Filter>강의 날짜\2023_03_22</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_22</Filter>
     </ClInclude>
     <ClInclude Include="2023_03_23_classOperator.h">
-      <Filter>강의 날짜\2023_03_23</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_23</Filter>
     </ClInclude>
     <ClInclude Include="20230324_class.h">
-      <Filter>강의 날짜\2023_03_24</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_24</Filter>
     </ClInclude>
     <ClInclude Include="20230324_operator.h">
-      <Filter>강의 날짜\2023_03_24</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_24</Filter>
     </ClInclude>
     <ClInclude Include="20230327_parent01.h">
-      <Filter>강의 날짜\2023_03_27</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_27</Filter>
     </ClInclude>
     <ClInclude Include="20230327_child.h">
-      <Filter>강의 날짜\2023_03_27</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_27</Filter>
     </ClInclude>
     <ClInclude Include="20230327_parent02.h">
-      <Filter>강의 날짜\2023_03_27</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_27</Filter>
     </ClInclude>
     <ClInclude Include="20230328_SuperClass01.h">
-      <Filter>강의 날짜\2023_03_28</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_28</Filter>
     </ClInclude>
     <ClInclude Include="20230328_SubClass01.h">
-      <Filter>강의 날짜\2023_03_28</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_28</Filter>
     </ClInclude>
     <ClInclude Include="20230328_SuperClass02.h">
-      <Filter>강의 날짜\2023_03_28</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_28</Filter>
     </ClInclude>
     <ClInclude Include="20230328_SubClass02.h">
-      <Filter>강의 날짜\2023_03_28</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_28</Filter>
     </ClInclude>
     <ClInclude Include="20230328_SubClass03.h">
-      <Filter>강의 날짜\2023_03_28</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_28</Filter>
     </ClInclude>
     <ClInclude Include="20230328_SubClass04.h">
-      <Filter>강의 날짜\2023_03_28</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_28</Filter>
     </ClInclude>
     <ClInclude Include="20230329_OldStyle_Parent.h">
-      <Filter>강의 날짜\2023_03_29</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_29</Filter>
     </ClInclude>
     <ClInclude Include="20230329_Child_Dog.h">
-      <Filter>강의 날짜\2023_03_29</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_29</Filter>
     </ClInclude>
     <ClInclude Include="20230330_duck.h">
-      <Filter>강의 날짜\2023_03_30</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_30</Filter>
     </ClInclude>
     <ClInclude Include="20230330_move.h">
-      <Filter>강의 날짜\2023_03_30</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_30</Filter>
     </ClInclude>
     <ClInclude Include="20230330_walk.h">
-      <Filter>강의 날짜\2023_03_30</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_30</Filter>
     </ClInclude>
     <ClInclude Include="20230330_swim.h">
-      <Filter>강의 날짜\2023_03_30</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_30</Filter>
     </ClInclude>
     <ClInclude Include="20230330_run.h">
-      <Filter>강의 날짜\2023_03_30</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_30</Filter>
     </ClInclude>
     <ClInclude Include="20230331_move.h">
-      <Filter>강의 날짜\2023_03_31</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_31</Filter>
     </ClInclude>
     <ClInclude Include="20230331_move_manager.h">
-      <Filter>강의 날짜\2023_03_31</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_31</Filter>
     </ClInclude>
     <ClInclude Include="20230331_unit.h">
-      <Filter>강의 날짜\2023_03_31</Filter>
+      <Filter>강의 날짜\2023\04\2023_03_31</Filter>
     </ClInclude>
     <ClInclude Include="20230403_factoryClass.h">
-      <Filter>강의 날짜\2023_04_03</Filter>
+      <Filter>강의 날짜\2023\04\2023_04_03</Filter>
     </ClInclude>
     <ClInclude Include="20230403_moveManager.h">
-      <Filter>강의 날짜\2023_04_03</Filter>
+      <Filter>강의 날짜\2023\04\2023_04_03</Filter>
     </ClInclude>
     <ClInclude Include="20230403_class.h">
-      <Filter>강의 날짜\2023_04_03</Filter>
+      <Filter>강의 날짜\2023\04\2023_04_03</Filter>
     </ClInclude>
     <ClInclude Include="20230515_EmptyData.h">
       <Filter>강의 날짜\2023\05\15</Filter>
@@ -354,6 +357,9 @@
       <Filter>강의 날짜\2023\05\15</Filter>
     </ClInclude>
     <ClInclude Include="15_functionPointerBasic.h">
+      <Filter>강의 날짜\2023\05\15</Filter>
+    </ClInclude>
+    <ClInclude Include="20230515_test.h">
       <Filter>강의 날짜\2023\05\15</Filter>
     </ClInclude>
   </ItemGroup>

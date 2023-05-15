@@ -109,7 +109,7 @@ void solution_acmicpc1041(void)
 	std::cout << nMin;
 }
 
-int mainSpace_acmicpc1041(void)
+int mainSpace01_acmicpc1041(void)
 {
 	solution_acmicpc1041();
 
