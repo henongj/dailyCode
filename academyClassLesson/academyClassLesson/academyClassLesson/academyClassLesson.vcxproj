@@ -163,6 +163,9 @@
     <ClCompile Include="20230403_mainSpace.cpp" />
     <ClCompile Include="20230403_moveManager.cpp" />
     <ClCompile Include="20230515_EmptyData.cpp" />
+    <ClCompile Include="20230516_calculation.cpp" />
+    <ClCompile Include="20230516_codeSpace.cpp" />
+    <ClCompile Include="20230516_data.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -209,6 +212,8 @@
     <ClInclude Include="20230403_moveManager.h" />
     <ClInclude Include="20230515_EmptyData.h" />
     <ClInclude Include="20230515_test.h" />
+    <ClInclude Include="20230516_calculation.h" />
+    <ClInclude Include="20230516_data.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />

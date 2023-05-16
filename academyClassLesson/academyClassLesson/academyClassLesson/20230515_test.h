@@ -20,7 +20,7 @@ int mainSpace04_20230515(void)
 	funcArr[3] = &divide;
 	funcArr[4] = &mod;
 
-	while (nFlag != 5)
+	while (0 <= nFlag && nFlag < 5)
 	{
 		printf("0 add, 1 sub, 2 mul, 3 divide, 4 mod ||| else break \n");
 		std::cin >> nFlag;
