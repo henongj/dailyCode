@@ -109,6 +109,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -166,6 +167,8 @@
     <ClCompile Include="20230516_calculation.cpp" />
     <ClCompile Include="20230516_codeSpace.cpp" />
     <ClCompile Include="20230516_data.cpp" />
+    <ClCompile Include="20230517_baseBall.cpp" />
+    <ClCompile Include="20230517_table.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -214,6 +217,8 @@
     <ClInclude Include="20230515_test.h" />
     <ClInclude Include="20230516_calculation.h" />
     <ClInclude Include="20230516_data.h" />
+    <ClInclude Include="20230517_baseBall.h" />
+    <ClInclude Include="20230517_table.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
