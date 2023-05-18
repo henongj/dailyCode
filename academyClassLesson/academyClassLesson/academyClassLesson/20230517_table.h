@@ -1,5 +1,5 @@
 #pragma once
-
+#include<list>
 
 class C20230517_table
 {
@@ -9,7 +9,7 @@ public:
 		E_OUT = 0,
 		E_BALL,
 		E_STRIKE,
-		E_LENGTH
+		E_MAX
 	};
 
 private:
@@ -17,7 +17,9 @@ private:
 
 public:
 	C20230517_table() = default;
-	void init(int nStrike, int nBall, int nBall2, int nBall3);
+	void init(std::list<int>::iterator iterBegin, std::list<int>::iterator iterEnd);
 
-	e_result getResult(int nStrike, int nBall, int nBall2, int nBall3);
+	e_result getResult(int nNumber);
+	void printTable(void);
+
 };
