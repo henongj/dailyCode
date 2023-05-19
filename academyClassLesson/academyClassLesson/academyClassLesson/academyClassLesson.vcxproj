@@ -169,6 +169,7 @@
     <ClCompile Include="20230516_data.cpp" />
     <ClCompile Include="20230517_baseBall.cpp" />
     <ClCompile Include="20230517_table.cpp" />
+    <ClCompile Include="20230519_templateAdd.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -234,6 +235,7 @@
     <ClInclude Include="data_2303150.h" />
     <ClInclude Include="print_20230314.h" />
     <ClInclude Include="20230328_SuperClass01.h" />
+    <ClInclude Include="template20230519_add.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
