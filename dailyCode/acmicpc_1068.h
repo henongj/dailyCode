@@ -1,4 +1,3 @@
-#pragma once
 #include<algorithm>
 #include<iostream>
 #include<map>
@@ -19,13 +18,6 @@ void isNodeToDelete(const int nParentID, const int nNodeID, const std::vector<in
 void isLeafNode(const std::vector<int*>& vNodeParent, std::vector<bool>& vIsLeafNode);
 void solution_acmicpc1068(void);
 
-int run(void)
-{
-	solution_acmicpc1068();
-
-	return 0;
-}
-
 
 void solution_acmicpc1068(void)
 {
@@ -43,8 +35,6 @@ void solution_acmicpc1068(void)
 	for (int i = 0; i < nNodeNum; i++)
 		vNodeParent[i] = &vData[i];
 
-
-	vNodeParent[nNodeToDelete] = nullptr;
 	for (int i = 0; i < nNodeNum; i++)
 	{
 		bool isToDelete{};
@@ -53,16 +43,16 @@ void solution_acmicpc1068(void)
 		if (isToDelete)
 			vNodeParent[i] = nullptr;
 
-		std::cout << isToDelete << ", ";
+		//std::cout << isToDelete << ", ";
 	}
-	std::cout << "\n";
+	//std::cout << "\n";
 
 	isLeafNode(vNodeParent, vIsLeafNode);
-	for (int i = 0; i < nNodeNum; i++)
-	{
-		std::cout << vIsLeafNode[i] << ", ";
-	}
-	std::cout << "\n";
+	//for (int i = 0; i < nNodeNum; i++)
+	//{
+	//	std::cout << vIsLeafNode[i] << ", ";
+	//}
+	//std::cout << "\n";
 
 	nCount = 0;
 	for (int i = 0; i < nNodeNum; i++)
@@ -104,17 +94,26 @@ void isNodeToDelete(const int nParentID, const int nNodeID, const std::vector<in
 
 void isLeafNode(const std::vector<int*>& vNodeParent, std::vector<bool>& vIsLeafNode)
 {
-	size_t szNodeParent = vNodeParent.size();
-
-	for (int i = 0; i < szNodeParent; i++)
+	int nNodeCount{};
+	size_t nSize = vNodeParent.size();
+	nNodeCount = (int)nSize;
+	for (int i = 0; i < nSize; i++)
+	{
 		vIsLeafNode[i] = true;
+		if (!vNodeParent[i])
+			nNodeCount--;
+	}
 
-	for (int i = 0; i < szNodeParent; i++)
+	//std::cout << "nNodeCount : " << nNodeCount << "\n";
+	for (int i = 0; i < nSize; i++)
 	{
 		if (vNodeParent[i])
 		{
-			if (*vNodeParent[i] == -1 && 1 < szNodeParent)
-				vIsLeafNode[i] = false;
+			if (*vNodeParent[i] == -1)
+			{
+				if (nNodeCount != 1)
+					vIsLeafNode[i] = false;
+			}
 			else
 				vIsLeafNode[*vNodeParent[i]] = false;
 		}
@@ -123,3 +122,8 @@ void isLeafNode(const std::vector<int*>& vNodeParent, std::vector<bool>& vIsLeaf
 	}
 }
 
+/*
+6
+1 2 3 4 -1 4
+5
+*/
