@@ -76,15 +76,6 @@
     <Filter Include="강의 날짜\2023\04\2023_04_03">
       <UniqueIdentifier>{09087fac-e416-405f-ab49-1bbd12d19e0f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="강의 날짜\2023\05\16">
-      <UniqueIdentifier>{78cfcc51-df65-4b57-bd91-aec87757a565}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023\05\17">
-      <UniqueIdentifier>{b491f3e2-2b10-4b39-adf2-89d579776753}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="강의 날짜\2023\05\20">
-      <UniqueIdentifier>{181882f6-6934-4ebb-9507-9cafe49ef1f9}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -231,24 +222,6 @@
     <ClCompile Include="20230515_EmptyData.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="20230516_codeSpace.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="20230516_data.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="20230516_calculation.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="20230517_table.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="20230517_baseBall.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="20230519_templateAdd.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -388,21 +361,6 @@
     </ClInclude>
     <ClInclude Include="20230515_test.h">
       <Filter>강의 날짜\2023\05\15</Filter>
-    </ClInclude>
-    <ClInclude Include="20230516_data.h">
-      <Filter>강의 날짜\2023\05\16</Filter>
-    </ClInclude>
-    <ClInclude Include="20230516_calculation.h">
-      <Filter>강의 날짜\2023\05\16</Filter>
-    </ClInclude>
-    <ClInclude Include="20230517_table.h">
-      <Filter>강의 날짜\2023\05\17</Filter>
-    </ClInclude>
-    <ClInclude Include="20230517_baseBall.h">
-      <Filter>강의 날짜\2023\05\17</Filter>
-    </ClInclude>
-    <ClInclude Include="template20230519_add.h">
-      <Filter>강의 날짜\2023\05\20</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
