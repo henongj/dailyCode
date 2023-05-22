@@ -1,4 +1,3 @@
-#pragma once
 #include<algorithm>
 #include<iostream>
 #include<map>
@@ -16,7 +15,7 @@
 //https://www.acmicpc.net/problem/1083
 //1083 ¼ÒÆ®
 void dataInput_acmicpc1083(int& nN, std::vector<int>& vData, int& nS);
-void swapData_acmicpc1083(int& nNumber1, int& nNumber2);
+void swapData_acmicpc1083(std::vector<int>& vData, int& nIndexStart, int& nIndexDestination);
 void solution_acmicpc1083(void);
 
 int run_acmicpc1083(void)
@@ -36,11 +35,26 @@ void dataInput_acmicpc1083(int& nN, std::vector<int>& vData, int& nS)
 	std::cin >> nS;
 }
 
-void swapData_acmicpc1083(int& nNumber1, int& nNumber2)
+/*
+5
+1 2 3 4 99
+4
+
+* */
+void swapData_acmicpc1083(std::vector<int>& vData, int& nIndexStart, int& nIndexDestination)
 {
-	int nTemp = nNumber1;
-	nNumber1 = nNumber2;
-	nNumber2 = nTemp;
+	int nTemp = vData[nIndexStart];
+
+	vData[nIndexStart] = vData[nIndexDestination];
+	int nIndex = nIndexDestination;
+
+	// 4 3 2 
+	while (nIndex > nIndexStart)
+	{
+		vData[nIndex] = vData[nIndex - 1];
+		nIndex--;
+	}
+	vData[nIndex + 1] = nTemp;
 }
 
 void solution_acmicpc1083(void)
@@ -49,25 +63,39 @@ void solution_acmicpc1083(void)
 	std::vector<int> vData{};
 	int nS{};
 	int nSwapCount{};
+
 	int nIndex{};
+	int nIndexMax{};
+	int nDistance{};
 
 	dataInput_acmicpc1083(nN, vData, nS);
 
-	nSwapCount = 0;
+	nSwapCount = nS;
 	nIndex = 0;
-	while (nSwapCount < nS && nIndex < nN - 1)
+	while (0 < nSwapCount && nIndex < nN)
 	{
-		if (vData[nIndex] < vData[nIndex + 1])
+		nIndexMax = nIndex;
+		for (int iter = nIndex + 1;
+			iter < nN && iter - nIndex <= nSwapCount;
+			iter++)
 		{
-			swapData_acmicpc1083(vData[nIndex], vData[nIndex + 1]);
-			nSwapCount++;
-			nIndex = 0;
+			if (vData[nIndexMax] < vData[iter])
+				nIndexMax = iter;
 		}
+
+		if (vData[nIndex] < vData[nIndexMax])
+		{
+			swapData_acmicpc1083(vData, nIndex, nIndexMax);
+			nSwapCount -= (nIndexMax - nIndex);
+		}
+
+		////print vData
+		//for (int i = 0; i < nN; i++)
+		//	printf("%d, ", vData[i]);
+		//printf("\n");
 
 		nIndex++;
 	}
-
 	for (int i = 0; i < nN; i++)
 		std::cout << vData[i] << " ";
-
 }
