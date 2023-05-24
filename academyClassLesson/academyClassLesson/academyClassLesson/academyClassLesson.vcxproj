@@ -165,6 +165,7 @@
     <ClCompile Include="20230515_EmptyData.cpp" />
     <ClCompile Include="20230522_templateClass.cpp" />
     <ClCompile Include="20230523_stlListVector.cpp" />
+    <ClCompile Include="20230524_code.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
