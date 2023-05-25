@@ -131,6 +131,7 @@
     <ClInclude Include="178871_programmers.h" />
     <ClInclude Include="20230405_BubbleSort.h" />
     <ClInclude Include="20230420_Node.h" />
+    <ClInclude Include="acmicpc1092.h" />
     <ClInclude Include="acmicpc_1041_TLE.h" />
     <ClInclude Include="acmicpc_1025.h" />
     <ClInclude Include="acmicpc_1041_wrongAnswer.h" />
