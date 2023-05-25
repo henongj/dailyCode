@@ -79,7 +79,7 @@
     <Filter Include="강의 날짜\2023\05\22">
       <UniqueIdentifier>{16251ca8-004a-48a5-81be-a07ed0cef9e7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="강의 날짜\2023\05\24">
+    <Filter Include="강의 날짜\2023\05\25">
       <UniqueIdentifier>{84381b45-456f-4f95-9b79-eb7e3c8958af}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -235,6 +235,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230524_code.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230525_code.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
