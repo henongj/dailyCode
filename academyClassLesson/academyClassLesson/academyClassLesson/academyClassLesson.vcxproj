@@ -167,6 +167,8 @@
     <ClCompile Include="20230523_stlListVector.cpp" />
     <ClCompile Include="20230524_code.cpp" />
     <ClCompile Include="20230525_code.cpp" />
+    <ClCompile Include="20230526_student.cpp" />
+    <ClCompile Include="20230526_studentManager.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -215,6 +217,8 @@
     <ClInclude Include="20230515_test.h" />
     <ClInclude Include="20230522_classTemplate.h" />
     <ClInclude Include="20230522_templateArray.h" />
+    <ClInclude Include="20230526_student.h" />
+    <ClInclude Include="20230526_studentManager.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
