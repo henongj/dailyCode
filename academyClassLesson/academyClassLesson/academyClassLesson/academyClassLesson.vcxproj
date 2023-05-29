@@ -167,6 +167,7 @@
     <ClCompile Include="20230523_stlListVector.cpp" />
     <ClCompile Include="20230524_code.cpp" />
     <ClCompile Include="20230525_code.cpp" />
+    <ClCompile Include="20230526_code.cpp" />
     <ClCompile Include="20230526_student.cpp" />
     <ClCompile Include="20230526_studentManager.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
