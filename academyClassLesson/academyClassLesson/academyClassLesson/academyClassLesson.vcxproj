@@ -170,6 +170,9 @@
     <ClCompile Include="20230526_code.cpp" />
     <ClCompile Include="20230526_student.cpp" />
     <ClCompile Include="20230526_studentManager.cpp" />
+    <ClCompile Include="20230529_Beverage.cpp" />
+    <ClCompile Include="20230529_Factory.cpp" />
+    <ClCompile Include="20230529_store.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -220,6 +223,9 @@
     <ClInclude Include="20230522_templateArray.h" />
     <ClInclude Include="20230526_student.h" />
     <ClInclude Include="20230526_studentManager.h" />
+    <ClInclude Include="20230529_Beverage.h" />
+    <ClInclude Include="20230529_Factory.h" />
+    <ClInclude Include="20230529_store.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />

@@ -82,6 +82,9 @@
     <Filter Include="강의 날짜\2023\05\26">
       <UniqueIdentifier>{84381b45-456f-4f95-9b79-eb7e3c8958af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023\05\29">
+      <UniqueIdentifier>{63822502-0b18-4254-bf2f-e30388dbc9cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -249,6 +252,15 @@
     <ClCompile Include="20230526_code.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230529_Beverage.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230529_Factory.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230529_store.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -400,6 +412,15 @@
     </ClInclude>
     <ClInclude Include="20230526_studentManager.h">
       <Filter>강의 날짜\2023\05\26</Filter>
+    </ClInclude>
+    <ClInclude Include="20230529_Beverage.h">
+      <Filter>강의 날짜\2023\05\29</Filter>
+    </ClInclude>
+    <ClInclude Include="20230529_Factory.h">
+      <Filter>강의 날짜\2023\05\29</Filter>
+    </ClInclude>
+    <ClInclude Include="20230529_store.h">
+      <Filter>강의 날짜\2023\05\29</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

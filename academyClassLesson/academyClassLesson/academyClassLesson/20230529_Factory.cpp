@@ -1,0 +1,11 @@
+#include "20230529_Factory.h"
+
+C20230529_BEVERAGE* C20230529_COFFE_FACTORY::createBeverage()
+{
+	return new C20230529_COFFEE{};
+}
+
+C20230529_BEVERAGE* C20230529_TEE_FACTORY::createBeverage()
+{
+	return new C20230529_TEA{};
+}
