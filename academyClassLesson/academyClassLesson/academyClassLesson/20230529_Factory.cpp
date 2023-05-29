@@ -9,3 +9,8 @@ C20230529_BEVERAGE* C20230529_TEE_FACTORY::createBeverage()
 {
 	return new C20230529_TEA{};
 }
+
+C20230529_BEVERAGE* C20230529_JUICE_FACTORY::createBeverage()
+{
+	return new C20230529_JUICE{};
+}

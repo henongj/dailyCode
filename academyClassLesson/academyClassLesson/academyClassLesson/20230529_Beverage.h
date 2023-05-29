@@ -20,3 +20,9 @@ class C20230529_TEA : public C20230529_BEVERAGE
 public:
 	virtual void printName() override;
 };
+
+class C20230529_JUICE : public C20230529_BEVERAGE
+{
+public:
+	virtual void printName() override;
+};

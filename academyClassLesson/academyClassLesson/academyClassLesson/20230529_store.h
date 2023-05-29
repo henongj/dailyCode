@@ -7,6 +7,7 @@ public:
 	{
 		E_TEA,
 		E_COFFE,
+		E_JUICE,
 		E_MAX
 	};
 private:

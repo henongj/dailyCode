@@ -4,6 +4,7 @@ void C20230529_STORE::init()
 {
 	m_pFactory[(int)E_TYPE::E_TEA] = new C20230529_TEE_FACTORY{};
 	m_pFactory[(int)E_TYPE::E_COFFE] = new C20230529_COFFE_FACTORY{};
+	m_pFactory[(int)E_TYPE::E_JUICE] = new C20230529_JUICE_FACTORY{};
 }
 
 void C20230529_STORE::release()
