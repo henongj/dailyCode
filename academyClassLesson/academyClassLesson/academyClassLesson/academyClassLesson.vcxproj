@@ -228,6 +228,7 @@
     <ClInclude Include="20230529_Beverage.h" />
     <ClInclude Include="20230529_Factory.h" />
     <ClInclude Include="20230529_store.h" />
+    <ClInclude Include="20230530_command.h" />
     <ClInclude Include="20230530_Observer.h" />
     <ClInclude Include="20230530_Subject.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
