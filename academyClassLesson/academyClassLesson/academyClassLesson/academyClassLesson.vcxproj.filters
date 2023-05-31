@@ -273,6 +273,15 @@
     <ClCompile Include="20230530_Subject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230531_alam.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C20230531_lamp.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230531_button.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -440,7 +449,19 @@
     <ClInclude Include="20230530_Subject.h">
       <Filter>강의 날짜\2023\05\30</Filter>
     </ClInclude>
-    <ClInclude Include="20230530_command.h">
+    <ClInclude Include="20230531_command.h">
+      <Filter>강의 날짜\2023\05\31</Filter>
+    </ClInclude>
+    <ClInclude Include="20230531_button.h">
+      <Filter>강의 날짜\2023\05\31</Filter>
+    </ClInclude>
+    <ClInclude Include="20230531_alam.h">
+      <Filter>강의 날짜\2023\05\31</Filter>
+    </ClInclude>
+    <ClInclude Include="20230531_lamp.h">
+      <Filter>강의 날짜\2023\05\31</Filter>
+    </ClInclude>
+    <ClInclude Include="20230531_adapter.h">
       <Filter>강의 날짜\2023\05\31</Filter>
     </ClInclude>
   </ItemGroup>

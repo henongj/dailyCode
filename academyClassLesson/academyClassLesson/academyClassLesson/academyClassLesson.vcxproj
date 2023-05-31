@@ -175,6 +175,8 @@
     <ClCompile Include="20230529_store.cpp" />
     <ClCompile Include="20230530_Observer.cpp" />
     <ClCompile Include="20230530_Subject.cpp" />
+    <ClCompile Include="20230531_alam.cpp" />
+    <ClCompile Include="20230531_button.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -183,6 +185,7 @@
     <ClCompile Include="230314_testPrint.cpp" />
     <ClCompile Include="230314_unit.cpp" />
     <ClCompile Include="add_230313.cpp" />
+    <ClCompile Include="C20230531_lamp.cpp" />
     <ClCompile Include="Data_230313.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="print_20230314.cpp" />
@@ -228,9 +231,12 @@
     <ClInclude Include="20230529_Beverage.h" />
     <ClInclude Include="20230529_Factory.h" />
     <ClInclude Include="20230529_store.h" />
-    <ClInclude Include="20230530_command.h" />
+    <ClInclude Include="20230531_adapter.h" />
+    <ClInclude Include="20230531_alam.h" />
+    <ClInclude Include="20230531_command.h" />
     <ClInclude Include="20230530_Observer.h" />
     <ClInclude Include="20230530_Subject.h" />
+    <ClInclude Include="20230531_lamp.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
@@ -246,6 +252,7 @@
     <ClInclude Include="data_2303150.h" />
     <ClInclude Include="print_20230314.h" />
     <ClInclude Include="20230328_SuperClass01.h" />
+    <ClInclude Include="20230531_button.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
