@@ -870,6 +870,9 @@
     <ClInclude Include="20230530_character.h">
       <Filter>헤더 파일\codePractice</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc_1174.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
