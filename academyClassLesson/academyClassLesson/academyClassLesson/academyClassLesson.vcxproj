@@ -177,6 +177,9 @@
     <ClCompile Include="20230530_Subject.cpp" />
     <ClCompile Include="20230531_alam.cpp" />
     <ClCompile Include="20230531_button.cpp" />
+    <ClCompile Include="20230601.deco.cpp" />
+    <ClCompile Include="20230601_code.cpp" />
+    <ClCompile Include="20230601_pivoit.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -237,6 +240,10 @@
     <ClInclude Include="20230530_Observer.h" />
     <ClInclude Include="20230530_Subject.h" />
     <ClInclude Include="20230531_lamp.h" />
+    <ClInclude Include="20230601_deco.h" />
+    <ClInclude Include="20230601_base.h" />
+    <ClInclude Include="20230601_doNotUseMultipleInheritance.h" />
+    <ClInclude Include="20230601_pivoit.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
@@ -250,6 +257,7 @@
     <ClInclude Include="Data_230313.h" />
     <ClInclude Include="data_20230314.h" />
     <ClInclude Include="data_2303150.h" />
+    <ClInclude Include="20230601_deco_A.h" />
     <ClInclude Include="print_20230314.h" />
     <ClInclude Include="20230328_SuperClass01.h" />
     <ClInclude Include="20230531_button.h" />
