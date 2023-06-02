@@ -9,6 +9,8 @@ __interface I20230530_OBSERVER
 
 class C20230530_OBSERVER abstract : public I20230530_OBSERVER
 {
+private:
+	
 public:
 	virtual ~C20230530_OBSERVER() = default;
 };
