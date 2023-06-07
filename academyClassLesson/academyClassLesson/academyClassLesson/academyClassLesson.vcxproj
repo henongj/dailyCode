@@ -181,6 +181,7 @@
     <ClCompile Include="20230601_code.cpp" />
     <ClCompile Include="20230601_pivoit.cpp" />
     <ClCompile Include="20230605_data.cpp" />
+    <ClCompile Include="20230607_Student.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -193,6 +194,7 @@
     <ClCompile Include="Data_230313.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="print_20230314.cpp" />
+    <ClCompile Include="studentManager.cpp" />
     <ClCompile Include="testMain.cpp" />
     <ClCompile Include="data_20230314.cpp" />
   </ItemGroup>
@@ -246,6 +248,8 @@
     <ClInclude Include="20230601_doNotUseMultipleInheritance.h" />
     <ClInclude Include="20230601_pivoit.h" />
     <ClInclude Include="20230605_data.h" />
+    <ClInclude Include="20230607_bookManager.h" />
+    <ClInclude Include="20230607_Student.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />
@@ -263,6 +267,7 @@
     <ClInclude Include="print_20230314.h" />
     <ClInclude Include="20230328_SuperClass01.h" />
     <ClInclude Include="20230531_button.h" />
+    <ClInclude Include="20230607_studentManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
