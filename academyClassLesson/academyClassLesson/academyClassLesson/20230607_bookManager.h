@@ -10,7 +10,7 @@ private:
 	{
 		int nID;
 		C20230607_STUDENT* pStudent;
-		std::map<std::string,std::list<std::string>> mapBookData;
+		std::map<std::string*,std::list<std::string>> mapBookData;
 	};
 private:
 	std::set<S_INFO> m_setInfo;

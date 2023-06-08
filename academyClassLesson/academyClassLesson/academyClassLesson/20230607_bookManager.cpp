@@ -29,7 +29,6 @@ void C20230607_bookManager::addBook(int nID, const char* pStudentName, const cha
 
 	if (iter == m_setInfo.end())
 		registStudent(nID, pStudentName, iter);
-
 	
 	
 }

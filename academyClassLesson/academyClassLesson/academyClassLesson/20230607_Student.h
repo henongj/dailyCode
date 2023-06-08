@@ -20,4 +20,7 @@ public:
 
 	void setId(int nID);
 	void setName(const char* pName);
+
+	void getId(int& nID);
+	std::string getName(void);
 };

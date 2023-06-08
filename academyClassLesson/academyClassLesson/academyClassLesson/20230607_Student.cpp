@@ -16,3 +16,13 @@ void C20230607_STUDENT::setName(const char* pName)
 {
 	m_strName = pName;
 }
+
+void C20230607_STUDENT::getId(int& nID)
+{
+	nID = m_nId;
+}
+
+std::string C20230607_STUDENT::getName(void)
+{
+	return m_strName;
+}
