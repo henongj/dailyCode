@@ -9,8 +9,13 @@ private:
 
 public:
 	C20230607_STUDENT_MANAGER() = default;
+	
 	void init();
+	void release();
+	
 	C20230607_STUDENT* findStudent(int nID);
+	
+
 
 };
 	

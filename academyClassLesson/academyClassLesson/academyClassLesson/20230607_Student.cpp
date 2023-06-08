@@ -6,3 +6,13 @@ C20230607_STUDENT::C20230607_STUDENT(int nID, const char* pName) :
 	m_nId = nID;
 	m_strName = pName;
 }
+
+void C20230607_STUDENT::setId(int nID)
+{
+	m_nId = nID;
+}
+
+void C20230607_STUDENT::setName(const char* pName)
+{
+	m_strName = pName;
+}

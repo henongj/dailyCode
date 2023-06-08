@@ -17,4 +17,7 @@ public:
 	//delete copy , assgin operator
 	C20230607_STUDENT(const C20230607_STUDENT&) = delete;
 	C20230607_STUDENT& operator=(const C20230607_STUDENT&) = delete;
+
+	void setId(int nID);
+	void setName(const char* pName);
 };
