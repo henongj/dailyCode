@@ -1,6 +1,7 @@
 #pragma once
 #include<set>
 #include<list>
+#include<stdio.h>
 #include<map>
 #include"20230607_Student.h"
 class C20230607_bookManager
@@ -10,7 +11,7 @@ private:
 	{
 		int nID;
 		C20230607_STUDENT* pStudent;
-		std::map<std::string*,std::list<std::string>> mapBookData;
+		std::map<std::string,std::list<std::string>> mapBookData;
 	};
 private:
 	std::set<S_INFO> m_setInfo;
@@ -31,4 +32,5 @@ public:
 
 	void addBook(int nID, const char* pStudentName, const char* pBookName);
 	
+	void printAll(void);
 };

@@ -17,18 +17,27 @@ void C20230607_bookManager::init()
 	pStudentBuffer = new C20230607_STUDENT(0, "");
 	m_setInfo.clear();
 }
-
 void C20230607_bookManager::addBook(int nID, const char* pStudentName, const char* pBookName)
 {
-	pInfoBuffer->nID = nID;
-	pInfoBuffer->pStudent = pStudentBuffer;
-	pStudentBuffer->setId(nID);
-	pStudentBuffer->setName(pStudentName);
+    pInfoBuffer->nID = nID;
+    pInfoBuffer->pStudent = pStudentBuffer;
+    pStudentBuffer->setId(nID);
+    pStudentBuffer->setName(pStudentName);
 
-	std::set<S_INFO>::iterator iter = m_setInfo.find(*pInfoBuffer);
+    std::set<S_INFO>::iterator iter = m_setInfo.find(*pInfoBuffer);
 
-	if (iter == m_setInfo.end())
-		registStudent(nID, pStudentName, iter);
-	
-	
+    if (iter == m_setInfo.end())
+        registStudent(nID, pStudentName, iter);
+
+    S_INFO& info = const_cast<S_INFO&>(*iter);
+    std::map<std::string, std::list<std::string>>& bookData = info.mapBookData;
+    std::map<std::string, std::list<std::string>>::iterator iterBook = bookData.find(pStudentName);
+
+    if (iterBook == bookData.end()) {
+        bookData.insert({ pStudentName, std::list<std::string>() });
+        iterBook = bookData.find(pStudentName);
+    }
+
+    std::list<std::string>& bookList = iterBook->second;
+    bookList.push_back(pBookName);
 }
