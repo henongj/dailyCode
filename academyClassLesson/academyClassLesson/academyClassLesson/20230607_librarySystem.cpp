@@ -41,12 +41,6 @@ bool C20230607_librarySystem::rentBook(int nStudentID, int nBookID)
 		return false;
 	}
 	
-	std::map<C20230607_STUDENT*, std::list<C20230607_Book*>>::iterator iter = m_mapBorrowedBook.find(pStudent);
-	// ºô¸° Ã¥ ¸ñ·Ï
-	std::list<C20230607_Book*>& listBorrowedBook = iter->second;
-	
-	listBorrowedBook.push_back(pBook);
-
 	return true;
 }
 
