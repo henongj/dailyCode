@@ -13,9 +13,10 @@ public:
 	void init();
 	void release();
 	
+	bool addStudent(int nID, const char* pName);
+	bool eraseStudent(int nID, const char* pName);
+
 	C20230607_STUDENT* findStudent(int nID);
 	
-
-
 };
 	

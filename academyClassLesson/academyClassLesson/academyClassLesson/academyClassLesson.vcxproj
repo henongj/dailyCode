@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="200230607_Book.cpp" />
     <ClCompile Include="20230321_class01.cpp" />
     <ClCompile Include="20230321_code.cpp" />
     <ClCompile Include="20230322_class01.cpp" />
@@ -182,6 +183,7 @@
     <ClCompile Include="20230601_pivoit.cpp" />
     <ClCompile Include="20230605_data.cpp" />
     <ClCompile Include="20230607_bookManager.cpp" />
+    <ClCompile Include="20230607_librarySystem.cpp" />
     <ClCompile Include="20230607_Student.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
@@ -202,6 +204,7 @@
   <ItemGroup>
     <ClInclude Include="15_functionPointerBasic.h" />
     <ClInclude Include="15_functionPointerExample.h" />
+    <ClInclude Include="20230607_Book.h" />
     <ClInclude Include="20230320_class01.h" />
     <ClInclude Include="20230321_class01.h" />
     <ClInclude Include="20230322_class01.h" />
@@ -250,6 +253,7 @@
     <ClInclude Include="20230601_pivoit.h" />
     <ClInclude Include="20230605_data.h" />
     <ClInclude Include="20230607_bookManager.h" />
+    <ClInclude Include="20230607_librarySystem.h" />
     <ClInclude Include="20230607_Student.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />

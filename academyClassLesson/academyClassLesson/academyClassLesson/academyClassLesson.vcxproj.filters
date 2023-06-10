@@ -315,6 +315,12 @@
     <ClCompile Include="20230607_bookManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="200230607_Book.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230607_librarySystem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -522,6 +528,12 @@
       <Filter>강의 날짜\2023\06\07</Filter>
     </ClInclude>
     <ClInclude Include="20230607_bookManager.h">
+      <Filter>강의 날짜\2023\06\07</Filter>
+    </ClInclude>
+    <ClInclude Include="20230607_Book.h">
+      <Filter>강의 날짜\2023\06\07</Filter>
+    </ClInclude>
+    <ClInclude Include="20230607_librarySystem.h">
       <Filter>강의 날짜\2023\06\07</Filter>
     </ClInclude>
   </ItemGroup>

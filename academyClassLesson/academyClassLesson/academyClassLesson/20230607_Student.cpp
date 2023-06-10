@@ -17,12 +17,9 @@ void C20230607_STUDENT::setName(const char* pName)
 	m_strName = pName;
 }
 
-void C20230607_STUDENT::getId(int& nID)
+void C20230607_STUDENT::printInfo(void)
 {
-	nID = m_nId;
+	printf("ID : %d, 학생 이름 : %s\n", m_nId, m_strName.c_str());
 }
 
-std::string C20230607_STUDENT::getName(void)
-{
-	return m_strName;
-}
+
