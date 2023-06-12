@@ -40,6 +40,20 @@ bool C20230607_librarySystem::rentBook(int nStudentID, int nBookID)
 		printf("id와 일치하는 학생이 없습니다 %d\n", nStudentID);
 		return false;
 	}
+
+	std::map<C20230607_STUDENT*, std::list<C20230607_Book*>>::iterator iter = m_mapBorrowedBook.find(pStudent);
+	
+	if (iter == m_mapBorrowedBook.end())
+	{
+		std::list<C20230607_Book*> listBorrowedBook{};
+		listBorrowedBook.push_back(pBook);
+		m_mapBorrowedBook.insert({ pStudent, listBorrowedBook });
+	}
+	else
+	{
+		std::list<C20230607_Book*>& listBorrowedBook = iter->second;
+		listBorrowedBook.push_back(pBook);
+	}
 	
 	return true;
 }

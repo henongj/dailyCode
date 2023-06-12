@@ -185,6 +185,8 @@
     <ClCompile Include="20230607_bookManager.cpp" />
     <ClCompile Include="20230607_librarySystem.cpp" />
     <ClCompile Include="20230607_Student.cpp" />
+    <ClCompile Include="20230612_codeSpace.cpp" />
+    <ClCompile Include="20230612_student.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />
@@ -255,6 +257,8 @@
     <ClInclude Include="20230607_bookManager.h" />
     <ClInclude Include="20230607_librarySystem.h" />
     <ClInclude Include="20230607_Student.h" />
+    <ClInclude Include="20230612_student.h" />
+    <ClInclude Include="20230612_studentManager.h" />
     <ClInclude Include="2023_03_20_lectureMain.h" />
     <ClInclude Include="2023_03_23_classOperator.h" />
     <ClInclude Include="230314_data.h" />

@@ -103,6 +103,9 @@
     <Filter Include="강의 날짜\2023\06\07">
       <UniqueIdentifier>{512227c3-7349-45d9-bf10-ecc505c39d04}</UniqueIdentifier>
     </Filter>
+    <Filter Include="강의 날짜\2023\06\12">
+      <UniqueIdentifier>{e4b7fbf3-4a62-4a64-b902-e8ab73b99c0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data_230313.cpp">
@@ -321,6 +324,12 @@
     <ClCompile Include="20230607_librarySystem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230612_student.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230612_codeSpace.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data_230313.h">
@@ -535,6 +544,12 @@
     </ClInclude>
     <ClInclude Include="20230607_librarySystem.h">
       <Filter>강의 날짜\2023\06\07</Filter>
+    </ClInclude>
+    <ClInclude Include="20230612_student.h">
+      <Filter>강의 날짜\2023\06\12</Filter>
+    </ClInclude>
+    <ClInclude Include="20230612_studentManager.h">
+      <Filter>강의 날짜\2023\06\12</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
