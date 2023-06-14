@@ -68,7 +68,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ACADEMYAPI));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_ACADEMYAPI);
+    wcex.lpszMenuName = nullptr;// MAKEINTRESOURCEW(IDC_ACADEMYAPI);
     wcex.lpszClassName  = L"className";
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
@@ -91,8 +91,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HMENU hMenu = nullptr;//LoadMenuW(hInstance, MAKEINTRESOURCE(IDC_ACADEMYAPI));
    
-   HWND hWnd = CreateWindowW(L"className", L"이거보여주려고 어그로끌었다", WS_OVERLAPPEDWINDOW,
-      0, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+   HWND hWnd = CreateWindowExW(0, L"className", L"AcademyAPI", WS_OVERLAPPEDWINDOW,
+	   CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
    
    if (!hWnd)
    {
@@ -121,6 +121,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             case IDM_EXIT:
                 DestroyWindow(hWnd);
                 break;
+            case IDM_testButton:
+				MessageBox(hWnd, L"s 눌렀으면 꺼버려야지",L"테스트박스", MB_OK);
+                DestroyWindow(hWnd);
+				break;
             default:
                 return DefWindowProc(hWnd, message, wParam, lParam);
             }
