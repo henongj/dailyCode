@@ -187,6 +187,7 @@
     <ClCompile Include="20230607_Student.cpp" />
     <ClCompile Include="20230612_codeSpace.cpp" />
     <ClCompile Include="20230612_student.cpp" />
+    <ClCompile Include="20230619_code.cpp" />
     <ClCompile Include="2023_03_23_classOperator.cpp" />
     <ClCompile Include="230314_data.cpp" />
     <ClCompile Include="230314_main.cpp" />

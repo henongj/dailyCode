@@ -133,7 +133,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AcademyAPI.cpp" />
+    <ClCompile Include="20230616_API.cpp" />
+    <ClCompile Include="20230619_API.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AcademyAPI.rc" />

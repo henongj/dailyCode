@@ -29,7 +29,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AcademyAPI.cpp">
+    <ClCompile Include="20230616_API.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230619_API.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
