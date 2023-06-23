@@ -51,6 +51,7 @@ void C_WINAPI::initMsgFunc()
 	m_arMSGFUNC[WM_DESTROY] = &C_WINAPI::OnDestroy;
 	m_arMSGFUNC[WM_KEYDOWN] = &C_WINAPI::OnFloatText;
 	m_arMSGFUNC[WM_MOUSEMOVE] = &C_WINAPI::OnMouseMove;
+	m_arMSGFUNC[WM_RBUTTONDOWN] = &C_WINAPI::OnModifyWindowStyle;
 }
 
 LRESULT C_WINAPI::OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
@@ -87,6 +88,22 @@ LRESULT C_WINAPI::OnMouseMove(HWND hWnd, WPARAM wParam, LPARAM lParam)
 	
 	InvalidateRect(hWnd, nullptr, true);
 	
+	return S_OK;
+}
+
+LRESULT C_WINAPI::OnModifyWindowStyle(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{
+	//(WS_OVERLAPPED     | \                             WS_CAPTION        | \WS_SYSMENU        | \WS_THICKFRAME     | \WS_MINIMIZEBOX    | \WS_MAXIMIZEBOX)
+	LONG_PTR lStyle = GetWindowLongPtr(hWnd, GWL_STYLE);
+	
+	lStyle ^= WS_MINIMIZEBOX;
+	lStyle ^= WS_MAXIMIZEBOX;
+	lStyle ^= WS_CAPTION;
+	lStyle ^= WS_SYSMENU;
+	lStyle ^= WS_THICKFRAME;
+	
+	SetWindowLongPtr(hWnd, GWL_STYLE, lStyle);
+
 	return S_OK;
 }
 

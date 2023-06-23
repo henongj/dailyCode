@@ -25,6 +25,8 @@ private:
 	LRESULT OnDestroy(HWND hWnd, WPARAM wParam, LPARAM lParam);
 	LRESULT OnFloatText(HWND hWnd, WPARAM wParam, LPARAM lParam);
 	LRESULT OnMouseMove(HWND hWnd, WPARAM wParam, LPARAM lParam);
+	LRESULT OnModifyWindowStyle(HWND hWnd, WPARAM wParam, LPARAM lParam);
+
 
 private:
 	C_WINAPI() = default;
