@@ -10,8 +10,12 @@ private:
 	
 	HINSTANCE m_hInstance;
 	HWND m_hWnd;
-
+	
 	int m_nData1;
+	int m_nMousePointX;
+	int m_nMousePointY;
+
+	WCHAR m_szKey = L'A';
 	
 	LRESULT(C_WINAPI::*m_arMSGFUNC[WM_USER])(HWND hWnd, WPARAM wParam, LPARAM lParam);
 
@@ -19,6 +23,8 @@ private:
 	void initMsgFunc();
 	LRESULT OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam);
 	LRESULT OnDestroy(HWND hWnd, WPARAM wParam, LPARAM lParam);
+	LRESULT OnFloatText(HWND hWnd, WPARAM wParam, LPARAM lParam);
+	LRESULT OnMouseMove(HWND hWnd, WPARAM wParam, LPARAM lParam);
 
 private:
 	C_WINAPI() = default;

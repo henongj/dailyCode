@@ -1,6 +1,6 @@
 #include "winapi.h"
 #include"resource.h"
-
+#include"windowsx.h"
 C_WINAPI* C_WINAPI::m_pAPI = nullptr;
 
 bool C_WINAPI::init(HINSTANCE hInstance)
@@ -49,6 +49,8 @@ void C_WINAPI::initMsgFunc()
 {
 	m_arMSGFUNC[WM_PAINT] = &C_WINAPI::OnPaint;
 	m_arMSGFUNC[WM_DESTROY] = &C_WINAPI::OnDestroy;
+	m_arMSGFUNC[WM_KEYDOWN] = &C_WINAPI::OnFloatText;
+	m_arMSGFUNC[WM_MOUSEMOVE] = &C_WINAPI::OnMouseMove;
 }
 
 LRESULT C_WINAPI::OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
@@ -56,6 +58,7 @@ LRESULT C_WINAPI::OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
 	PAINTSTRUCT ps;
 	HDC hdc = BeginPaint(hWnd, &ps);
 	// TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+	TextOut(GetDC(m_hWnd), m_nMousePointX - 10, m_nMousePointY, &m_szKey, 1);
 	EndPaint(hWnd, &ps);
 	
 	return S_OK;
@@ -64,6 +67,25 @@ LRESULT C_WINAPI::OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
 LRESULT C_WINAPI::OnDestroy(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
 	PostQuitMessage(0);
+	
+	return S_OK;
+}
+
+LRESULT C_WINAPI::OnFloatText(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{	
+	m_szKey = (WCHAR)wParam;
+	
+	InvalidateRect(hWnd, nullptr, true);
+	
+	return S_OK;
+}
+
+LRESULT C_WINAPI::OnMouseMove(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{
+	m_nMousePointX = GET_X_LPARAM(lParam);
+	m_nMousePointY = GET_Y_LPARAM(lParam);
+	
+	InvalidateRect(hWnd, nullptr, true);
 	
 	return S_OK;
 }
