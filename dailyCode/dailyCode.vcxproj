@@ -217,6 +217,7 @@
     <ClInclude Include="classTest230314_1.h" />
     <ClInclude Include="classTest230320.h" />
     <ClInclude Include="classTest230320_2.h" />
+    <ClInclude Include="commentTree.h" />
     <ClInclude Include="dataStruct\graph_implement_adjacency.h" />
     <ClInclude Include="dataStruct\graph_traversal.h" />
     <ClInclude Include="dataStruct\implement_binary_tree.h" />
@@ -427,6 +428,7 @@
     <ClCompile Include="classTest230314_main.cpp" />
     <ClCompile Include="classTest230320.cpp" />
     <ClCompile Include="classTest230320_2.cpp" />
+    <ClCompile Include="commentTree.cpp" />
     <ClCompile Include="inheritanceConstructorCall.cpp" />
     <ClCompile Include="main.cpp">
       <LanguageStandard_C Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdc17</LanguageStandard_C>
