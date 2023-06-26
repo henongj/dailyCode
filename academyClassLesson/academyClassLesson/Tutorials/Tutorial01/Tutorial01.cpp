@@ -98,8 +98,7 @@ HRESULT InitWindow( HINSTANCE hInstance, int nCmdShow )
     // Create window
     g_hInst = hInstance;
     RECT rc = { 0, 0, 640, 480 };
-    
-	AdjustWindowRect( &rc, WS_OVERLAPPEDWINDOW, FALSE );
+    AdjustWindowRect( &rc, WS_OVERLAPPEDWINDOW, FALSE );
     g_hWnd = CreateWindow( L"TutorialWindowClass", L"Direct3D 11 Tutorial 1: Direct3D 11 Basics", WS_OVERLAPPEDWINDOW,
                            CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance,
                            NULL );
@@ -210,7 +209,7 @@ HRESULT InitDevice()
 
     g_pImmediateContext->OMSetRenderTargets( 1, &g_pRenderTargetView, NULL );
 
-    // Setup the viewport ºäÆ÷Æ® ¼¼ÆÃ
+    // Setup the viewport
     D3D11_VIEWPORT vp;
     vp.Width = (FLOAT)width;
     vp.Height = (FLOAT)height;
@@ -230,9 +229,7 @@ HRESULT InitDevice()
 void Render()
 {
     // Just clear the backbuffer
-    //float ClearColor[4] = { 0.0f, 0.125f, 0.3f, 1.0f }; //red,green,blue,alpha
-    float ClearColor[4] = { 0.4f, 0.4f, 0.4f, 1.0f }; //red,green,blue,alpha
-
+    float ClearColor[4] = { 0.0f, 0.125f, 0.3f, 1.0f }; //red,green,blue,alpha
     g_pImmediateContext->ClearRenderTargetView( g_pRenderTargetView, ClearColor );
     g_pSwapChain->Present( 0, 0 );
 }
