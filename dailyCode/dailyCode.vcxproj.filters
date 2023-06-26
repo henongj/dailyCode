@@ -876,12 +876,6 @@
     <ClInclude Include="acmicpc_1106.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
-    <ClInclude Include="acmicpc_1927.h">
-      <Filter>헤더 파일\acmicpc</Filter>
-    </ClInclude>
-    <ClInclude Include="commentTree.h">
-      <Filter>헤더 파일\codePractice</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
@@ -933,9 +927,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="20230530_character.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="commentTree.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

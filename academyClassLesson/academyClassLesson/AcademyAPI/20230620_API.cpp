@@ -14,7 +14,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	C_WINAPI::getAPI()->init(hInstance);
 	C_WINAPI::getAPI()->updateMsg();
 
-
+	
 
 	
 	C_WINAPI::releaseAPI();
