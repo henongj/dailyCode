@@ -466,7 +466,8 @@ void Render()
     //
     // Animate the cube
     //
-	g_World = XMMatrixRotationY( t );
+	//g_World = XMMatrixRotationY( t );
+    g_World = XMMatrixRotationRollPitchYaw(0.0f, t, 0.0f);
 
     //
     // Clear the back buffer
