@@ -12,6 +12,7 @@ cbuffer ConstantBuffer : register( b0 )
 	matrix World;
 	matrix View;
 	matrix Projection;
+    matrix MVP;
 }
 
 //--------------------------------------------------------------------------------------
@@ -27,9 +28,10 @@ struct VS_OUTPUT
 VS_OUTPUT VS( float4 Pos : POSITION, float4 Color : COLOR )
 {
     VS_OUTPUT output = (VS_OUTPUT)0;
-    output.Pos = mul( Pos, World );
+	output.Pos = mul(Pos, MVP);
+    /*output.Pos = mul( Pos, World );
     output.Pos = mul( output.Pos, View );
-    output.Pos = mul( output.Pos, Projection );
+    output.Pos = mul( output.Pos, Projection );*/
     output.Color = Color;
     return output;
 }

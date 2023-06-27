@@ -28,6 +28,7 @@ struct ConstantBuffer
 	XMMATRIX mWorld;
 	XMMATRIX mView;
 	XMMATRIX mProjection;
+    XMMATRIX mWVP;
 };
 
 
@@ -449,10 +450,10 @@ LRESULT CALLBACK WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam 
 void Render()
 {
     // Update our time
-    static float t = 0.0f;
+    static float t = 2.0f;
     if( g_driverType == D3D_DRIVER_TYPE_REFERENCE )
     {
-        t += ( float )XM_PI * 0.0125f;
+        t += ( float )XM_PI * 0.1f;
     }
     else
     {
@@ -479,16 +480,35 @@ void Render()
     // Update variables
     //
     ConstantBuffer cb;
-	cb.mWorld = XMMatrixTranspose( g_World );
+
+    XMMATRIX matWVP{};
+    XMMATRIX matWorld{};
+    matWorld = XMMatrixIdentity();
+    XMMATRIX matLocation = XMMatrixIdentity();
+    XMMATRIX matRotation = XMMatrixIdentity();
+
+    matLocation = XMMatrixTranslation(2.0f, 0.0f, 0.0f);
+    //matRotation = XMMatrixRotationY(t*10);
+    matRotation = XMMatrixRotationRollPitchYaw(t*40, 0.0f, t*2);
+    //matWorld = matRotation * matLocation;
+    matWorld =  matLocation * matRotation;
+
+ //   matWVP = g_World * g_View * g_Projection;
+    matWVP = matWorld * g_View * g_Projection;
+
+	cb.mWVP = XMMatrixTranspose(matWVP);
+	g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, NULL, &cb, 0, 0);
+	/*cb.mWorld = XMMatrixTranspose( g_World );
 	cb.mView = XMMatrixTranspose( g_View );
 	cb.mProjection = XMMatrixTranspose( g_Projection );
-	g_pImmediateContext->UpdateSubresource( g_pConstantBuffer, 0, NULL, &cb, 0, 0 );
+	g_pImmediateContext->UpdateSubresource( g_pConstantBuffer, 0, NULL, &cb, 0, 0 );*/
 
     //
     // Renders a triangle
     //
-	g_pImmediateContext->VSSetShader( g_pVertexShader, NULL, 0 );
-	g_pImmediateContext->VSSetConstantBuffers( 0, 1, &g_pConstantBuffer );
+    g_pImmediateContext->VSSetShader( g_pVertexShader, NULL, 0 );
+    g_pImmediateContext->VSSetConstantBuffers( 0, 1, &g_pConstantBuffer );
+    
 	g_pImmediateContext->PSSetShader( g_pPixelShader, NULL, 0 );
 	g_pImmediateContext->DrawIndexed( 36, 0, 0 );        // 36 vertices needed for 12 triangles in a triangle list
 
