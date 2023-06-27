@@ -36,57 +36,52 @@ bool c_CommentTree::findNodeIndex(const int nTargetID, int& nResultIndex)
 	return false;
 }
 
-bool c_CommentTree::addReply(int nParentId, const std::string& text, e_CommentType type)
+bool c_CommentTree::addReply(int nParentId, const std::string& text)
 {
-	size_t nCommmentLength = m_vComments.size();
-
-	if (nParentId > nCommmentLength)
+	if (m_vComments.empty() || m_vComments.size() < nParentId || m_vComments[nParentId] == nullptr)
 		return false;
 
-	comment* cComment{};
-	cComment = new comment{};
+	reply* pReply{};
+	comment* pComment{};
+	pReply = new reply{};
+	pComment = m_vComments[nParentId];
 
-	cComment->m_nId = m_nIdCounter;
+	pReply->m_nId = m_nIdCounter;
+	pReply->m_nParentID = nParentId;
+	pReply->m_pLeftReply = nullptr;
+	pReply->m_pRightParentReply = nullptr;
+	pReply->m_strText = text;
 
-	cComment->m_pLeftReply = nullptr;
-	cComment->m_pRightComment = nullptr;
-	cComment->m_strText = text;
-
-	m_nIdCounter++;
-	m_vComments.push_back(cComment);
-
-	cComment->m_nParentID = nParentId;
-	getLeftMostNode(m_vComments[nParentId])->m_pLeftReply = cComment;
+	if (pComment->m_pLeftReply)
+		getRightMostParentReply(pComment->m_pLeftReply)->m_pRightParentReply = pReply;
+	else
+		pComment->m_pLeftReply = pReply;
 
 	return true;
 }
 
-bool c_CommentTree::addComment(const std::string& text, e_CommentType type)
+bool c_CommentTree::addComment(const std::string& text)
 {
-	comment* cComment{};
-	cComment = new comment{};
+	comment* pComment{};
 
-	cComment->m_nId = m_nIdCounter;
+	pComment = new comment{};
 
-	cComment->m_pLeftReply = nullptr;
-	cComment->m_pRightComment = nullptr;
-	cComment->m_strText = text;
+	pComment->m_nId = m_nIdCounter;
+	pComment->m_nParentID = pComment->m_nId;
+	pComment->m_pLeftReply = nullptr;
+	pComment->m_pRightComment = nullptr;
+	pComment->m_strText = text;
 
-	cComment->m_nParentID = cComment->m_nId = m_nIdCounter;
-	m_nIdCounter++;
-	m_vComments.push_back(cComment);
-
-	comment* cRightLeafNode = getRightLeafNode();
-	cRightLeafNode->m_pRightComment = cComment;
+	comment* pLastComment = getRightMostComment();
+	pLastComment->m_pRightComment = pComment;
+	m_vComments.push_back(pComment);
 
 	return true;
 }
 
-c_CommentTree::comment* c_CommentTree::getRightLeafNode(void)
+c_CommentTree::comment* c_CommentTree::getRightMostComment(void)
 {
 	comment* pFinder = m_pRoot;
-	if (pFinder == nullptr)
-		return m_pRoot;
 
 	while (pFinder->m_pRightComment != nullptr)
 		pFinder = pFinder->m_pRightComment;
@@ -94,12 +89,23 @@ c_CommentTree::comment* c_CommentTree::getRightLeafNode(void)
 	return pFinder;
 }
 
-c_CommentTree::comment* c_CommentTree::getLeftMostNode(comment* pComment)
+c_CommentTree::reply* c_CommentTree::getLeftMostReply(reply* pReply)
 {
-	comment* pFinder = pComment;
+	reply* pFinder = pReply;
+
 	while (pFinder->m_pLeftReply != nullptr)
 		pFinder = pFinder->m_pLeftReply;
 
+	return pFinder;
+}
+
+c_CommentTree::reply* c_CommentTree::getRightMostParentReply(reply* pReply)
+{
+	reply* pFinder = pReply;
+
+	while (pFinder->m_pRightParentReply != nullptr)
+		pFinder = pFinder->m_pRightParentReply;
+	
 	return pFinder;
 }
 
@@ -108,17 +114,28 @@ void c_CommentTree::printComment()
 	printAllCommentRecursive(m_pRoot->m_pRightComment);
 }
 
+
 void c_CommentTree::printAllCommentRecursive(comment* pComment)
 {
 	if (pComment == nullptr)
 		return;
 
 	printf("아이디 : %d ", pComment->m_nId);
-	if (pComment->m_nParentID != pComment->m_nId)
-		printf(" 답글 대상 : %d ", pComment->m_nParentID);
 	printf("\n%s\n", pComment->m_strText.c_str());
 
-	printAllCommentRecursive(pComment->m_pLeftReply);
+	printReplyRecursive(pComment->m_pLeftReply);
 	printAllCommentRecursive(pComment->m_pRightComment);
-	
+}
+
+void c_CommentTree::printReplyRecursive(reply* pReply)
+{
+	if (pReply == nullptr)
+		return;
+
+	printf(" ㄴ 아이디 : %d ", pReply->m_nId);
+	printf(" 답글 대상 : %d ", pReply->m_nParentID);
+	printf("\n   %s\n", pReply->m_strText.c_str());
+
+	printReplyRecursive(pReply->m_pLeftReply);
+	printReplyRecursive(pReply->m_pRightParentReply);
 }
