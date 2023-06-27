@@ -1,6 +1,6 @@
 #include "winapi.h"
 #include"resource.h"
-
+#include"windowsx.h"
 C_WINAPI* C_WINAPI::m_pAPI = nullptr;
 
 bool C_WINAPI::init(HINSTANCE hInstance)
@@ -21,10 +21,9 @@ bool C_WINAPI::init(HINSTANCE hInstance)
 
 	RegisterClassExW(&wcex);
 
-	//WS_TILEDWINDOW
-	m_hWnd = CreateWindowW(L"className", nullptr, (WS_OVERLAPPED | WS_CAPTION | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX),
+	m_hWnd = CreateWindowW(L"className", nullptr, WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
-	
+
 	if (!m_hWnd)
 		return false;
 
@@ -45,15 +44,14 @@ void C_WINAPI::updateMsg()
 	}
 }
 
-void C_WINAPI::setWindowStyle(DWORD dwStyle)
-{
-	SetWindowLongPtr(m_pAPI->m_hWnd, GWL_STYLE, dwStyle);
-}
 
 void C_WINAPI::initMsgFunc()
 {
 	m_arMSGFUNC[WM_PAINT] = &C_WINAPI::OnPaint;
 	m_arMSGFUNC[WM_DESTROY] = &C_WINAPI::OnDestroy;
+	m_arMSGFUNC[WM_KEYDOWN] = &C_WINAPI::OnFloatText;
+	m_arMSGFUNC[WM_MOUSEMOVE] = &C_WINAPI::OnMouseMove;
+	m_arMSGFUNC[WM_RBUTTONDOWN] = &C_WINAPI::OnModifyWindowStyle;
 }
 
 LRESULT C_WINAPI::OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
@@ -61,6 +59,7 @@ LRESULT C_WINAPI::OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
 	PAINTSTRUCT ps;
 	HDC hdc = BeginPaint(hWnd, &ps);
 	// TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+	TextOut(GetDC(m_hWnd), m_nMousePointX - 10, m_nMousePointY, &m_szKey, 1);
 	EndPaint(hWnd, &ps);
 	
 	return S_OK;
@@ -70,6 +69,41 @@ LRESULT C_WINAPI::OnDestroy(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
 	PostQuitMessage(0);
 	
+	return S_OK;
+}
+
+LRESULT C_WINAPI::OnFloatText(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{	
+	m_szKey = (WCHAR)wParam;
+	
+	InvalidateRect(hWnd, nullptr, true);
+	
+	return S_OK;
+}
+
+LRESULT C_WINAPI::OnMouseMove(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{
+	m_nMousePointX = GET_X_LPARAM(lParam);
+	m_nMousePointY = GET_Y_LPARAM(lParam);
+	
+	InvalidateRect(hWnd, nullptr, true);
+	
+	return S_OK;
+}
+
+LRESULT C_WINAPI::OnModifyWindowStyle(HWND hWnd, WPARAM wParam, LPARAM lParam)
+{
+	//(WS_OVERLAPPED     | \                             WS_CAPTION        | \WS_SYSMENU        | \WS_THICKFRAME     | \WS_MINIMIZEBOX    | \WS_MAXIMIZEBOX)
+	LONG_PTR lStyle = GetWindowLongPtr(hWnd, GWL_STYLE);
+	
+	lStyle ^= WS_MINIMIZEBOX;
+	lStyle ^= WS_MAXIMIZEBOX;
+	lStyle ^= WS_CAPTION;
+	lStyle ^= WS_SYSMENU;
+	lStyle ^= WS_THICKFRAME;
+	
+	SetWindowLongPtr(hWnd, GWL_STYLE, lStyle);
+
 	return S_OK;
 }
 

@@ -77,7 +77,9 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
             DispatchMessage( &msg );
         }
         else
+        {
             Render();
+        }
     }
 
     CleanupDevice();
@@ -226,7 +228,6 @@ HRESULT InitDevice()
     if( FAILED( hr ) )
         return hr;
 
-    //리소스 데이터에 액세스하기 위한 Render-Target View를 만듭니다.
     g_pImmediateContext->OMSetRenderTargets( 1, &g_pRenderTargetView, NULL );
 
     // Setup the viewport
@@ -237,7 +238,6 @@ HRESULT InitDevice()
     vp.MaxDepth = 1.0f;
     vp.TopLeftX = 0;
     vp.TopLeftY = 0;
-    //뷰포트 배열을 파이프라인의 래스터라이저 단계에 바인딩합니다.
     g_pImmediateContext->RSSetViewports( 1, &vp );
 
     // Compile the vertex shader

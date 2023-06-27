@@ -1,6 +1,6 @@
-#define _CRTDBG_MAP_ALLOC
-#include <stdlib.h>
-#include <crtdbg.h>
+//#define _CRTDBG_MAP_ALLOC
+//#include <stdlib.h>
+//#include <crtdbg.h>
 #include<algorithm>
 #include<iostream>
 #include<map>
@@ -14,17 +14,38 @@
 #include<cmath>
 #include<set>
 
+#include"commentTree.h"
 
 int main(void)
 {
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	int nData = 10;
-	char strTmp[30] = "ajbksd'";
-	char strPaint[64]{};
+	c_CommentTree commentTree{};
+	commentTree.init();
+	std::string strInput{};
+	
+	strInput = "this is the 0 comment";
+	commentTree.addComment(strInput, c_CommentTree::e_CommentType::Comment);
+	strInput = "this is the 1 comment";
+	commentTree.addComment(strInput, c_CommentTree::e_CommentType::Comment);
+	strInput = "this is the 2 comment";
+	commentTree.addComment(strInput, c_CommentTree::e_CommentType::Comment);
+	strInput = "this is the 3 comment";
+	commentTree.addComment(strInput, c_CommentTree::e_CommentType::Comment);
 
-	sprintf_s(strPaint, 64, "%s = %d", strTmp, nData);
+	strInput = "this is the 4 comment, 1 Reply";
+	commentTree.addReply(1, strInput, c_CommentTree::e_CommentType::Reply);
+	strInput = "this is the 5 comment, 2 Reply";
+	commentTree.addReply(1, strInput, c_CommentTree::e_CommentType::Reply);
+	strInput = "this is the 6 comment, 3 Reply";
+	commentTree.addReply(4, strInput, c_CommentTree::e_CommentType::Reply);
+	strInput = "this is the 7 comment, 4 Reply";
+	commentTree.addReply(5, strInput, c_CommentTree::e_CommentType::Reply);
+	strInput = "this is the 8 comment, 5 Reply";
+	commentTree.addReply(4, strInput, c_CommentTree::e_CommentType::Reply);
 
-	std::cout << strPaint << std::endl;
+	commentTree.printComment();
+
+	commentTree.release();
 	return 0;
 }
