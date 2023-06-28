@@ -1,52 +1,35 @@
 #pragma once
 
-#include<Windows.h>
-#include"winapi.h"
+#include <windows.h>
+#include "resource.h"
 
 class C_WINAPI
 {
 private:
-	static C_WINAPI* m_pAPI;
-
-	HINSTANCE m_hInstance;
+	static C_WINAPI* m_pWinAPI;
+	HINSTANCE m_hInst;
 	HWND m_hWnd;
 
-	int m_nData1;
-	int m_nMousePointX;
-	int m_nMousePointY;
-
-	WCHAR m_szKey = L'A';
-
-	LRESULT(C_WINAPI::* m_arMSGFUNC[WM_USER])(HWND hWnd, WPARAM wParam, LPARAM lParam);
-
-private:
-	void initMsgFunc();
-	LRESULT OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam);
-	LRESULT OnDestroy(HWND hWnd, WPARAM wParam, LPARAM lParam);
-	LRESULT OnFloatText(HWND hWnd, WPARAM wParam, LPARAM lParam);
-	LRESULT OnMouseMove(HWND hWnd, WPARAM wParam, LPARAM lParam);
-	LRESULT OnModifyWindowStyle(HWND hWnd, WPARAM wParam, LPARAM lParam);
-
-
+	LRESULT(C_WINAPI::* m_msgFunction[WM_USER])(HWND hWnd, WPARAM wParam, LPARAM lParam);
+	
 private:
 	C_WINAPI() = default;
+
+private:
 	static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
-	LRESULT CALLBACK apiProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+	LRESULT classProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+
+private:
+	void initMsgFunction(void);
+	LRESULT onPaint(HWND hWnd, WPARAM wParam, LPARAM lParam);
+	LRESULT onDestroy(HWND hWnd, WPARAM wParam, LPARAM lParam);
 
 public:
-	static void createAPI();
-	static C_WINAPI* getAPI();
-	static void releaseAPI();
+	static void createIstance(void);
+	static void releaseInstance(void);
+	static C_WINAPI* getAPI(void);
 
 public:
-	~C_WINAPI() = default;
-
-	C_WINAPI& operator=(const C_WINAPI&) = delete;
-	C_WINAPI(const C_WINAPI&) = delete;
-
-	bool init(HINSTANCE hInstance);
-	void updateMsg();
-	HWND getHWND() const { return m_hWnd; }
-	
+	HRESULT init(HINSTANCE hInstance);
+	void updateMessage(void);
 };
-

@@ -5,14 +5,12 @@
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
-#include <windows.h>
 #include <d3d11.h>
 #include <d3dx11.h>
 #include <d3dcompiler.h>
 #include <xnamath.h>
-#include "resource.h"
-#include"winAPI.h"
 
+#include"winAPI.h"
 
 //--------------------------------------------------------------------------------------
 // Structures
@@ -35,6 +33,8 @@ struct ConstantBuffer
 //--------------------------------------------------------------------------------------
 // Global Variables
 //--------------------------------------------------------------------------------------
+HINSTANCE               g_hInst = NULL;
+HWND                    g_hWnd = NULL;
 D3D_DRIVER_TYPE         g_driverType = D3D_DRIVER_TYPE_NULL;
 D3D_FEATURE_LEVEL       g_featureLevel = D3D_FEATURE_LEVEL_11_0;
 ID3D11Device*           g_pd3dDevice = NULL;
@@ -58,32 +58,92 @@ XMMATRIX                g_Projection;
 //--------------------------------------------------------------------------------------
 // Forward declarations
 //--------------------------------------------------------------------------------------
-
+HRESULT InitWindow( HINSTANCE hInstance, int nCmdShow );
 HRESULT InitDevice();
 void CleanupDevice();
 LRESULT CALLBACK    WndProc( HWND, UINT, WPARAM, LPARAM );
 void Render();
 
 
+//--------------------------------------------------------------------------------------
+// Entry point to the program. Initializes everything and goes into a message processing 
+// loop. Idle time is used to render the scene.
+//--------------------------------------------------------------------------------------
 int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow )
 {
-	C_WINAPI::createAPI();
+    UNREFERENCED_PARAMETER( hPrevInstance );
+    UNREFERENCED_PARAMETER( lpCmdLine );
+
+    C_WINAPI::createIstance();
 	C_WINAPI::getAPI()->init(hInstance);
-        
+    C_WINAPI::getAPI()->updateMessage();
+
+    /*if( FAILED( InitWindow( hInstance, nCmdShow ) ) )
+        return 0;*/
+
     if( FAILED( InitDevice() ) )
     {
         CleanupDevice();
         return 0;
     }
 
-	// Main message loop
-    C_WINAPI::getAPI()->updateMsg();
-    
+    // Main message loop
+    /*MSG msg = {0};
+    while( WM_QUIT != msg.message )
+    {
+        if( PeekMessage( &msg, NULL, 0, 0, PM_REMOVE ) )
+        {
+            TranslateMessage( &msg );
+            DispatchMessage( &msg );
+        }
+        else
+        {
+            Render();
+        }
+    }*/
+
     CleanupDevice();
 
-	return 0;
+    return S_OK;
 }
 
+
+//--------------------------------------------------------------------------------------
+// Register class and create window
+//--------------------------------------------------------------------------------------
+HRESULT InitWindow( HINSTANCE hInstance, int nCmdShow )
+{
+    // Register class
+    WNDCLASSEX wcex;
+    wcex.cbSize = sizeof( WNDCLASSEX );
+    wcex.style = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc = WndProc;
+    wcex.cbClsExtra = 0;
+    wcex.cbWndExtra = 0;
+    wcex.hInstance = hInstance;
+    wcex.hIcon = LoadIcon( hInstance, ( LPCTSTR )IDI_TUTORIAL1);
+    wcex.hCursor = LoadCursor( NULL, IDC_ARROW );
+    wcex.hbrBackground = ( HBRUSH )( COLOR_WINDOW + 1 );
+    wcex.lpszMenuName = NULL;
+    wcex.lpszClassName = L"TutorialWindowClass";
+    wcex.hIconSm = LoadIcon( wcex.hInstance, ( LPCTSTR )IDI_TUTORIAL1);
+    if( !RegisterClassEx( &wcex ) )
+        return E_FAIL;
+
+    // Create window
+    g_hInst = hInstance;
+    RECT rc = { 0, 0, 640, 480 };
+    AdjustWindowRect( &rc, WS_OVERLAPPEDWINDOW, FALSE );
+    g_hWnd = CreateWindow( L"TutorialWindowClass", L"Direct3D 11 Tutorial 5", WS_OVERLAPPEDWINDOW,
+                           CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance,
+                           NULL );
+    if( !g_hWnd )
+        return E_FAIL;
+
+    ShowWindow( g_hWnd, nCmdShow );
+
+    return S_OK;
+}
 
 
 //--------------------------------------------------------------------------------------
@@ -126,7 +186,7 @@ HRESULT InitDevice()
     HRESULT hr = S_OK;
 
     RECT rc;
-	GetClientRect(C_WINAPI::getAPI()->getHWND(), &rc);
+    GetClientRect( g_hWnd, &rc );
     UINT width = rc.right - rc.left;
     UINT height = rc.bottom - rc.top;
 
@@ -160,7 +220,7 @@ HRESULT InitDevice()
     sd.BufferDesc.RefreshRate.Numerator = 60;
     sd.BufferDesc.RefreshRate.Denominator = 1;
     sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-	sd.OutputWindow = C_WINAPI::getAPI()->getHWND();
+    sd.OutputWindow = g_hWnd;
     sd.SampleDesc.Count = 1;
     sd.SampleDesc.Quality = 0;
     sd.Windowed = TRUE;
@@ -392,6 +452,32 @@ void CleanupDevice()
     if( g_pd3dDevice ) g_pd3dDevice->Release();
 }
 
+
+//--------------------------------------------------------------------------------------
+// Called every time the application receives a message
+//--------------------------------------------------------------------------------------
+LRESULT CALLBACK WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
+{
+    PAINTSTRUCT ps;
+    HDC hdc;
+
+    switch( message )
+    {
+        case WM_PAINT:
+            hdc = BeginPaint( hWnd, &ps );
+            EndPaint( hWnd, &ps );
+            break;
+
+        case WM_DESTROY:
+            PostQuitMessage( 0 );
+            break;
+
+        default:
+            return DefWindowProc( hWnd, message, wParam, lParam );
+    }
+
+    return 0;
+}
 
 
 //--------------------------------------------------------------------------------------
