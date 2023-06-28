@@ -2,6 +2,8 @@
 
 #include <windows.h>
 #include "resource.h"
+#include"directX.h"
+
 
 class C_WINAPI
 {
@@ -31,5 +33,6 @@ public:
 
 public:
 	HRESULT init(HINSTANCE hInstance);
-	void updateMessage(void);
+	void updateMessage(C_DirectX* pRenderer);
+	HWND getHWND(void);
 };

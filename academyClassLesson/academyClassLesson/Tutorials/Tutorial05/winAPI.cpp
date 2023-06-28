@@ -99,21 +99,25 @@ HRESULT C_WINAPI::init(HINSTANCE hInstance)
     return S_OK;
 }
 
-void C_WINAPI::updateMessage(void)
+void C_WINAPI::updateMessage(C_DirectX* pRenderer)
 {
-	MSG msg = { 0 };
+    MSG msg = { 0 };
 
-   while( WM_QUIT != msg.message )
-   {
-       if( PeekMessage( &msg, NULL, 0, 0, PM_REMOVE ) )
-       {
-           TranslateMessage( &msg );
-           DispatchMessage( &msg );
-       }
-       else
-       {
-           //Render();
-       }
-   }
+    while (WM_QUIT != msg.message)
+    {
+        if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+        {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
+        else
+        {
+            pRenderer->renderFrame();
+        }
+    }
+}
 
+HWND C_WINAPI::getHWND(void)
+{
+    return m_hWnd;
 }

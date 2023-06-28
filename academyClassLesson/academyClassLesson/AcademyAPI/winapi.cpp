@@ -1,6 +1,7 @@
 #include "winapi.h"
 #include"resource.h"
 #include"windowsx.h"
+
 C_WINAPI* C_WINAPI::m_pAPI = nullptr;
 
 bool C_WINAPI::init(HINSTANCE hInstance)

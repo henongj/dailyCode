@@ -373,6 +373,7 @@
   </ItemDefinitionGroup>
   <ItemGroup />
   <ItemGroup>
+    <ClCompile Include="directX.cpp" />
     <ClCompile Include="Tutorial05.cpp" />
     <ClCompile Include="winAPI.cpp" />
   </ItemGroup>
@@ -380,6 +381,7 @@
     <None Include="Tutorial05.fx" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="directX.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="winAPI.h" />
     <ResourceCompile Include="Tutorial05.rc" />

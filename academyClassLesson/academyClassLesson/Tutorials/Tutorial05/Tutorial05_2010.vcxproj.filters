@@ -20,10 +20,14 @@
     <ClInclude Include="winAPI.h">
       <Filter>header</Filter>
     </ClInclude>
+    <ClInclude Include="directX.h">
+      <Filter>header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tutorial05.cpp" />
     <ClCompile Include="winAPI.cpp" />
+    <ClCompile Include="directX.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Tutorial05.fx">

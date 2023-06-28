@@ -11,6 +11,7 @@
 #include <xnamath.h>
 
 #include"winAPI.h"
+#include"directX.h"
 
 //--------------------------------------------------------------------------------------
 // Structures
@@ -76,17 +77,16 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
 
     C_WINAPI::createIstance();
 	C_WINAPI::getAPI()->init(hInstance);
-    C_WINAPI::getAPI()->updateMessage();
 
-    /*if( FAILED( InitWindow( hInstance, nCmdShow ) ) )
-        return 0;*/
-
-    if( FAILED( InitDevice() ) )
+    C_DirectX directX{};
+	
+    if (FAILED(directX.initDevice(C_WINAPI::getAPI()->getHWND())))
     {
-        CleanupDevice();
+        directX.cleanUpDevice();
         return 0;
     }
-
+	
+    C_WINAPI::getAPI()->updateMessage(&directX);
     // Main message loop
     /*MSG msg = {0};
     while( WM_QUIT != msg.message )
@@ -102,7 +102,7 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
         }
     }*/
 
-    CleanupDevice();
+    directX.cleanUpDevice();
 
     return S_OK;
 }
