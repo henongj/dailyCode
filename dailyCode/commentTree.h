@@ -1,30 +1,39 @@
 #pragma once
 #include<string>
 #include<vector>
+
 class c_CommentTree
 {
 private:
+	struct reply;
+	struct comment;
+	
 	struct comment
 	{
 		int m_nId;
 		int m_nParentID;
 		std::string m_strText;
 		
-		comment* m_pLeftReply;
+		reply* m_pLeftReply;
 		comment* m_pRightComment;
 	};
+	struct reply
+	{
+		int m_nId;
+		int m_nParentID;
+		std::string m_strText;
+
+		reply* m_pLeftReply;
+		reply* m_pRightParentReply;
+	};
+
 
 private:
 	comment* m_pRoot;
 	std::vector<comment*> m_vComments;
 	int m_nIdCounter;
 	void printAllCommentRecursive(comment* pComment);
-public:
-	enum class e_CommentType
-	{
-		Comment,
-		Reply,
-	};
+	void printReplyRecursive(reply* pReply);
 	
 public:
 	c_CommentTree() = default;
@@ -37,10 +46,12 @@ public:
 	void release(void);
 	
 	bool findNodeIndex(const int nTargetID, int& nResult);
-	bool addReply(int nParentId, const std::string& text, e_CommentType type);
-	bool addComment(const std::string& text, e_CommentType type);
+	bool addReply(int nParentId, const std::string& text);
+	bool addComment(const std::string& text);
 
-	comment* getRightLeafNode(void);
-	comment* getLeftMostNode(comment* pComment);
+	comment* getRightMostComment(void);
+	reply* getLeftMostReply(reply* pReply);
+	reply* getRightMostParentReply(reply* pReply);
 	void printComment(void);
+	
 };
