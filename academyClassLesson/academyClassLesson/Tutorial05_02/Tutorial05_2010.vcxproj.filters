@@ -12,18 +12,22 @@
       <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
       <Extensions>fx;fxh;hlsl</Extensions>
     </Filter>
-    <Filter Include="WInAPI">
-      <UniqueIdentifier>{00816441-41e7-48e4-a501-c5c8b8f29bf7}</UniqueIdentifier>
+    <Filter Include="header">
+      <UniqueIdentifier>{8d757d5d-84ac-4be4-9f64-2c89ee5df1f6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="winAPI.h">
-      <Filter>WInAPI</Filter>
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="directX.h">
+      <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tutorial05.cpp" />
     <ClCompile Include="winAPI.cpp" />
+    <ClCompile Include="directX.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Tutorial05.fx">
@@ -39,8 +43,5 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="directx.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>

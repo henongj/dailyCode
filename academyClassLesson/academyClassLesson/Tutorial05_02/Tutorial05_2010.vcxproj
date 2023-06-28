@@ -183,6 +183,7 @@
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4005, 4838;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
@@ -371,10 +372,9 @@
       </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Image Include="directx.ico" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="directX.cpp" />
     <ClCompile Include="Tutorial05.cpp" />
     <ClCompile Include="winAPI.cpp" />
   </ItemGroup>
@@ -382,6 +382,7 @@
     <None Include="Tutorial05.fx" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="directX.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="winAPI.h" />
     <ResourceCompile Include="Tutorial05.rc" />
