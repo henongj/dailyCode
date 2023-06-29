@@ -1,10 +1,41 @@
 #include "directX.h"
 
+ID3D11Device* C_DIRECTX::g_pd3dDevice = nullptr;
+ID3D11DeviceContext* C_DIRECTX::g_pImmediateContext = nullptr;
+
+
+
+ID3D11Device* C_DIRECTX::getDevice(void)
+{
+	return g_pd3dDevice;
+}
+
+ID3D11DeviceContext* C_DIRECTX::getDeviceContext(void)
+{
+	return g_pImmediateContext;
+}
+
+HRESULT C_DIRECTX::createBuffer(UINT size, D3D11_BIND_FLAG bindFlag, void* initData, ID3D11Buffer** ppBuffer)
+{
+    D3D11_BUFFER_DESC bd{
+        size,
+        D3D11_USAGE_DEFAULT,
+        bindFlag,
+        0, 0, 0
+    };
+    
+    //데이터가 있으면 만들어서 넣고, 없으면 null을 넣게 되어있고, 안 쓰니까 null만들어서 넣으면 터짐
+    D3D11_SUBRESOURCE_DATA InitSubResource{ initData, 0,0 };
+    D3D11_SUBRESOURCE_DATA* pSubResource{};
+	if (initData)
+		pSubResource = &InitSubResource;
+	
+    return  g_pd3dDevice->CreateBuffer(&bd, &InitSubResource, ppBuffer);
+}
+
 C_DIRECTX::C_DIRECTX() :
     g_driverType{},
     g_featureLevel{},
-    g_pd3dDevice{},
-    g_pImmediateContext{},
     g_pSwapChain{},
     g_pRenderTargetView{},
     g_pDepthStencil{},
@@ -408,6 +439,16 @@ void C_DIRECTX::render(void)
     // Present our back buffer to our front buffer
     //
     g_pSwapChain->Present(0, 0);
+}
+
+void* C_DIRECTX::operator new(size_t size)
+{
+	return _aligned_malloc(size, 16);
+}
+
+void C_DIRECTX::operator delete(void* pDelete)
+{
+	_aligned_free(pDelete);
 }
 
 

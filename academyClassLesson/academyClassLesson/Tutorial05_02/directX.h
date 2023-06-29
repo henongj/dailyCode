@@ -22,11 +22,12 @@ private:
 	};
 
 private:
+	static ID3D11Device* g_pd3dDevice;
+	static ID3D11DeviceContext* g_pImmediateContext;
+	
+	IDXGISwapChain* g_pSwapChain = NULL;
 	D3D_DRIVER_TYPE         g_driverType = D3D_DRIVER_TYPE_NULL;
 	D3D_FEATURE_LEVEL       g_featureLevel = D3D_FEATURE_LEVEL_11_0;
-	ID3D11Device* g_pd3dDevice = NULL;
-	ID3D11DeviceContext* g_pImmediateContext = NULL;
-	IDXGISwapChain* g_pSwapChain = NULL;
 	ID3D11RenderTargetView* g_pRenderTargetView = NULL;
 	ID3D11Texture2D* g_pDepthStencil = NULL;
 	ID3D11DepthStencilView* g_pDepthStencilView = NULL;
@@ -46,8 +47,16 @@ private:
 	HRESULT CompileShaderFromFile(const WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut);
 
 public:
+	static ID3D11Device* getDevice(void);
+	static ID3D11DeviceContext* getDeviceContext(void);
+	static HRESULT createBuffer(UINT size, D3D11_BIND_FLAG bindFlag, void* initData, ID3D11Buffer** ppBuffer);
+	
+public:
 	C_DIRECTX();
 	HRESULT InitDevice(HWND hWnd);
 	void cleanupDevice(void);
 	void render(void);
+
+	void* operator new(size_t size);
+	void operator delete(void* pDelete);
 };

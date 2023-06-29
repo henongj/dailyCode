@@ -26,6 +26,9 @@
     <ClInclude Include="directX.h">
       <Filter>header</Filter>
     </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directX.cpp">

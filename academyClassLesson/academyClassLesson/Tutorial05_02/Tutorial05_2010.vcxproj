@@ -383,6 +383,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="directX.h" />
+    <ClInclude Include="mesh.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="winAPI.h" />
     <ResourceCompile Include="Tutorial05.rc" />
