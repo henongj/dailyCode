@@ -1,38 +1,68 @@
 #include "directX.h"
 
 C_DIRECTX::C_DIRECTX() :
-	g_driverType{},
-	g_featureLevel{},
-	g_pd3dDevice{},
-	g_pImmediateContext{},
-	g_pSwapChain{},
-	g_pRenderTargetView{},
-	g_pDepthStencil{},
-	g_pDepthStencilView{},
-	g_pVertexShader{},
-	g_pPixelShader{},
-	g_pVertexLayout{},
-	g_pVertexBuffer{},
-	g_pIndexBuffer{},
-	g_pConstantBuffer{},
-	g_World1{},
-	g_World2{},
-	g_View{},
-	g_Projection{},
-	g_hWnd {}
+    g_driverType{},
+    g_featureLevel{},
+    g_pd3dDevice{},
+    g_pImmediateContext{},
+    g_pSwapChain{},
+    g_pRenderTargetView{},
+    g_pDepthStencil{},
+    g_pDepthStencilView{},
+    g_pVertexShader{},
+    g_pPixelShader{},
+    g_pVertexLayout{},
+    g_pVertexBuffer{},
+    g_pIndexBuffer{},
+    g_pConstantBuffer{},
+    g_World1{},
+    g_World2{},
+    g_View{},
+    g_Projection{},
+    g_hWnd{}
 {
-	g_driverType = D3D_DRIVER_TYPE_NULL;
-	g_featureLevel = D3D_FEATURE_LEVEL_11_0;
-	
-	g_World1 = XMMatrixIdentity();
-	g_World2 = XMMatrixIdentity();
-	g_View = XMMatrixIdentity();
-	g_Projection = XMMatrixIdentity();
-	
+    g_driverType = D3D_DRIVER_TYPE_NULL;
+    g_featureLevel = D3D_FEATURE_LEVEL_11_0;
+
+    g_World1 = XMMatrixIdentity();
+    g_World2 = XMMatrixIdentity();
+    g_View = XMMatrixIdentity();
+    g_Projection = XMMatrixIdentity();
 }
 
-HRESULT C_DIRECTX::InitDevice(HWND g_hWnd)
+
+HRESULT C_DIRECTX::CompileShaderFromFile(const WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut)
 {
+    HRESULT hr = S_OK;
+
+    DWORD dwShaderFlags = D3DCOMPILE_ENABLE_STRICTNESS;
+#if defined( DEBUG ) || defined( _DEBUG )
+    // Set the D3DCOMPILE_DEBUG flag to embed debug information in the shaders.
+    // Setting this flag improves the shader debugging experience, but still allows 
+    // the shaders to be optimized and to run exactly the way they will run in 
+    // the release configuration of this program.
+    dwShaderFlags |= D3DCOMPILE_DEBUG;
+#endif
+
+    ID3DBlob* pErrorBlob;
+    hr = D3DX11CompileFromFile(szFileName, NULL, NULL, szEntryPoint, szShaderModel,
+        dwShaderFlags, 0, NULL, ppBlobOut, &pErrorBlob, NULL);
+    if (FAILED(hr))
+    {
+        if (pErrorBlob != NULL)
+            OutputDebugStringA((char*)pErrorBlob->GetBufferPointer());
+        if (pErrorBlob) pErrorBlob->Release();
+        return hr;
+    }
+    if (pErrorBlob) pErrorBlob->Release();
+
+    return S_OK;
+}
+
+
+HRESULT C_DIRECTX::InitDevice(HWND hWnd)
+{
+    g_hWnd = hWnd;
 
     HRESULT hr = S_OK;
 
@@ -279,5 +309,105 @@ HRESULT C_DIRECTX::InitDevice(HWND g_hWnd)
     g_Projection = XMMatrixPerspectiveFovLH(XM_PIDIV2, width / (FLOAT)height, 0.01f, 100.0f);
 
     return S_OK;
-
 }
+
+
+
+//--------------------------------------------------------------------------------------
+// Clean up the objects we've created
+//--------------------------------------------------------------------------------------
+void C_DIRECTX::cleanupDevice()
+{
+    if (g_pImmediateContext) g_pImmediateContext->ClearState();
+
+    if (g_pConstantBuffer) g_pConstantBuffer->Release();
+    if (g_pVertexBuffer) g_pVertexBuffer->Release();
+    if (g_pIndexBuffer) g_pIndexBuffer->Release();
+    if (g_pVertexLayout) g_pVertexLayout->Release();
+    if (g_pVertexShader) g_pVertexShader->Release();
+    if (g_pPixelShader) g_pPixelShader->Release();
+    if (g_pDepthStencil) g_pDepthStencil->Release();
+    if (g_pDepthStencilView) g_pDepthStencilView->Release();
+    if (g_pRenderTargetView) g_pRenderTargetView->Release();
+    if (g_pSwapChain) g_pSwapChain->Release();
+    if (g_pImmediateContext) g_pImmediateContext->Release();
+    if (g_pd3dDevice) g_pd3dDevice->Release();
+}
+
+void C_DIRECTX::render(void)
+{
+    // Update our time
+    static float t = 0.0f;
+    if (g_driverType == D3D_DRIVER_TYPE_REFERENCE)
+    {
+        t += (float)XM_PI * 0.0125f;
+    }
+    else
+    {
+        static DWORD dwTimeStart = 0;
+        DWORD dwTimeCur = GetTickCount();
+        if (dwTimeStart == 0)
+            dwTimeStart = dwTimeCur;
+        t = (dwTimeCur - dwTimeStart) / 1000.0f;
+    }
+
+    // 1st Cube: Rotate around the origin
+    g_World1 = XMMatrixRotationY(t);
+
+    // 2nd Cube:  Rotate around origin
+    XMMATRIX mSpin = XMMatrixRotationZ(-t);
+    XMMATRIX mOrbit = XMMatrixRotationY(-t * 2.0f);
+    XMMATRIX mTranslate = XMMatrixTranslation(-4.0f, 0.0f, 0.0f);
+    XMMATRIX mScale = XMMatrixScaling(0.3f, 0.3f, 0.3f);
+
+    g_World2 = mScale * mSpin * mTranslate * mOrbit;
+
+    //
+    // Clear the back buffer
+    //
+    float ClearColor[4] = { 0.0f, 0.125f, 0.3f, 1.0f }; //red, green, blue, alpha
+    g_pImmediateContext->ClearRenderTargetView(g_pRenderTargetView, ClearColor);
+
+    //
+    // Clear the depth buffer to 1.0 (max depth)
+    //
+    g_pImmediateContext->ClearDepthStencilView(g_pDepthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);
+
+    //
+    // Update variables for the first cube
+    //
+    ConstantBuffer cb1;
+    cb1.mWorld = XMMatrixTranspose(g_World1);
+    cb1.mView = XMMatrixTranspose(g_View);
+    cb1.mProjection = XMMatrixTranspose(g_Projection);
+    g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, NULL, &cb1, 0, 0);
+
+    //
+    // Render the first cube
+    //
+    g_pImmediateContext->VSSetShader(g_pVertexShader, NULL, 0);
+    g_pImmediateContext->VSSetConstantBuffers(0, 1, &g_pConstantBuffer);
+    g_pImmediateContext->PSSetShader(g_pPixelShader, NULL, 0);
+    g_pImmediateContext->DrawIndexed(36, 0, 0);
+
+    //
+    // Update variables for the second cube
+    //
+    ConstantBuffer cb2;
+    cb2.mWorld = XMMatrixTranspose(g_World2);
+    cb2.mView = XMMatrixTranspose(g_View);
+    cb2.mProjection = XMMatrixTranspose(g_Projection);
+    g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, NULL, &cb2, 0, 0);
+
+    //
+    // Render the second cube
+    //
+    g_pImmediateContext->DrawIndexed(36, 0, 0);
+
+    //
+    // Present our back buffer to our front buffer
+    //
+    g_pSwapChain->Present(0, 0);
+}
+
+

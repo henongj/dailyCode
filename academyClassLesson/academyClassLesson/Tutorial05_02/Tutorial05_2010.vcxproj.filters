@@ -15,6 +15,9 @@
     <Filter Include="header">
       <UniqueIdentifier>{8d757d5d-84ac-4be4-9f64-2c89ee5df1f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{e113648b-7e8e-4567-add1-ceeeab3b531a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="winAPI.h">
@@ -25,9 +28,15 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tutorial05.cpp" />
-    <ClCompile Include="winAPI.cpp" />
-    <ClCompile Include="directX.cpp" />
+    <ClCompile Include="directX.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="winAPI.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Tutorial05.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Tutorial05.fx">

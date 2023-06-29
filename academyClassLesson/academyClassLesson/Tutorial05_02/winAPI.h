@@ -1,29 +1,28 @@
 #pragma once
 
-#include<windows.h>
-#include"Resource.h"
+#include <windows.h>
+#include "resource.h"
+#include "directX.h"
 
 class C_WINAPI
 {
 private:
-	static C_WINAPI* m_pWinAPI;
-	
-	HWND m_hWnd;
-	HINSTANCE m_hInstance;
+	static C_WINAPI* m_pApi;
+	HINSTANCE               m_hInst;
+	HWND                    m_hWnd;
+	C_DIRECTX*				m_pDirectX;
 private:
 	C_WINAPI() = default;
-	
+
 private:
 	static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
-	LRESULT classProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+	LRESULT CALLBACK myProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 public:
-	static void createAPI(void);
-	static void releaseAPI(void);
-	static C_WINAPI* getAPI(void);
-	
-public:
-	HRESULT init(HINSTANCE hInstance);
-	void updateMSG(void);
-	HWND getHWNdD(void);
+	static void createApi();
+	static C_WINAPI* getApi();
+	static void releaseApi();
+
+	HRESULT InitWindow(HINSTANCE hInstance, int nCmdShow);
+	void updateMsg();
 };

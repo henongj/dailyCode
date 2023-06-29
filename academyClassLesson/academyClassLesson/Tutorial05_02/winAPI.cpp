@@ -1,13 +1,65 @@
-#include "winAPI.h"
+#include "winapi.h"
 
-C_WINAPI* C_WINAPI::m_pWinAPI = nullptr;
+C_WINAPI* C_WINAPI::m_pApi = nullptr;
 
-LRESULT C_WINAPI::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+void C_WINAPI::createApi()
 {
-	return m_pWinAPI->classProc(hWnd, message, wParam, lParam);
+    if (!m_pApi)
+        m_pApi = new C_WINAPI{};
 }
 
-LRESULT C_WINAPI::classProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+C_WINAPI* C_WINAPI::getApi()
+{
+    return m_pApi;
+}
+
+void C_WINAPI::releaseApi()
+{
+    if (m_pApi)
+    {
+	    delete m_pApi;
+        m_pApi = nullptr;
+    }
+}
+
+HRESULT C_WINAPI::InitWindow(HINSTANCE hInstance, int nCmdShow)
+{
+    m_hInst = hInstance;
+
+
+    WNDCLASSEX wcex;
+    wcex.cbSize = sizeof(WNDCLASSEX);
+    wcex.style = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc = WndProc;
+    wcex.cbClsExtra = 0;
+    wcex.cbWndExtra = 0;
+    wcex.hInstance = m_hInst;
+    wcex.hIcon = LoadIcon(m_hInst, (LPCTSTR)IDI_TUTORIAL1);
+    wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
+    wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+    wcex.lpszMenuName = NULL;
+    wcex.lpszClassName = L"TutorialWindowClass";
+    wcex.hIconSm = LoadIcon(wcex.hInstance, (LPCTSTR)IDI_TUTORIAL1);
+    if (!RegisterClassEx(&wcex))
+        return E_FAIL;
+
+    // Create window
+    RECT rc = { 0, 0, 640, 480 };
+    AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
+    m_hWnd = CreateWindow(L"TutorialWindowClass", L"Direct3D 11 Tutorial 5", WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, m_hInst,
+        NULL);
+    if (!m_hWnd)
+        return E_FAIL;
+
+    ShowWindow(m_hWnd, nCmdShow);
+	m_pDirectX = new C_DIRECTX{};
+    m_pDirectX->InitDevice(m_hWnd);
+
+    return S_OK;
+}
+
+LRESULT CALLBACK C_WINAPI::myProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     PAINTSTRUCT ps;
     HDC hdc;
@@ -30,60 +82,13 @@ LRESULT C_WINAPI::classProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
     return S_OK;
 }
 
-void C_WINAPI::createAPI(void)
+LRESULT CALLBACK C_WINAPI::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    if (!m_pWinAPI)
-        m_pWinAPI = new C_WINAPI{};
+    return m_pApi->myProc(hWnd, message, wParam, lParam);
+
 }
 
-void C_WINAPI::releaseAPI(void)
-{
-	if (m_pWinAPI)
-    {
-        delete m_pWinAPI;
-        m_pWinAPI = nullptr;
-    }
-}
-
-C_WINAPI* C_WINAPI::getAPI(void)
-{
-	return m_pWinAPI;
-}
-
-HRESULT C_WINAPI::init(HINSTANCE hInstance)
-{
-    WNDCLASSEX wcex;
-    wcex.cbSize = sizeof(WNDCLASSEX);
-    wcex.style = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc = WndProc;
-    wcex.cbClsExtra = 0;
-    wcex.cbWndExtra = 0;
-    wcex.hInstance = hInstance;
-    wcex.hIcon = LoadIcon(hInstance, (LPCTSTR)IDI_TUTORIAL1);
-    wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
-    wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-    wcex.lpszMenuName = NULL;
-    wcex.lpszClassName = L"Æ©ÅçÀ©Å¬";
-    wcex.hIconSm = LoadIcon(wcex.hInstance, (LPCTSTR)IDI_TUTORIAL1);
-    if (!RegisterClassEx(&wcex))
-        return E_FAIL;
-
-    // Create window
-    m_hInstance = hInstance;
-    RECT rc = { 0, 0, 640, 480 };
-    AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
-    m_hWnd = CreateWindow(L"Æ©ÅçÀ©Å¬", L"Æ©Åç 5¹ø", WS_OVERLAPPEDWINDOW,
-        CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance,
-        NULL);
-    if (!m_hWnd)
-        return E_FAIL;
-
-	ShowWindow(m_hWnd, SW_SHOWDEFAULT);
-
-    return S_OK;
-}
-
-void C_WINAPI::updateMSG(void)
+void C_WINAPI::updateMsg()
 {
     MSG msg = { 0 };
     while (WM_QUIT != msg.message)
@@ -95,12 +100,11 @@ void C_WINAPI::updateMSG(void)
         }
         else
         {
-            //Render();
+            m_pDirectX->render();
         }
     }
-}
 
-HWND C_WINAPI::getHWNdD(void)
-{
-    return m_hWnd;
+    m_pApi->m_pDirectX->cleanupDevice();
+	delete m_pApi->m_pDirectX;
+	m_pDirectX = nullptr;
 }
