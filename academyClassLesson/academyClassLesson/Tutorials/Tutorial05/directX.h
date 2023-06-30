@@ -14,13 +14,14 @@ private:
 		XMFLOAT4 m_Color;
 	};
 
-
 	struct ConstantBuffer
 	{
 		XMMATRIX m_World;
 		XMMATRIX m_View;
 		XMMATRIX m_Projection;
 	};
+private:
+	
 	
 private:
 	D3D_DRIVER_TYPE				m_driverType;
@@ -49,6 +50,11 @@ public:
 
 	HRESULT C_DirectX::initDevice(HWND hWnd);
 	HRESULT C_DirectX::compileShaderFromFile(const WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut);
+
 	void cleanUpDevice(void);
 	void renderFrame(void);
+
+	HRESULT createBufferVertex(SimpleVertex* vertices, UINT size, ID3D11Buffer** ppVertexBuffer);
+	HRESULT createBufferIndex(WORD* indices, UINT size, ID3D11Buffer** ppIndexBuffer);
+	HRESULT createBufferConstant(UINT size, ID3D11Buffer** ppConstantBuffer);
 };

@@ -225,11 +225,14 @@ HRESULT C_DirectX::initDevice(HWND hWnd)
 	D3D11_SUBRESOURCE_DATA InitData;
 	ZeroMemory(&InitData, sizeof(InitData));
 	InitData.pSysMem = vertices;
-	hr = m_pd3dDevice->CreateBuffer(&bd, &InitData, &m_pVertexBuffer);
+	/*hr = m_pd3dDevice->CreateBuffer(&bd, &InitData, &m_pVertexBuffer);
 	if (FAILED(hr))
-		return hr;
+		return hr;*/
+	
+	if (FAILED(createBufferVertex(vertices, sizeof(SimpleVertex) * 8, &m_pVertexBuffer)))
+		return S_FALSE;
 
-	// Set vertex buffer
+		// Set vertex buffer
 	UINT stride = sizeof(SimpleVertex);
 	UINT offset = 0;
 	m_pImmediateContext->IASetVertexBuffers(0, 1, &m_pVertexBuffer, &stride, &offset);
@@ -260,9 +263,12 @@ HRESULT C_DirectX::initDevice(HWND hWnd)
 	bd.BindFlags = D3D11_BIND_INDEX_BUFFER;
 	bd.CPUAccessFlags = 0;
 	InitData.pSysMem = indices;
-	hr = m_pd3dDevice->CreateBuffer(&bd, &InitData, &m_pIndexBuffer);
+	/*hr = m_pd3dDevice->CreateBuffer(&bd, &InitData, &m_pIndexBuffer);
 	if (FAILED(hr))
-		return hr;
+		return hr;*/
+	if (FAILED(createBufferIndex(indices, sizeof(WORD) * 36, &m_pIndexBuffer)))
+		return S_FALSE;
+	
 
 	// Set index buffer
 	m_pImmediateContext->IASetIndexBuffer(m_pIndexBuffer, DXGI_FORMAT_R16_UINT, 0);
@@ -275,9 +281,11 @@ HRESULT C_DirectX::initDevice(HWND hWnd)
 	bd.ByteWidth = sizeof(ConstantBuffer);
 	bd.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
 	bd.CPUAccessFlags = 0;
-	hr = m_pd3dDevice->CreateBuffer(&bd, NULL, &m_pConstantBuffer);
+	/*hr = m_pd3dDevice->CreateBuffer(&bd, NULL, &m_pConstantBuffer);
 	if (FAILED(hr))
-		return hr;
+		return hr;*/
+	if (FAILED(createBufferConstant(sizeof(ConstantBuffer), &m_pConstantBuffer)))
+		return S_FALSE;
 
 	// Initialize the view matrix
 	XMVECTOR Eye = XMVectorSet(0.0f, 1.0f, -5.0f, 0.0f);
@@ -293,31 +301,31 @@ HRESULT C_DirectX::initDevice(HWND hWnd)
 
 void C_DirectX::cleanUpDevice(void)
 {
-	if (m_pImmediateContext) 
+	if (m_pImmediateContext)
 		m_pImmediateContext->ClearState();
-	if (m_pConstantBuffer) 
+	if (m_pConstantBuffer)
 		m_pConstantBuffer->Release();
-	if (m_pVertexBuffer) 
+	if (m_pVertexBuffer)
 		m_pVertexBuffer->Release();
-	if (m_pIndexBuffer) 
+	if (m_pIndexBuffer)
 		m_pIndexBuffer->Release();
-	if (m_pVertexLayout) 
+	if (m_pVertexLayout)
 		m_pVertexLayout->Release();
-	if (m_pVertexShader) 
+	if (m_pVertexShader)
 		m_pVertexShader->Release();
-	if (m_pPixelShader) 
+	if (m_pPixelShader)
 		m_pPixelShader->Release();
-	if (m_pDepthStencil) 
+	if (m_pDepthStencil)
 		m_pDepthStencil->Release();
-	if (m_pDepthStencilView) 
+	if (m_pDepthStencilView)
 		m_pDepthStencilView->Release();
-	if (m_pRenderTargetView) 
+	if (m_pRenderTargetView)
 		m_pRenderTargetView->Release();
-	if (m_pSwapChain) 
+	if (m_pSwapChain)
 		m_pSwapChain->Release();
-	if (m_pImmediateContext) 
+	if (m_pImmediateContext)
 		m_pImmediateContext->Release();
-	if (m_pd3dDevice) 
+	if (m_pd3dDevice)
 		m_pd3dDevice->Release();
 }
 
@@ -396,6 +404,68 @@ void C_DirectX::renderFrame(void)
 	//
 	m_pSwapChain->Present(0, 0);
 }
+
+HRESULT C_DirectX::createBufferVertex(SimpleVertex* vertices, UINT size, ID3D11Buffer** buffer)
+{
+	D3D11_BUFFER_DESC bd
+	{
+		size,
+		D3D11_USAGE_DEFAULT,
+		D3D11_BIND_VERTEX_BUFFER,
+		0, 0, 0
+	};
+
+	D3D11_SUBRESOURCE_DATA subData
+	{
+		nullptr,
+		0,
+		0
+	};
+
+	if (vertices)
+		subData.pSysMem = vertices;
+
+	return m_pd3dDevice->CreateBuffer(&bd, &subData, buffer);
+}
+
+HRESULT C_DirectX::createBufferConstant(UINT size, ID3D11Buffer** ppConstantBuffer)
+{
+	D3D11_BUFFER_DESC bd
+	{
+		size,
+		D3D11_USAGE_DEFAULT,
+		D3D11_BIND_CONSTANT_BUFFER,
+		0, 0, 0
+	};
+	
+	return m_pd3dDevice->CreateBuffer(&bd, nullptr, ppConstantBuffer);
+}
+
+HRESULT C_DirectX::createBufferIndex(WORD* indices, UINT size, ID3D11Buffer** ppIndexBuffer)
+{
+	D3D11_BUFFER_DESC bd
+	{
+		size,
+		D3D11_USAGE_DEFAULT,
+		D3D11_BIND_INDEX_BUFFER,
+		0, 0, 0
+	};
+
+	D3D11_SUBRESOURCE_DATA subData
+	{
+		nullptr,
+		0,
+		0
+	};
+	
+	if (indices)
+		subData.pSysMem = indices;
+
+	return m_pd3dDevice->CreateBuffer(&bd, &subData, ppIndexBuffer);
+}
+
+
+
 
 HRESULT C_DirectX::compileShaderFromFile(const WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut)
 {
