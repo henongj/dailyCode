@@ -3,8 +3,6 @@
 ID3D11Device* C_DIRECTX::g_pd3dDevice = nullptr;
 ID3D11DeviceContext* C_DIRECTX::g_pImmediateContext = nullptr;
 
-
-
 ID3D11Device* C_DIRECTX::getDevice(void)
 {
 	return g_pd3dDevice;
@@ -23,14 +21,14 @@ HRESULT C_DIRECTX::createBuffer(UINT size, D3D11_BIND_FLAG bindFlag, void* initD
         bindFlag,
         0, 0, 0
     };
-    
-    //데이터가 있으면 만들어서 넣고, 없으면 null을 넣게 되어있고, 안 쓰니까 null만들어서 넣으면 터짐
-    D3D11_SUBRESOURCE_DATA InitSubResource{ initData, 0,0 };
-    D3D11_SUBRESOURCE_DATA* pSubResource{};
-	if (initData)
-		pSubResource = &InitSubResource;
-	
-    return  g_pd3dDevice->CreateBuffer(&bd, &InitSubResource, ppBuffer);
+
+    // 데이터가 있으면 만들어서 넣고, 없으면 null을 넣게 되어있음
+    D3D11_SUBRESOURCE_DATA InitSubResource{ initData, 0, 0 };
+    D3D11_SUBRESOURCE_DATA* pSubResource = nullptr;
+    if (initData)
+        pSubResource = &InitSubResource;
+
+    return g_pd3dDevice->CreateBuffer(&bd, pSubResource, ppBuffer);
 }
 
 C_DIRECTX::C_DIRECTX() :
@@ -43,14 +41,13 @@ C_DIRECTX::C_DIRECTX() :
     g_pVertexShader{},
     g_pPixelShader{},
     g_pVertexLayout{},
-    g_pVertexBuffer{},
-    g_pIndexBuffer{},
     g_pConstantBuffer{},
     g_World1{},
     g_World2{},
     g_View{},
     g_Projection{},
-    g_hWnd{}
+    g_hWnd{},
+    m_meshMgr{}
 {
     g_driverType = D3D_DRIVER_TYPE_NULL;
     g_featureLevel = D3D_FEATURE_LEVEL_11_0;
@@ -173,6 +170,7 @@ HRESULT C_DIRECTX::InitDevice(HWND hWnd)
     descDepth.BindFlags = D3D11_BIND_DEPTH_STENCIL;
     descDepth.CPUAccessFlags = 0;
     descDepth.MiscFlags = 0;
+
     hr = g_pd3dDevice->CreateTexture2D(&descDepth, NULL, &g_pDepthStencil);
     if (FAILED(hr))
         return hr;
@@ -251,80 +249,23 @@ HRESULT C_DIRECTX::InitDevice(HWND hWnd)
     if (FAILED(hr))
         return hr;
 
-    // Create vertex buffer
-    SimpleVertex vertices[] =
-    {
-        { XMFLOAT3(-1.0f, 1.0f, -1.0f), XMFLOAT4(0.0f, 0.0f, 1.0f, 1.0f) },
-        { XMFLOAT3(1.0f, 1.0f, -1.0f), XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f) },
-        { XMFLOAT3(1.0f, 1.0f, 1.0f), XMFLOAT4(0.0f, 1.0f, 1.0f, 1.0f) },
-        { XMFLOAT3(-1.0f, 1.0f, 1.0f), XMFLOAT4(1.0f, 0.0f, 0.0f, 1.0f) },
-        { XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT4(1.0f, 0.0f, 1.0f, 1.0f) },
-        { XMFLOAT3(1.0f, -1.0f, -1.0f), XMFLOAT4(1.0f, 1.0f, 0.0f, 1.0f) },
-        { XMFLOAT3(1.0f, -1.0f, 1.0f), XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f) },
-        { XMFLOAT3(-1.0f, -1.0f, 1.0f), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f) },
-    };
-    D3D11_BUFFER_DESC bd;
-    ZeroMemory(&bd, sizeof(bd));
-    bd.Usage = D3D11_USAGE_DEFAULT;
-    bd.ByteWidth = sizeof(SimpleVertex) * 8;
-    bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-    bd.CPUAccessFlags = 0;
-    D3D11_SUBRESOURCE_DATA InitData;
-    ZeroMemory(&InitData, sizeof(InitData));
-    InitData.pSysMem = vertices;
-    hr = g_pd3dDevice->CreateBuffer(&bd, &InitData, &g_pVertexBuffer);
-    if (FAILED(hr))
-        return hr;
-
-    // Set vertex buffer
-    UINT stride = sizeof(SimpleVertex);
+    m_cMeshMgr.load();
+	C_MESH* pMesh = m_cMeshMgr.getMesh(0);
+    
     UINT offset = 0;
-    g_pImmediateContext->IASetVertexBuffers(0, 1, &g_pVertexBuffer, &stride, &offset);
+    g_pImmediateContext->IASetVertexBuffers(0, 1, &g_pVertexBuffer, pMesh->getStride() , &offset);
 
-    // Create index buffer
-    WORD indices[] =
-    {
-        3,1,0,
-        2,1,3,
-
-        0,5,4,
-        1,5,0,
-
-        3,4,7,
-        0,4,3,
-
-        1,6,5,
-        2,6,1,
-
-        2,7,6,
-        3,7,2,
-
-        6,4,5,
-        7,4,6,
-    };
-    bd.Usage = D3D11_USAGE_DEFAULT;
-    bd.ByteWidth = sizeof(WORD) * 36;        // 36 vertices needed for 12 triangles in a triangle list
-    bd.BindFlags = D3D11_BIND_INDEX_BUFFER;
-    bd.CPUAccessFlags = 0;
-    InitData.pSysMem = indices;
-    hr = g_pd3dDevice->CreateBuffer(&bd, &InitData, &g_pIndexBuffer);
-    if (FAILED(hr))
-        return hr;
-
-    // Set index buffer
     g_pImmediateContext->IASetIndexBuffer(g_pIndexBuffer, DXGI_FORMAT_R16_UINT, 0);
 
     // Set primitive topology
     g_pImmediateContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-
-    // Create the constant buffer
-    bd.Usage = D3D11_USAGE_DEFAULT;
-    bd.ByteWidth = sizeof(ConstantBuffer);
-    bd.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
-    bd.CPUAccessFlags = 0;
-    hr = g_pd3dDevice->CreateBuffer(&bd, NULL, &g_pConstantBuffer);
+    
+    /*hr = g_pd3dDevice->CreateBuffer(&bd, NULL, &g_pConstantBuffer);
     if (FAILED(hr))
-        return hr;
+        return hr;*/
+	if (FAILED(createBuffer(sizeof(ConstantBuffer), D3D11_BIND_CONSTANT_BUFFER, NULL, &g_pConstantBuffer)))
+        return S_FALSE;
+
 
     // Initialize the world matrix
     g_World1 = XMMatrixIdentity();
@@ -352,8 +293,7 @@ void C_DIRECTX::cleanupDevice()
     if (g_pImmediateContext) g_pImmediateContext->ClearState();
 
     if (g_pConstantBuffer) g_pConstantBuffer->Release();
-    if (g_pVertexBuffer) g_pVertexBuffer->Release();
-    if (g_pIndexBuffer) g_pIndexBuffer->Release();
+  
     if (g_pVertexLayout) g_pVertexLayout->Release();
     if (g_pVertexShader) g_pVertexShader->Release();
     if (g_pPixelShader) g_pPixelShader->Release();

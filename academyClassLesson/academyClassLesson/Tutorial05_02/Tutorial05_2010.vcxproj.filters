@@ -29,6 +29,12 @@
     <ClInclude Include="mesh.h">
       <Filter>header</Filter>
     </ClInclude>
+    <ClInclude Include="meshMGR.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="directX.cpp">
@@ -38,6 +44,15 @@
       <Filter>cpp</Filter>
     </ClCompile>
     <ClCompile Include="Tutorial05.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="_msh.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="meshManager.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="object.cpp">
       <Filter>cpp</Filter>
     </ClCompile>
   </ItemGroup>

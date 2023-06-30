@@ -375,8 +375,11 @@
   <ItemGroup />
   <ItemGroup>
     <ClCompile Include="directX.cpp" />
+    <ClCompile Include="meshManager.cpp" />
+    <ClCompile Include="object.cpp" />
     <ClCompile Include="Tutorial05.cpp" />
     <ClCompile Include="winAPI.cpp" />
+    <ClCompile Include="_msh.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Tutorial05.fx" />
@@ -384,6 +387,8 @@
   <ItemGroup>
     <ClInclude Include="directX.h" />
     <ClInclude Include="mesh.h" />
+    <ClInclude Include="meshMGR.h" />
+    <ClInclude Include="object.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="winAPI.h" />
     <ResourceCompile Include="Tutorial05.rc" />
