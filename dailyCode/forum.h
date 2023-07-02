@@ -2,14 +2,13 @@
 
 #include<string>
 #include<set>
-#include<list>
+#include<vector>
 
 class C_ForumSystem
 {
 	struct Comment;
 	struct Reply;
 private:
-	
 	struct Comment
 	{
 		int m_nCommentId;
@@ -17,23 +16,26 @@ private:
 		
 		std::string m_strText;
 		
-		std::list<Reply*> m_vReplyList;
+		int* m_pReplyId;
 	};
 	struct Reply
 	{
 		int m_nReplyId;
 		int m_nWriterId;
-		int m_nCommentId;
+	
 		std::string m_strText;
 		
-		std::list<Reply*> m_vReplyList;
+		int* m_pReplyNext;
+		int* m_pReplyToReplyId;
 	};
 	
 private:
-	int m_nCommentId;
-	int m_nReplyId;
-	std::list<Comment*> m_listComment;
+	int m_nCommentIdCounter;
+	int m_nReplyIdCounter;
+	Comment* m_pCommentRoot;
 	
+	std::vector<Comment*> m_vCommentList;
+	std::vector<Reply*> m_vReplyList;
 public:
 	C_ForumSystem() = default;
 	~C_ForumSystem() = default;
@@ -42,7 +44,8 @@ public:
 	C_ForumSystem& operator=(const C_ForumSystem& forumSys) = delete;
 
 public:
-	bool addComment(int nWriterId, const std::string& strText);
-	bool addReply(int nWriterId, int nCommentId, const std::string& strText);
-
+	void init(void);
+	
+	bool addComment(const std::string& strText, int nWriterId);
+	bool addReply(const std::string& strText, int nWriterId, int nCommentId);
 };

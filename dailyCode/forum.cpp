@@ -1,44 +1,29 @@
 #include "forum.h"
 
-bool C_ForumSystem::addComment(int nWriterId, const std::string& strText)
-{
-	if (!strText.empty())
-		return false;
 
+void C_ForumSystem::init(void)
+{
+	m_nCommentIdCounter = 1;
+	m_pCommentRoot = new Comment{};
+	m_vCommentList.push_back(m_pCommentRoot);
+
+}
+
+bool C_ForumSystem::addComment(const std::string& strText, int nWriterId)
+{
+	if (strText.empty())
+		return false;
+	
 	Comment* pComment = new Comment{};
-
+	
 	pComment->m_nWriterId = nWriterId;
-	pComment->m_nCommentId = m_nCommentId;
 	pComment->m_strText = strText;
-	
-	m_nCommentId++;
-	m_listComment.push_back(pComment);
+	pComment->m_pReplyId = nullptr;
+	pComment->m_nCommentId = m_nCommentIdCounter;
+
+	m_nCommentIdCounter++;
+	m_vCommentList.push_back(pComment);
 
 	return true;
 }
 
-bool C_ForumSystem::addReply(int nWriterId, int nCommentId, const std::string& strText)
-{
-	if (!strText.empty())
-		return false;
-
-	Reply* pReply = new Reply{};
-
-	pReply->m_nReplyId = m_nCommentId;
-	pReply->m_nCommentId = nCommentId;
-	pReply->m_nWriterId = nWriterId;
-	pReply->m_strText = strText;
-
-	std::list<Comment*>::iterator iterList = m_listComment.begin();
-
-	while (iterList != m_listComment.end())
-	{
-		if ((*iterList)->m_nCommentId == nCommentId)
-			break;
-	}
-
-	(*iterList)->m_vReplyList.push_back(pReply);
-	
-
-	return true;
-}
