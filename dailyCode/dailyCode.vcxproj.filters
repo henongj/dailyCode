@@ -31,6 +31,9 @@
     <Filter Include="메인">
       <UniqueIdentifier>{83a293f3-540b-47f9-b9ac-a6c59f04bfd7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\codePractice\forum">
+      <UniqueIdentifier>{430e32de-3603-46be-b37a-2195fa2999e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Find_Peak_Element_162.h">
@@ -879,8 +882,8 @@
     <ClInclude Include="acmicpc_1927.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
-    <ClInclude Include="commentTree.h">
-      <Filter>헤더 파일\codePractice</Filter>
+    <ClInclude Include="forum.h">
+      <Filter>헤더 파일\codePractice\forum</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -935,7 +938,7 @@
     <ClCompile Include="20230530_character.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="commentTree.cpp">
+    <ClCompile Include="forum.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
