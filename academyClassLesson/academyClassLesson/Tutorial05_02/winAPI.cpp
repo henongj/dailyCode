@@ -17,7 +17,7 @@ void C_WINAPI::releaseApi()
 {
     if (m_pApi)
     {
-	    delete m_pApi;
+        delete m_pApi;
         m_pApi = nullptr;
     }
 }
@@ -25,7 +25,6 @@ void C_WINAPI::releaseApi()
 HRESULT C_WINAPI::InitWindow(HINSTANCE hInstance, int nCmdShow)
 {
     m_hInst = hInstance;
-
 
     WNDCLASSEX wcex;
     wcex.cbSize = sizeof(WNDCLASSEX);
@@ -53,8 +52,9 @@ HRESULT C_WINAPI::InitWindow(HINSTANCE hInstance, int nCmdShow)
         return E_FAIL;
 
     ShowWindow(m_hWnd, nCmdShow);
-	m_pDirectX = new C_DIRECTX{};
-    m_pDirectX->InitDevice(m_hWnd);
+
+    m_pDirectx = new C_DIRECTX{};
+    m_pDirectx->InitDevice(m_hWnd);
 
     return S_OK;
 }
@@ -90,7 +90,14 @@ LRESULT CALLBACK C_WINAPI::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 
 void C_WINAPI::updateMsg()
 {
+    m_arObject[0].init(0);
+	m_arObject[1].init(1);
+
+    m_arObject[0].setPosition(2.0f, 0.0f, 0.0f);
+	m_arObject[1].setPosition(0.0f, 2.0f, 0.0f);
+    
     MSG msg = { 0 };
+
     while (WM_QUIT != msg.message)
     {
         if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
@@ -100,11 +107,17 @@ void C_WINAPI::updateMsg()
         }
         else
         {
-            m_pDirectX->render();
+            for (int i = 0; i < 2; i++)
+            {
+				m_arObject[i].update();
+            }
+            
+            m_pDirectx->Render();
         }
     }
 
-    m_pApi->m_pDirectX->cleanupDevice();
-	delete m_pApi->m_pDirectX;
-	m_pDirectX = nullptr;
+    m_pDirectx->CleanupDevice();
+    delete m_pDirectx;
+    m_pDirectx = nullptr;
+
 }

@@ -3,90 +3,27 @@
 ID3D11Device* C_DIRECTX::g_pd3dDevice = nullptr;
 ID3D11DeviceContext* C_DIRECTX::g_pImmediateContext = nullptr;
 
-ID3D11Device* C_DIRECTX::getDevice(void)
-{
-	return g_pd3dDevice;
-}
-
-ID3D11DeviceContext* C_DIRECTX::getDeviceContext(void)
-{
-	return g_pImmediateContext;
-}
-
-HRESULT C_DIRECTX::createBuffer(UINT size, D3D11_BIND_FLAG bindFlag, void* initData, ID3D11Buffer** ppBuffer)
-{
-    D3D11_BUFFER_DESC bd{
-        size,
-        D3D11_USAGE_DEFAULT,
-        bindFlag,
-        0, 0, 0
-    };
-
-    // 데이터가 있으면 만들어서 넣고, 없으면 null을 넣게 되어있음
-    D3D11_SUBRESOURCE_DATA InitSubResource{ initData, 0, 0 };
-    D3D11_SUBRESOURCE_DATA* pSubResource = nullptr;
-    if (initData)
-        pSubResource = &InitSubResource;
-
-    return g_pd3dDevice->CreateBuffer(&bd, pSubResource, ppBuffer);
-}
-
 C_DIRECTX::C_DIRECTX() :
-    g_driverType{},
-    g_featureLevel{},
-    g_pSwapChain{},
-    g_pRenderTargetView{},
-    g_pDepthStencil{},
-    g_pDepthStencilView{},
-    g_pVertexShader{},
-    g_pPixelShader{},
-    g_pVertexLayout{},
-    g_pConstantBuffer{},
-    g_World1{},
-    g_World2{},
-    g_View{},
-    g_Projection{},
-    g_hWnd{},
-    m_meshMgr{}
+	g_driverType{},
+	g_featureLevel{},
+	g_pSwapChain{},
+	g_pRenderTargetView{},
+	g_pDepthStencil{},
+	g_pDepthStencilView{},
+	g_World1{},
+	g_World2{},
+	g_View{},
+	g_Projection{},
+    g_hWnd{}
 {
-    g_driverType = D3D_DRIVER_TYPE_NULL;
-    g_featureLevel = D3D_FEATURE_LEVEL_11_0;
+	g_driverType = D3D_DRIVER_TYPE_NULL;
+	g_featureLevel = D3D_FEATURE_LEVEL_11_0;
 
-    g_World1 = XMMatrixIdentity();
-    g_World2 = XMMatrixIdentity();
-    g_View = XMMatrixIdentity();
-    g_Projection = XMMatrixIdentity();
+	g_World1 = XMMatrixIdentity();
+	g_World2 = XMMatrixIdentity();
+	g_View = XMMatrixIdentity();
+	g_Projection = XMMatrixIdentity();
 }
-
-
-HRESULT C_DIRECTX::CompileShaderFromFile(const WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut)
-{
-    HRESULT hr = S_OK;
-
-    DWORD dwShaderFlags = D3DCOMPILE_ENABLE_STRICTNESS;
-#if defined( DEBUG ) || defined( _DEBUG )
-    // Set the D3DCOMPILE_DEBUG flag to embed debug information in the shaders.
-    // Setting this flag improves the shader debugging experience, but still allows 
-    // the shaders to be optimized and to run exactly the way they will run in 
-    // the release configuration of this program.
-    dwShaderFlags |= D3DCOMPILE_DEBUG;
-#endif
-
-    ID3DBlob* pErrorBlob;
-    hr = D3DX11CompileFromFile(szFileName, NULL, NULL, szEntryPoint, szShaderModel,
-        dwShaderFlags, 0, NULL, ppBlobOut, &pErrorBlob, NULL);
-    if (FAILED(hr))
-    {
-        if (pErrorBlob != NULL)
-            OutputDebugStringA((char*)pErrorBlob->GetBufferPointer());
-        if (pErrorBlob) pErrorBlob->Release();
-        return hr;
-    }
-    if (pErrorBlob) pErrorBlob->Release();
-
-    return S_OK;
-}
-
 
 HRESULT C_DIRECTX::InitDevice(HWND hWnd)
 {
@@ -170,7 +107,6 @@ HRESULT C_DIRECTX::InitDevice(HWND hWnd)
     descDepth.BindFlags = D3D11_BIND_DEPTH_STENCIL;
     descDepth.CPUAccessFlags = 0;
     descDepth.MiscFlags = 0;
-
     hr = g_pd3dDevice->CreateTexture2D(&descDepth, NULL, &g_pDepthStencil);
     if (FAILED(hr))
         return hr;
@@ -197,75 +133,23 @@ HRESULT C_DIRECTX::InitDevice(HWND hWnd)
     vp.TopLeftY = 0;
     g_pImmediateContext->RSSetViewports(1, &vp);
 
-    // Compile the vertex shader
-    ID3DBlob* pVSBlob = NULL;
-    hr = CompileShaderFromFile(L"Tutorial05.fx", "VS", "vs_4_0", &pVSBlob);
-    if (FAILED(hr))
-    {
-        MessageBox(NULL,
-            L"The FX file cannot be compiled.  Please run this executable from the directory that contains the FX file.", L"Error", MB_OK);
-        return hr;
-    }
+    m_cVs.loadVS();
+    m_cPs.loadPS();
 
-    // Create the vertex shader
-    hr = g_pd3dDevice->CreateVertexShader(pVSBlob->GetBufferPointer(), pVSBlob->GetBufferSize(), NULL, &g_pVertexShader);
-    if (FAILED(hr))
-    {
-        pVSBlob->Release();
-        return hr;
-    }
-
-    // Define the input layout
-    D3D11_INPUT_ELEMENT_DESC layout[] =
-    {
-        { "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-        { "COLOR", 0, DXGI_FORMAT_R32G32B32A32_FLOAT, 0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-    };
-    UINT numElements = ARRAYSIZE(layout);
-
-    // Create the input layout
-    hr = g_pd3dDevice->CreateInputLayout(layout, numElements, pVSBlob->GetBufferPointer(),
-        pVSBlob->GetBufferSize(), &g_pVertexLayout);
-    pVSBlob->Release();
-    if (FAILED(hr))
-        return hr;
-
-    // Set the input layout
-    g_pImmediateContext->IASetInputLayout(g_pVertexLayout);
-
-    // Compile the pixel shader
-    ID3DBlob* pPSBlob = NULL;
-    hr = CompileShaderFromFile(L"Tutorial05.fx", "PS", "ps_4_0", &pPSBlob);
-    if (FAILED(hr))
-    {
-        MessageBox(NULL,
-            L"The FX file cannot be compiled.  Please run this executable from the directory that contains the FX file.", L"Error", MB_OK);
-        return hr;
-    }
-
-    // Create the pixel shader
-    hr = g_pd3dDevice->CreatePixelShader(pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(), NULL, &g_pPixelShader);
-    pPSBlob->Release();
-    if (FAILED(hr))
-        return hr;
+    m_cVs.setVS();
+    m_cPs.setPS();
 
     m_cMeshMgr.load();
-	C_MESH* pMesh = m_cMeshMgr.getMesh(0);
-    
-    UINT offset = 0;
-    g_pImmediateContext->IASetVertexBuffers(0, 1, &g_pVertexBuffer, pMesh->getStride() , &offset);
+    C_MESH* pMesh = m_cMeshMgr.getMesh(0);
 
-    g_pImmediateContext->IASetIndexBuffer(g_pIndexBuffer, DXGI_FORMAT_R16_UINT, 0);
+    // Set vertex buffer
+    UINT offset = 0;
+    g_pImmediateContext->IASetVertexBuffers(0, 1, pMesh->getVertexBuffer(), pMesh->getStride(), &offset);
+    // Set index buffer
+    g_pImmediateContext->IASetIndexBuffer(pMesh->getIndexBuffer(), pMesh->getIndexFormat(), 0);
 
     // Set primitive topology
     g_pImmediateContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-    
-    /*hr = g_pd3dDevice->CreateBuffer(&bd, NULL, &g_pConstantBuffer);
-    if (FAILED(hr))
-        return hr;*/
-	if (FAILED(createBuffer(sizeof(ConstantBuffer), D3D11_BIND_CONSTANT_BUFFER, NULL, &g_pConstantBuffer)))
-        return S_FALSE;
-
 
     // Initialize the world matrix
     g_World1 = XMMatrixIdentity();
@@ -283,29 +167,22 @@ HRESULT C_DIRECTX::InitDevice(HWND hWnd)
     return S_OK;
 }
 
-
-
-//--------------------------------------------------------------------------------------
-// Clean up the objects we've created
-//--------------------------------------------------------------------------------------
-void C_DIRECTX::cleanupDevice()
+void C_DIRECTX::CleanupDevice()
 {
     if (g_pImmediateContext) g_pImmediateContext->ClearState();
-
-    if (g_pConstantBuffer) g_pConstantBuffer->Release();
-  
-    if (g_pVertexLayout) g_pVertexLayout->Release();
-    if (g_pVertexShader) g_pVertexShader->Release();
-    if (g_pPixelShader) g_pPixelShader->Release();
     if (g_pDepthStencil) g_pDepthStencil->Release();
     if (g_pDepthStencilView) g_pDepthStencilView->Release();
     if (g_pRenderTargetView) g_pRenderTargetView->Release();
     if (g_pSwapChain) g_pSwapChain->Release();
     if (g_pImmediateContext) g_pImmediateContext->Release();
     if (g_pd3dDevice) g_pd3dDevice->Release();
+
+    m_cMeshMgr.clear();
+    m_cVs.clear();
+    m_cPs.clear();
 }
 
-void C_DIRECTX::render(void)
+void C_DIRECTX::Render()
 {
     // Update our time
     static float t = 0.0f;
@@ -344,51 +221,38 @@ void C_DIRECTX::render(void)
     //
     g_pImmediateContext->ClearDepthStencilView(g_pDepthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);
 
-    //
-    // Update variables for the first cube
-    //
-    ConstantBuffer cb1;
-    cb1.mWorld = XMMatrixTranspose(g_World1);
-    cb1.mView = XMMatrixTranspose(g_View);
-    cb1.mProjection = XMMatrixTranspose(g_Projection);
-    g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, NULL, &cb1, 0, 0);
-
-    //
-    // Render the first cube
-    //
-    g_pImmediateContext->VSSetShader(g_pVertexShader, NULL, 0);
-    g_pImmediateContext->VSSetConstantBuffers(0, 1, &g_pConstantBuffer);
-    g_pImmediateContext->PSSetShader(g_pPixelShader, NULL, 0);
+    m_cVs.updateConstBuffer(g_World1, g_View, g_Projection);
     g_pImmediateContext->DrawIndexed(36, 0, 0);
 
-    //
-    // Update variables for the second cube
-    //
-    ConstantBuffer cb2;
-    cb2.mWorld = XMMatrixTranspose(g_World2);
-    cb2.mView = XMMatrixTranspose(g_View);
-    cb2.mProjection = XMMatrixTranspose(g_Projection);
-    g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, NULL, &cb2, 0, 0);
-
-    //
-    // Render the second cube
-    //
+    m_cVs.updateConstBuffer(g_World2, g_View, g_Projection);
     g_pImmediateContext->DrawIndexed(36, 0, 0);
-
-    //
-    // Present our back buffer to our front buffer
     //
     g_pSwapChain->Present(0, 0);
 }
 
 void* C_DIRECTX::operator new(size_t size)
 {
-	return _aligned_malloc(size, 16);
+    return _aligned_malloc(size , 16);
 }
 
-void C_DIRECTX::operator delete(void* pDelete)
+void C_DIRECTX::operator delete(void* p)
 {
-	_aligned_free(pDelete);
+    _aligned_free(p);
 }
 
+void C_DIRECTX::setRenderObject(int nRenderId, XMMATRIX* pMatrix)
+{
+    auto iter = m_mapRenderObject.find(nRenderId);
+    if (iter == m_mapRenderObject.end())
+    {
+        std::list<XMMATRIX*> listMatrix{};
+		listMatrix.push_back(pMatrix);
+        m_mapRenderObject.insert({ nRenderId,listMatrix });
+    }
+    else
+    {
+		iter->second.push_back(pMatrix);
+    }
+    
+}
 

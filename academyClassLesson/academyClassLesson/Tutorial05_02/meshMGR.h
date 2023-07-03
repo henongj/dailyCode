@@ -1,11 +1,6 @@
 #pragma once
 
-
-#include <d3d11.h>
-#include <d3dx11.h>
-#include <d3dcompiler.h>
-#include <xnamath.h>
-#include "mesh.h"
+#include"mesh.h"
 
 class C_MESHMGR
 {
@@ -15,9 +10,7 @@ private:
 
 public:
 	C_MESHMGR() = default;
-	~C_MESHMGR() = default;
-
-	void load(void);
+	void load();
 	C_MESH* getMesh(int nMeshIndex);
-	void release(void);
+	void clear();
 };

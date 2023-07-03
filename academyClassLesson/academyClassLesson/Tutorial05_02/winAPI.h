@@ -3,14 +3,17 @@
 #include <windows.h>
 #include "resource.h"
 #include "directX.h"
+#include "object.h"
 
 class C_WINAPI
 {
 private:
-	static C_WINAPI* m_pApi;
+	static C_WINAPI*		m_pApi;
 	HINSTANCE               m_hInst;
 	HWND                    m_hWnd;
-	C_DIRECTX*				m_pDirectX;
+	C_DIRECTX				* m_pDirectx;
+
+	C_OBJECT m_arObject[2];
 private:
 	C_WINAPI() = default;
 

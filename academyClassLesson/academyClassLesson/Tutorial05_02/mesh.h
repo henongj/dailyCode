@@ -1,6 +1,8 @@
 #pragma once
 
-#include"directX.h"
+#include<D3D11.h>
+#include<D3DX11.h>
+#include <xnamath.h>
 
 class C_MESH
 {
@@ -11,19 +13,18 @@ private:
 		XMFLOAT4 Color;
 	};
 private:
-	ID3D11Buffer* g_pVertexBuffer;
+	ID3D11Buffer* g_pVertexBuffer ;
 	ID3D11Buffer* g_pIndexBuffer;
-	UINT m_strde;
-	DXGI_FORMAT m_Indexformat;
+	UINT			m_iStride;
+	DXGI_FORMAT		m_Indexformat;
 
 public:
 	C_MESH() = default;
-	HRESULT load(const char* fileName);
-	
-	ID3D11Buffer* const* getVertexBuffer();
-	ID3D11Buffer* getIndexBuffer() { return g_pIndexBuffer; }
-	const UINT* getStride() { return &m_strde; }
-	DXGI_FORMAT getIndexFormat() { return m_Indexformat; }
+	HRESULT load(const char *strFileName);
 
-	void release(void);
+	ID3D11Buffer* const * getVertexBuffer();
+	ID3D11Buffer* getIndexBuffer();
+	const UINT* getStride();
+	DXGI_FORMAT getIndexFormat();
+	void release();
 };
