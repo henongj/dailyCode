@@ -61,6 +61,7 @@ LRESULT C_WINAPI::OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
 	HDC hdc = BeginPaint(hWnd, &ps);
 	// TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
 	TextOut(GetDC(m_hWnd), m_nMousePointX - 10, m_nMousePointY, &m_szKey, 1);
+
 	EndPaint(hWnd, &ps);
 	
 	return S_OK;
