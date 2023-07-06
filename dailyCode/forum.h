@@ -9,6 +9,11 @@ class C_ForumSystem
 	struct Comment;
 	struct Reply;
 private:
+	enum class eCommentType
+	{
+		Comment,
+		Reply
+	};
 	struct Comment
 	{
 		int m_nCommentId;
@@ -24,10 +29,11 @@ private:
 		int m_nWriterId;
 	
 		std::string m_strText;
+		eCommentType m_eParentType;
 		
-		int* m_pReplyNext;
 		int* m_pReplyToReplyId;
 	};
+
 	
 private:
 	int m_nCommentIdCounter;
@@ -47,5 +53,5 @@ public:
 	void init(void);
 	
 	bool addComment(const std::string& strText, int nWriterId);
-	bool addReply(const std::string& strText, int nWriterId, int nCommentId);
+	bool addReply(const std::string& strText, int nWriterId, int nCommentId, eCommentType eType);
 };
