@@ -21,7 +21,7 @@ private:
 		
 		std::string m_strText;
 		
-		int* m_pReplyId;
+		std::vector<int> m_vReplyId;
 	};
 	struct Reply
 	{
@@ -31,7 +31,7 @@ private:
 		std::string m_strText;
 		eCommentType m_eParentType;
 		
-		int* m_pReplyToReplyId;
+		std::vector<int> m_vReplyId;
 	};
 
 	

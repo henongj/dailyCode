@@ -37,26 +37,26 @@ bool C_ForumSystem::addReply(const std::string& strText, int nWriterId, int nCom
 	pReply->m_nReplyId = m_nReplyIdCounter;
 	pReply->m_nWriterId = nWriterId;
 	pReply->m_strText = strText;
-	pReply->m_pReplyToReplyId = new int{};
-	*pReply->m_pReplyToReplyId = nCommentId;
+	//pReply->m_pReplyToReplyId = new int{};
+	//*pReply->m_pReplyToReplyId = nCommentId;
 	pReply->m_eParentType = eType;
 
 	m_nReplyIdCounter++;
 	
 	Comment* pCommentTarget{};
 	Reply* pReplyTarget{};
-	if (eType == C_ForumSystem::eCommentType::Comment)
-	{
-		pCommentTarget = m_vCommentList[nCommentId];
-		pCommentTarget->m_pReplyId = new int{};
-		*pCommentTarget->m_pReplyId = pReply->m_nReplyId;
-	}
-	else
-	{
-		pReplyTarget = m_vReplyList[nCommentId];
-		pReplyTarget->m_pReplyToReplyId = new int{};
-		*pReplyTarget->m_pReplyToReplyId = pReply->m_nReplyId;
-	}
+	//if (eType == C_ForumSystem::eCommentType::Comment)
+	//{
+	//	pCommentTarget = m_vCommentList[nCommentId];
+	//	pCommentTarget->m_pReplyId = new int{};
+	//	*pCommentTarget->m_pReplyId = pReply->m_nReplyId;
+	//}
+	//else
+	//{
+	//	pReplyTarget = m_vReplyList[nCommentId];
+	//	pReplyTarget->m_pReplyToReplyId = new int{};
+	//	*pReplyTarget->m_pReplyToReplyId = pReply->m_nReplyId;
+	//}
 	
 	return true;
 }
