@@ -3,10 +3,17 @@
 
 void C_ForumSystem::init(void)
 {
-	m_nCommentIdCounter = 1;
-	m_pCommentRoot = new Comment{};
-	m_vCommentList.push_back(m_pCommentRoot);
+	m_nCommentIdCounter = 0;
+	m_nReplyIdCounter = 0;
 
+}
+
+void C_ForumSystem::release(void)
+{
+	for (int i = 0; i < m_vCommentList.size(); i++)
+		delete m_vCommentList[i];
+	for (int i = 0; i < m_vReplyList.size(); i++)
+		delete m_vReplyList[i];
 }
 
 bool C_ForumSystem::addComment(const std::string& strText, int nWriterId)
@@ -16,9 +23,9 @@ bool C_ForumSystem::addComment(const std::string& strText, int nWriterId)
 	
 	Comment* pComment = new Comment{};
 	
-	pComment->m_nWriterId = nWriterId;
+	//pComment->m_nWriterId = nWriterId;
 	pComment->m_strText = strText;
-	pComment->m_pReplyId = nullptr;
+	pComment->m_vReplyId = std::vector<int>{};
 	pComment->m_nCommentId = m_nCommentIdCounter;
 
 	m_nCommentIdCounter++;
@@ -27,7 +34,7 @@ bool C_ForumSystem::addComment(const std::string& strText, int nWriterId)
 	return true;
 }
 
-bool C_ForumSystem::addReply(const std::string& strText, int nWriterId, int nCommentId, eCommentType eType)
+bool C_ForumSystem::addReply(const std::string& strText, int nWriterId, int nIdReplyTarget, eCommentType eTypeToTarget)
 {
 	if (strText.empty())
 		return false;
@@ -35,30 +42,49 @@ bool C_ForumSystem::addReply(const std::string& strText, int nWriterId, int nCom
 	Reply* pReply = new Reply{};
 
 	pReply->m_nReplyId = m_nReplyIdCounter;
-	pReply->m_nWriterId = nWriterId;
+	//pReply->m_nWriterId = nWriterId;
 	pReply->m_strText = strText;
-	//pReply->m_pReplyToReplyId = new int{};
-	//*pReply->m_pReplyToReplyId = nCommentId;
-	pReply->m_eParentType = eType;
+	
+	pReply->m_nParentId = nIdReplyTarget;
+	pReply->m_eParentType = eTypeToTarget;
 
 	m_nReplyIdCounter++;
+	m_vReplyList.push_back(pReply);
 	
-	Comment* pCommentTarget{};
-	Reply* pReplyTarget{};
-	//if (eType == C_ForumSystem::eCommentType::Comment)
-	//{
-	//	pCommentTarget = m_vCommentList[nCommentId];
-	//	pCommentTarget->m_pReplyId = new int{};
-	//	*pCommentTarget->m_pReplyId = pReply->m_nReplyId;
-	//}
-	//else
-	//{
-	//	pReplyTarget = m_vReplyList[nCommentId];
-	//	pReplyTarget->m_pReplyToReplyId = new int{};
-	//	*pReplyTarget->m_pReplyToReplyId = pReply->m_nReplyId;
-	//}
+	if (eTypeToTarget == eCommentType::Comment)
+		m_vCommentList[nIdReplyTarget]->m_vReplyId.push_back(pReply->m_nReplyId);
+	else
+		m_vReplyList[nIdReplyTarget]->m_vReplyId.push_back(pReply->m_nReplyId);
 	
 	return true;
+}
+
+void C_ForumSystem::printAll(void)
+{
+	for (int i = 0; i < m_vCommentList.size(); i++)
+	{
+		printComment(m_vCommentList[i]);
+	}
+}
+
+void C_ForumSystem::printComment(const Comment* pComment)
+{
+	printf("comment id : %d\ntext : %s\n天天天天天天天天天天天天天天天天天天天\n", pComment->m_nCommentId, pComment->m_strText.c_str());
+	
+	for(int i = 0 ; i < pComment->m_vReplyId.size(); i++)
+	{
+		printReply(m_vReplyList[pComment->m_vReplyId[i]]);
+	}
+}
+
+void C_ForumSystem::printReply(const Reply* pReply)
+{
+	printf("reply id : %d, reply to : %d\n, text : %s\n天天天天天天天天天天天天天天天天天天天\n", pReply->m_nReplyId, pReply->m_nParentId, pReply->m_strText.c_str());
+	
+	for (int i = 0; i < pReply->m_vReplyId.size(); i++)
+	{
+		printReply(m_vReplyList[pReply->m_vReplyId[i]]);
+	}
 }
 
 
