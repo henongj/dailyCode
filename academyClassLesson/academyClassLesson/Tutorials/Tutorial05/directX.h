@@ -4,57 +4,48 @@
 #include <d3dx11.h>
 #include <d3dcompiler.h>
 #include <xnamath.h>
+#include "meshMgr.h"
+#include "vs.h"
+#include "ps.h"
 
-class C_DirectX
+#include <map>
+#include <list>
+
+class C_DXFUNC;
+
+class C_DIRECTX
 {
+	friend C_DXFUNC;
 private:
-	struct SimpleVertex
-	{
-		XMFLOAT3 m_Pos;
-		XMFLOAT4 m_Color;
-	};
+	D3D_DRIVER_TYPE         g_driverType = D3D_DRIVER_TYPE_NULL;
+	D3D_FEATURE_LEVEL       g_featureLevel = D3D_FEATURE_LEVEL_11_0;
+	static ID3D11Device*			g_pd3dDevice;
+	static ID3D11DeviceContext*	    g_pImmediateContext;
+	IDXGISwapChain*			g_pSwapChain = NULL;
+	ID3D11RenderTargetView* g_pRenderTargetView = NULL;
+	ID3D11Texture2D*		g_pDepthStencil = NULL;
+	ID3D11DepthStencilView* g_pDepthStencilView = NULL;
+	XMMATRIX                g_View;
+	XMMATRIX                g_Projection;
+	HWND					g_hWnd;
 
-	struct ConstantBuffer
-	{
-		XMMATRIX m_World;
-		XMMATRIX m_View;
-		XMMATRIX m_Projection;
-	};
-private:
-	
-	
-private:
-	D3D_DRIVER_TYPE				m_driverType;
-	D3D_FEATURE_LEVEL			m_featureLevel;
-	ID3D11Device*				m_pd3dDevice;
-	ID3D11DeviceContext*		m_pImmediateContext;
-	IDXGISwapChain*				m_pSwapChain;
-	ID3D11RenderTargetView*		m_pRenderTargetView;
-	ID3D11Texture2D*			m_pDepthStencil;
-	ID3D11DepthStencilView*		m_pDepthStencilView;
-	ID3D11VertexShader*			m_pVertexShader;
-	ID3D11PixelShader*			m_pPixelShader;
-	ID3D11InputLayout*			m_pVertexLayout;
-	ID3D11Buffer*				m_pVertexBuffer;
-	ID3D11Buffer*				m_pIndexBuffer;
-	ID3D11Buffer*				m_pConstantBuffer;
-	XMMATRIX					m_World1;
-	XMMATRIX					m_World2;
-	XMMATRIX					m_View;
-	XMMATRIX					m_Projection;
+	std::map<int, std::list<const XMMATRIX*> > m_mapRenderObject{};
 
+	C_MESHMGR				m_cMeshMgr;
+	C_VS					m_cVs;
+	C_PS					m_cPs;
+
+private:
+	void clearRenderObject();
 
 public:
-	C_DirectX();
-	~C_DirectX() = default;
+	C_DIRECTX();
+	HRESULT InitDevice(HWND hWnd);
+	void CleanupDevice();
+	void Render();
+	void* operator new(size_t size);
+	void operator delete(void *p);
+	void setRenderObject(int nRenderId, CXMMATRIX mat);
+	void setViewMatrix(CXMMATRIX matView);
 
-	HRESULT C_DirectX::initDevice(HWND hWnd);
-	HRESULT C_DirectX::compileShaderFromFile(const WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut);
-
-	void cleanUpDevice(void);
-	void renderFrame(void);
-
-	HRESULT createBufferVertex(SimpleVertex* vertices, UINT size, ID3D11Buffer** ppVertexBuffer);
-	HRESULT createBufferIndex(WORD* indices, UINT size, ID3D11Buffer** ppIndexBuffer);
-	HRESULT createBufferConstant(UINT size, ID3D11Buffer** ppConstantBuffer);
 };

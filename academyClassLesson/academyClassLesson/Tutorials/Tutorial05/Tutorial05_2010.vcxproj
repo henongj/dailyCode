@@ -140,11 +140,12 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4005;4838</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
@@ -179,10 +180,11 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FloatingPointModel>Fast</FloatingPointModel>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DisableSpecificWarnings>4005;4838</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
@@ -219,7 +221,7 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -259,7 +261,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FloatingPointModel>Fast</FloatingPointModel>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -300,7 +302,7 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;NDEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -340,7 +342,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FloatingPointModel>Fast</FloatingPointModel>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;%(AdditionalIncludeDirectories)
+      <AdditionalIncludeDirectories>..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;%(AdditionalIncludeDirectories)
       </AdditionalIncludeDirectories>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;NDEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -373,17 +375,31 @@
   </ItemDefinitionGroup>
   <ItemGroup />
   <ItemGroup>
+    <ClCompile Include="camera.cpp" />
     <ClCompile Include="directX.cpp" />
+    <ClCompile Include="dxFunc.cpp" />
+    <ClCompile Include="mesh.cpp" />
+    <ClCompile Include="meshMgr.cpp" />
+    <ClCompile Include="object.cpp" />
+    <ClCompile Include="ps.cpp" />
     <ClCompile Include="Tutorial05.cpp" />
-    <ClCompile Include="winAPI.cpp" />
+    <ClCompile Include="vs.cpp" />
+    <ClCompile Include="winapi.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Tutorial05.fx" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="directX.h" />
+    <ClInclude Include="dxFunc.h" />
+    <ClInclude Include="mesh.h" />
+    <ClInclude Include="meshMgr.h" />
+    <ClInclude Include="object.h" />
+    <ClInclude Include="ps.h" />
     <CLInclude Include="resource.h" />
-    <ClInclude Include="winAPI.h" />
+    <ClInclude Include="vs.h" />
+    <ClInclude Include="winapi.h" />
     <ResourceCompile Include="Tutorial05.rc" />
   </ItemGroup>
   <ItemGroup>

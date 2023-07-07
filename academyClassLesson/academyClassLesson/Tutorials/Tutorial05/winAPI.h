@@ -2,37 +2,33 @@
 
 #include <windows.h>
 #include "resource.h"
-#include"directX.h"
-
+#include "directX.h"
+#include "object.h"
+#include "camera.h"
 
 class C_WINAPI
 {
 private:
-	static C_WINAPI* m_pWinAPI;
-	HINSTANCE m_hInst;
-	HWND m_hWnd;
+	static C_WINAPI*		m_pApi;
+	HINSTANCE               m_hInst;
+	HWND                    m_hWnd;
+	C_DIRECTX				* m_pDirectx;
 
-	LRESULT(C_WINAPI::* m_msgFunction[WM_USER])(HWND hWnd, WPARAM wParam, LPARAM lParam);
-	
+	C_OBJECT				m_arObject[100];
+	C_CAMERA				m_cCamera;
+
 private:
 	C_WINAPI() = default;
 
 private:
 	static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
-	LRESULT classProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
-
-private:
-	void initMsgFunction(void);
-	LRESULT onPaint(HWND hWnd, WPARAM wParam, LPARAM lParam);
-	LRESULT onDestroy(HWND hWnd, WPARAM wParam, LPARAM lParam);
+	LRESULT CALLBACK myProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 public:
-	static void createIstance(void);
-	static void releaseInstance(void);
-	static C_WINAPI* getAPI(void);
+	static void createApi();
+	static C_WINAPI* getApi();
+	static void releaseApi();
 
-public:
-	HRESULT init(HINSTANCE hInstance);
-	void updateMessage(C_DirectX* pRenderer);
-	HWND getHWND(void);
+	HRESULT InitWindow(HINSTANCE hInstance, int nCmdShow);
+	void updateMsg();
 };

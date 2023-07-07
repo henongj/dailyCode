@@ -1,108 +1,104 @@
-#include "winAPI.h"
+#include "winapi.h"
 
-C_WINAPI* C_WINAPI::m_pWinAPI = nullptr;
+C_WINAPI* C_WINAPI::m_pApi = nullptr;
 
-LRESULT C_WINAPI::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+void C_WINAPI::createApi()
 {
-	return C_WINAPI::getAPI()->classProc(hWnd, message, wParam, lParam);
+    if (!m_pApi)
+        m_pApi = new C_WINAPI{};
 }
 
-LRESULT C_WINAPI::classProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+C_WINAPI* C_WINAPI::getApi()
 {
-    PAINTSTRUCT ps;
-    HDC hdc;
-
-    if (message < WM_USER && m_msgFunction[message])
-        return (this->*m_msgFunction[message])(hWnd, wParam, lParam);
-    
-    return DefWindowProc(hWnd, message, wParam, lParam);
+    return m_pApi;
 }
 
-void C_WINAPI::initMsgFunction(void)
+void C_WINAPI::releaseApi()
 {
-	m_msgFunction[WM_PAINT] = &C_WINAPI::onPaint;
-	m_msgFunction[WM_DESTROY] = &C_WINAPI::onDestroy;
-	
-}
-
-LRESULT C_WINAPI::onPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
-{
-	PAINTSTRUCT ps;
-	HDC hdc;
-
-	hdc = BeginPaint(hWnd, &ps);
-	EndPaint(hWnd, &ps);
-
-	return 0;
-}
-
-LRESULT C_WINAPI::onDestroy(HWND hWnd, WPARAM wParam, LPARAM lParam)
-{
-    PostQuitMessage(0);
-	
-    return S_OK;
-}
-
-void C_WINAPI::createIstance(void)
-{
-    if (!m_pWinAPI)
-        m_pWinAPI = new C_WINAPI{};
-}
-
-void C_WINAPI::releaseInstance(void)
-{
-    if (m_pWinAPI)
+    if (m_pApi)
     {
-		delete m_pWinAPI;
-        m_pWinAPI = nullptr;
+        delete m_pApi;
+        m_pApi = nullptr;
     }
 }
 
-C_WINAPI* C_WINAPI::getAPI(void)
+HRESULT C_WINAPI::InitWindow(HINSTANCE hInstance, int nCmdShow)
 {
-    return m_pWinAPI;
-}
+    m_hInst = hInstance;
 
-HRESULT C_WINAPI::init(HINSTANCE hInstance)
-{
-    // Register class
     WNDCLASSEX wcex;
     wcex.cbSize = sizeof(WNDCLASSEX);
     wcex.style = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc = C_WINAPI::WndProc;
+    wcex.lpfnWndProc = WndProc;
     wcex.cbClsExtra = 0;
     wcex.cbWndExtra = 0;
-    wcex.hInstance = hInstance;
-    wcex.hIcon = LoadIcon(hInstance, (LPCTSTR)IDI_TUTORIAL1);
+    wcex.hInstance = m_hInst;
+    wcex.hIcon = LoadIcon(m_hInst, (LPCTSTR)IDI_TUTORIAL1);
     wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
     wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
     wcex.lpszMenuName = NULL;
-    wcex.lpszClassName = L"winAPI";
+    wcex.lpszClassName = L"TutorialWindowClass";
     wcex.hIconSm = LoadIcon(wcex.hInstance, (LPCTSTR)IDI_TUTORIAL1);
     if (!RegisterClassEx(&wcex))
         return E_FAIL;
 
     // Create window
-    m_hInst = hInstance;
     RECT rc = { 0, 0, 640, 480 };
     AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
-    m_hWnd = CreateWindow(L"winAPI", L"directXClassTutorial05", WS_OVERLAPPEDWINDOW,
-        CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance,
+    m_hWnd = CreateWindow(L"TutorialWindowClass", L"Direct3D 11 Tutorial 5", WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, m_hInst,
         NULL);
     if (!m_hWnd)
         return E_FAIL;
 
-    initMsgFunction();
+    ShowWindow(m_hWnd, nCmdShow);
 
-    ShowWindow(m_hWnd, SW_SHOWDEFAULT);
+    m_pDirectx = new C_DIRECTX{};
+    m_pDirectx->InitDevice(m_hWnd);
 
     return S_OK;
 }
 
-void C_WINAPI::updateMessage(C_DirectX* pRenderer)
-{
-    MSG msg = { 0 };
 
+LRESULT CALLBACK C_WINAPI::myProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    PAINTSTRUCT ps;
+    HDC hdc;
+
+    switch (message)
+    {
+    case WM_PAINT:
+        hdc = BeginPaint(hWnd, &ps);
+        EndPaint(hWnd, &ps);
+        break;
+
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        break;
+
+    default:
+        return DefWindowProc(hWnd, message, wParam, lParam);
+    }
+
+    return S_OK;
+}
+
+LRESULT CALLBACK C_WINAPI::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    return m_pApi->myProc(hWnd, message, wParam, lParam);
+
+}
+
+void C_WINAPI::updateMsg()
+{
+    for (int i = 0; i < 100; i++)
+    {
+        m_arObject[i].init(rand() % 2);
+
+        m_arObject[i].setPosition( (rand() % 100) - 50.0f, (rand() % 100) - 50.0f, (rand() % 100) - 50.0f);
+    }
+
+    MSG msg = { 0 };
     while (WM_QUIT != msg.message)
     {
         if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
@@ -112,12 +108,35 @@ void C_WINAPI::updateMessage(C_DirectX* pRenderer)
         }
         else
         {
-            pRenderer->renderFrame();
+            if (GetAsyncKeyState('A') & 0x8000)
+                m_cCamera.addRotationYaw(-0.1f);
+            if (GetAsyncKeyState('D') & 0x8000)
+                m_cCamera.addRotationYaw(0.1f);
+            if (GetAsyncKeyState('W') & 0x8000)
+                m_cCamera.moveFoward(0.1f);
+            if (GetAsyncKeyState('S') & 0x8000)
+                m_cCamera.moveBackward(0.1f);
+
+
+            for (int i = 0; i < 100; i++)
+            {
+                m_arObject[i].update();
+            }
+
+            for (int i = 0; i < 100; i++)
+            {
+                m_pDirectx->setRenderObject(m_arObject[i].getMeshId(), m_arObject[i].getMatrix());
+            }
+
+            m_cCamera.update();
+            m_pDirectx->setViewMatrix(m_cCamera.getMatView());
+
+            m_pDirectx->Render();
         }
     }
-}
 
-HWND C_WINAPI::getHWND(void)
-{
-    return m_hWnd;
+    m_pDirectx->CleanupDevice();
+    delete m_pDirectx;
+    m_pDirectx = nullptr;
+
 }

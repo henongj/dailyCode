@@ -12,7 +12,7 @@
 <Tool Name="VCXMLDataGeneratorTool" />
 <Tool Name="VCWebServiceProxyGeneratorTool" />
 <Tool Name="VCMIDLTool" />
-<Tool Name="VCCLCompilerTool" Optimization="0" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="DXUT\Core;DXUT\Optional;" PreprocessorDefinitions="WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" EnableEnhancedInstructionSet="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="4" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
+<Tool Name="VCCLCompilerTool" Optimization="0" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;" PreprocessorDefinitions="WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" EnableEnhancedInstructionSet="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="4" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
 <Tool Name="VCManagedResourceCompilerTool" />
 <Tool Name="VCResourceCompilerTool" />
 <Tool Name="VCPreLinkEventTool" />
@@ -31,7 +31,7 @@
 <Tool Name="VCXMLDataGeneratorTool" />
 <Tool Name="VCWebServiceProxyGeneratorTool" />
 <Tool Name="VCMIDLTool" TargetEnvironment="3" />
-<Tool Name="VCCLCompilerTool" Optimization="0" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="DXUT\Core;DXUT\Optional;" PreprocessorDefinitions="WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
+<Tool Name="VCCLCompilerTool" Optimization="0" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;" PreprocessorDefinitions="WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" MinimalRebuild="true" BasicRuntimeChecks="3" RuntimeLibrary="3" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
 <Tool Name="VCManagedResourceCompilerTool" />
 <Tool Name="VCResourceCompilerTool" />
 <Tool Name="VCPreLinkEventTool" />
@@ -50,7 +50,7 @@
 <Tool Name="VCXMLDataGeneratorTool" />
 <Tool Name="VCWebServiceProxyGeneratorTool" />
 <Tool Name="VCMIDLTool" />
-<Tool Name="VCCLCompilerTool" Optimization="2" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="DXUT\Core;DXUT\Optional;" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" RuntimeLibrary="2" EnableEnhancedInstructionSet="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
+<Tool Name="VCCLCompilerTool" Optimization="2" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" RuntimeLibrary="2" EnableEnhancedInstructionSet="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
 <Tool Name="VCManagedResourceCompilerTool" />
 <Tool Name="VCResourceCompilerTool" />
 <Tool Name="VCPreLinkEventTool" />
@@ -69,7 +69,7 @@
 <Tool Name="VCXMLDataGeneratorTool" />
 <Tool Name="VCWebServiceProxyGeneratorTool" />
 <Tool Name="VCMIDLTool" TargetEnvironment="3" />
-<Tool Name="VCCLCompilerTool" Optimization="2" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="DXUT\Core;DXUT\Optional;" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" RuntimeLibrary="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
+<Tool Name="VCCLCompilerTool" Optimization="2" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;" PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" RuntimeLibrary="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
 <Tool Name="VCManagedResourceCompilerTool" />
 <Tool Name="VCResourceCompilerTool" />
 <Tool Name="VCPreLinkEventTool" />
@@ -88,7 +88,7 @@
 <Tool Name="VCXMLDataGeneratorTool" />
 <Tool Name="VCWebServiceProxyGeneratorTool" />
 <Tool Name="VCMIDLTool" />
-<Tool Name="VCCLCompilerTool" Optimization="2" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="DXUT\Core;DXUT\Optional;" PreprocessorDefinitions="WIN32;NDEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" RuntimeLibrary="2" EnableEnhancedInstructionSet="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
+<Tool Name="VCCLCompilerTool" Optimization="2" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;" PreprocessorDefinitions="WIN32;NDEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" RuntimeLibrary="2" EnableEnhancedInstructionSet="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
 <Tool Name="VCManagedResourceCompilerTool" />
 <Tool Name="VCResourceCompilerTool" />
 <Tool Name="VCPreLinkEventTool" />
@@ -107,7 +107,7 @@
 <Tool Name="VCXMLDataGeneratorTool" />
 <Tool Name="VCWebServiceProxyGeneratorTool" />
 <Tool Name="VCMIDLTool" TargetEnvironment="3" />
-<Tool Name="VCCLCompilerTool" Optimization="2" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="DXUT\Core;DXUT\Optional;" PreprocessorDefinitions="WIN32;NDEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" RuntimeLibrary="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
+<Tool Name="VCCLCompilerTool" Optimization="2" EnableIntrinsicFunctions="true" AdditionalIncludeDirectories="..\..\..\DXUT11\Core;..\..\..\DXUT11\Optional;" PreprocessorDefinitions="WIN32;NDEBUG;PROFILE;_WINDOWS;D3DXFX_LARGEADDRESS_HANDLE;" RuntimeLibrary="2" FloatingPointModel="2" UsePrecompiledHeader="0" PrecompiledHeaderThrough="DXUT.h" WarningLevel="4" Detect64BitPortabilityProblems="false" DebugInformationFormat="3" ExceptionHandling="1" ForceConformanceInForLoopScope="true" OpenMP="false" AdditionalOptions="" />
 <Tool Name="VCManagedResourceCompilerTool" />
 <Tool Name="VCResourceCompilerTool" />
 <Tool Name="VCPreLinkEventTool" />
@@ -129,7 +129,7 @@
       <File RelativePath="Tutorial05.fx" />
   </Filter>
 <Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
-<File RelativePath="DXUT\Core\dpiaware.manifest" />
+<File RelativePath="..\..\..\DXUT11\Core\dpiaware.manifest" />
       <File RelativePath="resource.h" />
       <File RelativePath="Tutorial05.rc" />
   </Filter>

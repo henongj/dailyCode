@@ -12,22 +12,69 @@
       <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
       <Extensions>fx;fxh;hlsl</Extensions>
     </Filter>
-    <Filter Include="header">
-      <UniqueIdentifier>{9d895d09-d569-4cf9-957c-0c0658d5493c}</UniqueIdentifier>
+    <Filter Include="h">
+      <UniqueIdentifier>{cea786a0-6aee-4a43-a222-ba7b0b8e406e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{25c23394-c195-419e-9201-4b0f08f2fca5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="winAPI.h">
-      <Filter>header</Filter>
+    <ClInclude Include="winapi.h">
+      <Filter>h</Filter>
     </ClInclude>
     <ClInclude Include="directX.h">
-      <Filter>header</Filter>
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="meshMgr.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="vs.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="ps.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="dxFunc.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>h</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tutorial05.cpp" />
-    <ClCompile Include="winAPI.cpp" />
-    <ClCompile Include="directX.cpp" />
+    <ClCompile Include="winapi.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="directX.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="meshMgr.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="object.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="vs.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ps.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="dxFunc.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Tutorial05.fx">
