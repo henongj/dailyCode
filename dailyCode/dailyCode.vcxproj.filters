@@ -885,6 +885,9 @@
     <ClInclude Include="forum.h">
       <Filter>헤더 파일\codePractice\forum</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc_10988.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
