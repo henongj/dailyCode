@@ -142,6 +142,7 @@
     <ClInclude Include="acmicpc_10988.h" />
     <ClInclude Include="acmicpc_1106.h" />
     <ClInclude Include="acmicpc_1174.h" />
+    <ClInclude Include="acmicpc_1676.h" />
     <ClInclude Include="acmicpc_1927.h" />
     <ClInclude Include="acmicpc_1966.h" />
     <ClInclude Include="C20230404_Fly.h" />
