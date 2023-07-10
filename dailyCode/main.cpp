@@ -19,18 +19,19 @@
 struct node
 {
 	int m_nId;
-	std::map<int, int> m_mapConnected; // id , distance
+	std::unordered_map<int, int> m_mapConnected; // id , distance
 };
 void solution_acmicpc1240(void);
 void dataInput_acmicpc1240(int& nNumOfNodes, int& nNumOfQueries, std::vector<std::vector<int>>& vDistances, std::vector<std::pair<int, int>>& vQueries);
-void makeNodes_acmicpc1240(const std::vector<std::vector<int>> vDistances, std::unordered_map<int, node>& mapNodes);
+void makeNodes_acmicpc1240(const std::vector<std::vector<int>>& vDistances, std::unordered_map<int, node>& mapNodes);
+
 
 int main(void)
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
 	solution_acmicpc1240();
-	
+
 	return 0;
 }
 
@@ -41,14 +42,33 @@ void solution_acmicpc1240(void)
 	std::vector<std::vector<int>> vDistances{};
 	std::vector<std::pair<int, int>> vQueries{};
 	std::unordered_map<int, node> mapNodes{};
-	
+	std::vector<bool> vVisited{};
+
 	dataInput_acmicpc1240(nNumOfNodes, nNumOfQueries, vDistances, vQueries);
 	makeNodes_acmicpc1240(vDistances, mapNodes);
-	
+
+	for (int i = 0; i < vQueries.size(); i++)
+	{
+		int nResult = 0;
+		vVisited.resize(nNumOfNodes, false);
+		vVisited[vQueries[i].first] = true;
+		const std::unordered_map<int, node>::iterator mIterNode = mapNodes.find(vQueries[i].first);
+		if (mIterNode != mapNodes.end())
+		{
+			nResult += vQueries[i].second;
+			return;
+		}
+		else
+		{
+
+		}
+		
+	}
+
 	std::cout << nNumOfNodes;
 }
 
-void dataInput_acmicpc1240(int& nNumOfNodes, int& nNumOfQueries, std::vector<std::vector<int>>& vDistances, std::vector<std::pair<int,int>>& vQueries)
+void dataInput_acmicpc1240(int& nNumOfNodes, int& nNumOfQueries, std::vector<std::vector<int>>& vDistances, std::vector<std::pair<int, int>>& vQueries)
 {
 	int nTemp1{};
 	int nTemp2{};
@@ -75,15 +95,14 @@ void dataInput_acmicpc1240(int& nNumOfNodes, int& nNumOfQueries, std::vector<std
 	for (int i = 0; i < nNumOfQueries; i++)
 	{
 		std::cin >> nTemp1 >> nTemp2;
-		std::pair<int,int> pQuery{};
+		std::pair<int, int> pQuery{};
 		pQuery.first = nTemp1;
 		pQuery.second = nTemp2;
 
 		vQueries.push_back(pQuery);
 	}
 }
-
-void makeNodes_acmicpc1240(const std::vector<std::vector<int>> vDistances, std::unordered_map<int, node>& mapNodes)
+void makeNodes_acmicpc1240(const std::vector<std::vector<int>>& vDistances, std::unordered_map<int, node>& mapNodes)
 {
 	int nNodeId{};
 	std::unordered_map<int, node>::iterator mapIter{};
@@ -110,4 +129,3 @@ void makeNodes_acmicpc1240(const std::vector<std::vector<int>> vDistances, std::
 	}
 
 }
-
