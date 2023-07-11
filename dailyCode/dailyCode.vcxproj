@@ -134,6 +134,7 @@
     <ClInclude Include="20230530_move.h" />
     <ClInclude Include="20230530_moveFactory.h" />
     <ClInclude Include="acmicpc1092.h" />
+    <ClInclude Include="acmicpc1240_incorrectAnswer.h" />
     <ClInclude Include="acmicpc_1041_TLE.h" />
     <ClInclude Include="acmicpc_1025.h" />
     <ClInclude Include="acmicpc_1041_wrongAnswer.h" />
