@@ -25,7 +25,6 @@ struct node
 void solution_acmicpc1240(void);
 void dataInput_acmicpc1240(int& nNumOfNodes, int& nNumOfQueries, std::vector<std::vector<int>>& vDistances, std::vector<std::pair<int, int>>& vQueries);
 void makeNodes_acmicpc1240(const std::vector<std::vector<int>>& vDistances, std::unordered_map<int, node>& mapNodes);
-int getDistance_acmicpc1240(const std::unordered_map<int, node>& mapNodes, const std::pair<int, int>& vQuery, std::vector<bool>& vVisited, const node* pNode, int nDistance);
 
 int mainSapce_acmicpc1240(void)
 {
