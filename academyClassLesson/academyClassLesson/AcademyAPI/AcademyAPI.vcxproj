@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="direct2D.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
@@ -137,7 +136,6 @@
     <ClCompile Include="20230616_API.cpp" />
     <ClCompile Include="20230619_API.cpp" />
     <ClCompile Include="20230620_API.cpp" />
-    <ClCompile Include="direct2D.cpp" />
     <ClCompile Include="winapi.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -27,9 +27,6 @@
     <ClInclude Include="winapi.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="direct2D.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="20230616_API.cpp">
@@ -42,9 +39,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="winapi.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="direct2D.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
