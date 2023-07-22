@@ -140,6 +140,7 @@
     <ClInclude Include="acmicpc_1117.h" />
     <ClInclude Include="acmicpc_11723.h" />
     <ClInclude Include="acmicpc_1241.h" />
+    <ClInclude Include="acmicpc_1261.h" />
     <ClInclude Include="acmicpc_1334.h" />
     <ClInclude Include="acmicpc_1240.h" />
     <ClInclude Include="acmicpc_1240_incorrectAnswer.h" />
