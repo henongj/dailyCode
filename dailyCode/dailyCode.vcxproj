@@ -438,6 +438,7 @@
     <ClInclude Include="acmicpc_25304.h" />
     <ClInclude Include="acmicpc_2164.h" />
     <ClInclude Include="20230420_LinkedList.h" />
+    <ClInclude Include="acmicpc_1405.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="20230405_BubbleSort.cpp" />
