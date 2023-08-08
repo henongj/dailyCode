@@ -1,9 +1,6 @@
 
 #ifndef ___acmicpc_1011_h___
 #define ___acmicpc_1011_h___
-
-//https://www.acmicpc.net/problem/1011
-//Fly me to the Alpha Centauri
 #include<algorithm>
 #include<iostream>
 #include<map>
@@ -14,33 +11,41 @@
 #include<vector>
 #include<sstream>
 #include<stack>
-using namespace std;
-void data_input(vector<int>& distance)
+
+namespace acmicpc_1101
 {
-	int len;
-	cin >> len;
-	for (int i = 0; i < len; i++)
+
+	//https://www.acmicpc.net/problem/1011
+	//Fly me to the Alpha Centauri
+
+	using namespace std;
+	void data_input(vector<int>& distance)
 	{
-		int a, b;
-		cin >> a >> b;
-		distance.push_back(b - a);
+		int len;
+		cin >> len;
+		for (int i = 0; i < len; i++)
+		{
+			int a, b;
+			cin >> a >> b;
+			distance.push_back(b - a);
+		}
 	}
-}
 
-void solution()
-{
-	vector<int> distance;
-	data_input(distance);
-
-	for (int i = 0; i < distance.size(); i++)
+	void solution()
 	{
-		int result = 0;
-		int root = sqrt(distance[i]);
-		root* root == distance[i] ? result = root * 2 - 1 : result = root * 2;
+		vector<int> distance;
+		data_input(distance);
 
-		if (distance[i] > root * (root + 1))
-			result = result + 1;
-		cout << result << endl;
+		for (int i = 0; i < distance.size(); i++)
+		{
+			int result = 0;
+			int root = sqrt(distance[i]);
+			root* root == distance[i] ? result = root * 2 - 1 : result = root * 2;
+
+			if (distance[i] > root * (root + 1))
+				result = result + 1;
+			cout << result << endl;
+		}
 	}
 }
 

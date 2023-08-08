@@ -14,31 +14,33 @@ using namespace std;
 
 //https://www.acmicpc.net/problem/11653
 //소인수분해
-
-void fDataInput(int& nData, int& nDivisor)
+namespace acmicpc_11653
 {
-	cin >> nData;
-	nDivisor = 2;
-}
-
-void fGetAllDivisor(int nData, int nDivisor)
-{
-	while (nData != 1)
+	void fDataInput(int& nData, int& nDivisor)
 	{
-		if (nData % nDivisor == 0)
-		{
-			cout << nDivisor << endl;
-			nData /= nDivisor;
-		}
-		else
-			nDivisor++;
+		cin >> nData;
+		nDivisor = 2;
 	}
-}
 
-void solution(void)
-{
-	int nData{};
-	int nDivisor{};
-	fDataInput(nData, nDivisor);
-	fGetAllDivisor(nData, nDivisor);
+	void fGetAllDivisor(int nData, int nDivisor)
+	{
+		while (nData != 1)
+		{
+			if (nData % nDivisor == 0)
+			{
+				cout << nDivisor << endl;
+				nData /= nDivisor;
+			}
+			else
+				nDivisor++;
+		}
+	}
+
+	void solution(void)
+	{
+		int nData{};
+		int nDivisor{};
+		fDataInput(nData, nDivisor);
+		fGetAllDivisor(nData, nDivisor);
+	}
 }

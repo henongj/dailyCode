@@ -15,28 +15,30 @@
 #include<stack>
 #include<cmath>	
 using namespace std;
+namespace acmicpc_11279
+{
 
-void solution(void) {
+	void solution(void) {
 
-	priority_queue<int> pq;
-	int N;
-	cin >> N;
-	for (int i = 0; i < N; i++) {
-		int num;
-		cin >> num;
-		if (num == 0) {
-			if (pq.empty()) {
-				cout << 0 << '\n';
+		priority_queue<int> pq;
+		int N;
+		cin >> N;
+		for (int i = 0; i < N; i++) {
+			int num;
+			cin >> num;
+			if (num == 0) {
+				if (pq.empty()) {
+					cout << 0 << '\n';
+				}
+				else {
+					cout << pq.top() << '\n';
+					pq.pop();
+				}
 			}
 			else {
-				cout << pq.top() << '\n';
-				pq.pop();
+				pq.push(num);
 			}
-		}
-		else {
-			pq.push(num);
 		}
 	}
 }
 #endif // ___acmicpc_11279_h___
-
