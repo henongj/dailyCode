@@ -465,9 +465,7 @@
     <ClCompile Include="classTest230320_2.cpp" />
     <ClCompile Include="forum.cpp" />
     <ClCompile Include="inheritanceConstructorCall.cpp" />
-    <ClCompile Include="main.cpp">
-      <LanguageStandard_C Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdc17</LanguageStandard_C>
-    </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
