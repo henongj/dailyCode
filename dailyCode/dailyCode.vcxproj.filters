@@ -948,9 +948,6 @@
     <ClInclude Include="acmicpc_14940_wrongAnswer.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
-    <ClInclude Include="acmicpc_14940.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="acmicpc_9663.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
@@ -988,6 +985,12 @@
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
     <ClInclude Include="acmicpc_1987_TLE.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc_14940.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
+    <ClInclude Include="acmicpc_1753.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
   </ItemGroup>
