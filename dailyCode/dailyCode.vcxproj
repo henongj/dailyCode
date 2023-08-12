@@ -178,6 +178,7 @@
     <ClInclude Include="acmicpc_1987.h" />
     <ClInclude Include="acmicpc_1987_TLE.h" />
     <ClInclude Include="acmicpc_2108.h" />
+    <ClInclude Include="acmicpc_2580.h" />
     <ClInclude Include="acmicpc_2630.h" />
     <ClInclude Include="acmicpc_27866.h" />
     <ClInclude Include="acmicpc_9663.h" />
