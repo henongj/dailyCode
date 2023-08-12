@@ -1061,5 +1061,8 @@
     <ClCompile Include="main.cpp">
       <Filter>메인</Filter>
     </ClCompile>
+    <ClCompile Include="20230812_accessTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

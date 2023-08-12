@@ -459,6 +459,7 @@
     <ClCompile Include="20230530_character.cpp" />
     <ClCompile Include="20230530_move.cpp" />
     <ClCompile Include="20230530_moveFactory.cpp" />
+    <ClCompile Include="20230812_accessTest.cpp" />
     <ClCompile Include="C20230330_machine.cpp" />
     <ClCompile Include="C20230331_MainSpace.cpp" />
     <ClCompile Include="C20230331_PureVirtualFunctionTest.cpp" />
