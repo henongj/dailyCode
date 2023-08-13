@@ -182,6 +182,7 @@
     <ClInclude Include="acmicpc_2580.h" />
     <ClInclude Include="acmicpc_2630.h" />
     <ClInclude Include="acmicpc_27866.h" />
+    <ClInclude Include="acmicpc_9019.h" />
     <ClInclude Include="acmicpc_9663.h" />
     <ClInclude Include="C20230404_Fly.h" />
     <ClInclude Include="C20230404_strategyClass.h" />
