@@ -34,10 +34,10 @@ namespace accessTest
 		int* p2 = arr[0] + 100;
 
 		printf("%d\n", *p);
-		printf("%p\n", *p2);
+		//printf("%p\n", *p2);
 
 		*p2 = 3;
-		printf("%p\n", *p2);
+		//printf("%p\n", *p2);
 
 	}
 	
