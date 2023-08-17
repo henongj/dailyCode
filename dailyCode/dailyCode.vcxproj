@@ -136,6 +136,7 @@
     <ClInclude Include="acmicpc1092.h" />
     <ClInclude Include="acmicpc_11053.h" />
     <ClInclude Include="acmicpc_11055.h" />
+    <ClInclude Include="acmicpc_13913.h" />
     <ClInclude Include="acmicpc_13913_wrontAnswer.h" />
     <ClInclude Include="acmicpc_14499.h" />
     <ClInclude Include="acmicpc_14500.h" />
