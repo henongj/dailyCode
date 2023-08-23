@@ -14,69 +14,85 @@
 #include <fstream>
 #include<functional>
 
-namespace acmicpc_2108
+//https://www.acmicpc.net/problem/2108
+//통계학
+namespace acmicpc_2108_WrongAnswer
 {
-	//https://www.acmicpc.net/problem/2108
-	//통계학
-	void solution_acmicpc2108(void);
+	using namespace std;
 
-
-	void solution_acmicpc2108(void)
+	void solution(void);
+	void inputData(int& nSize, vector<int>& vData);
+	void solution(void)
 	{
-		using namespace std;
+		int nSize{};
+		vector<int> vData{};
 
-		int nNumber{};
-		vector<int> vNumber{};
 		int nSum{};
-		int nMaxCount{ 0 };
-		int nMaxNumber{ 0 };
-		bool bSecond{ false };
+		int nMax{};
+		int nMin{};
+		int nMid{};
+		int nMode{};
+		int nRange{};
+		int nCount{};
+		int nMaxCount{};
 
-		cin >> nNumber;
-		vNumber.reserve(nNumber);
 
-		for (int i = 0; i < nNumber; ++i)
+		inputData(nSize, vData);
+
+		sort(vData.begin(), vData.end());
+
+		nMax = vData.back();
+		nMin = vData.front();
+
+		for (int i = 0; i < nSize; ++i)
+			nSum += vData[i];
+
+		nMid = vData[nSize / 2];
+
+		map<int, int> mMode{};
+		for (int i = 0; i < nSize; ++i)
 		{
-			int nTemp{};
-			cin >> nTemp;
-			vNumber.push_back(nTemp);
-			nSum += nTemp;
-		}
-
-		sort(vNumber.begin(), vNumber.end());
-
-		cout << round((double)nSum / nNumber) << endl;
-		cout << vNumber[nNumber / 2] << endl;
-
-		map<int, int> mNumber{};
-
-		for (int i = 0; i < nNumber; ++i)
-		{
-			if (mNumber.find(vNumber[i]) == mNumber.end())
-				mNumber.insert(make_pair(vNumber[i], 1));
+			auto iter = mMode.find(vData[i]);
+			if (iter == mMode.end())
+				mMode.insert(iter, { vData[i], 1 });
 			else
-				mNumber[vNumber[i]]++;
+				++iter->second;
 		}
 
-		for (auto iter = mNumber.begin(); iter != mNumber.end(); ++iter)
+		for (auto iter = mMode.begin(); iter != mMode.end(); ++iter)
 		{
 			if (nMaxCount < iter->second)
 			{
 				nMaxCount = iter->second;
-				nMaxNumber = iter->first;
-				bSecond = false;
+				nMode = iter->first;
+				nCount = 1;
 			}
-			else if (nMaxCount == iter->second && bSecond == false)
+			else if (nMaxCount == iter->second)
 			{
-				nMaxNumber = iter->first;
-				bSecond = true;
+				if (nCount == 1)
+				{
+					nMode = iter->first;
+					++nCount;
+				}
 			}
 		}
 
-		cout << nMaxNumber << endl;
-		cout << vNumber[nNumber - 1] - vNumber[0] << endl;
+		nRange = nMax - nMin;
 
+		nSum = round((double)nSum / nSize);
+
+		cout << nSum << endl;
+		cout << nMid << endl;
+		cout << nMode << endl;
+		cout << nRange << endl;
 
 	}
+	void inputData(int& nSize, vector<int>& vData)
+	{
+		cin >> nSize;
+		vData.resize(nSize);
 
+		for (int i = 0; i < nSize; ++i)
+			cin >> vData[i];
+	}
 }
