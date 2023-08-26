@@ -1044,6 +1044,9 @@
     <ClInclude Include="acmicpc_1520.h">
       <Filter>헤더 파일\acmicpc</Filter>
     </ClInclude>
+    <ClInclude Include="acmicpc_11729.h">
+      <Filter>헤더 파일\acmicpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classTest230314_0.cpp">
