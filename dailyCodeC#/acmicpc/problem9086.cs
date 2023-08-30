@@ -34,8 +34,12 @@ namespace acmicpc_9086
 
             for (int i = 0; i < inputCount; i++)
             {
-                string str = Console.ReadLine();
-                inputList.Add(str);
+                string? str = Console.ReadLine();
+
+                if(str != null)
+                {
+                    inputList.Add(str);
+                }
             }
 
         }
